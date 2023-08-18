@@ -128,15 +128,14 @@ ul{
     background-color: black;
 }
 .postDiv{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content:space-between;
     width: 95%;
-    gap: 3%;
     margin: 0;
     border-radius: 30px;
-    padding: 10px 10px;
+    padding: 30px 30px;
     background-color: #1c1c1c;
-    justify-content: space-around;
 }
 .moreContent{
     position: relative;
@@ -150,13 +149,11 @@ ul{
 .post{
     background-color: black;
     color: purple;
+    height: 200px;
     border-radius: 20px;
     border: solid 4px #2beaccfd;
-    font-size: 125%;
-    align-self: center;
+    font-size: 100%;
     text-align: center;
-    padding: 20px;
-    margin: 15px 0;
 }
 .cambios{
     font-family: monospace;

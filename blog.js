@@ -12,7 +12,7 @@ let postArray=[
 postArray.reverse()
 let blogContent= document.getElementById("blogContent");
 let addContent= document.querySelector(".moreContent");
-for (let i= 0; i<3; i++){
+for (let i= 0; i<4; i++){
     let postTitle= document.createElement("button");
     postTitle.setAttribute("class", "post");
     postTitle.innerText= postArray.length- postArray.indexOf(postArray[i]) + ". "+ postArray[i][0];
