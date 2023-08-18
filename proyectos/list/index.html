@@ -1,0 +1,52 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando listas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="../../Profile/newLogo.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCXPF4F656"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FCXPF4F656');
+    </script>
+</head>
+<body>
+    <header>
+        <article class="webPages">
+            <a class="otherPages" id="index" href="../../index.html">Programmind</a>
+            <a class="otherPages" href="../../blog.html">Blog</a>
+            <a class="otherPages" href="../../proyectos.html">Proyectos</a>
+        </article>
+        <div class="principal">
+            <h1 class="programmind">Program<strong id="mind">mind</strong></h1>
+        </div>
+    </header>
+    </header>
+    <br>
+    <p>En este código, se generará una lista aleatoria o se seleccionará una cantidad específica de elementos.
+        Ya sea que necesites una lista de números aleatorios para realizar pruebas o desees obtener una
+        muestra aleatoria de elementos de una lista existente.</p>
+    <div id="inputConsole">
+        <button>Añadir item</button>
+        <input type="text">
+    </div>
+    <div class="controlPanel">
+        <button>Eliminar último item</button>
+        <button>Reorganizar</button>
+        <p class="pContainer">
+            Selecciona una cantidad de items
+            <input type="number" value="1">
+            <button>Seleccionar</button>
+        </p>
+    </div>
+    <p id="result"> En este espacio se mostrará las modificaciones</p>
+    <script src="script.js"></script>
+</body>
+</html>

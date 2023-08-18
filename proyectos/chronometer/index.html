@@ -1,0 +1,53 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="../../Profile/newLogo.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCXPF4F656"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FCXPF4F656');
+    </script>
+</head>
+<body>
+    <header>
+        <article class="webPages">
+            <a class="otherPages" id="index" href="../../index.html">Programmind</a>
+            <a class="otherPages" href="../../blog.html">Blog</a>
+            <a class="otherPages" href="../../proyectos.html">Proyectos</a>
+        </article>
+        <div class="principal">
+            <h1 class="programmind">Program<strong id="mind">mind</strong></h1>
+        </div>
+    </header>
+    <br>
+    <div>
+        <div class="no-style">
+            <h2>Minutos</h2>
+            <h2 id="min">00</h2>
+        </div>
+        <div class="no-style">
+            <h2>Segundos</h2>
+            <h2 id="sec"> 00</h2>
+        </div>
+        <div class="no-style">
+            <h2>Milisegundos</h2>
+            <h2 id="msec">00</h2>
+        </div>
+    </div>
+    <br>
+    <div class="buttonsConsole">
+        <button id="start">Iniciar</button>
+        <button id="reset">Reiniciar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

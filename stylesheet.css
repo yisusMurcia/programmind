@@ -1,0 +1,207 @@
+html{
+    font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #1c1c1c;
+}
+header{
+    background-image: url(Profile/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: solid 2px #8591c8;
+    overflow: hidden;
+}
+h1{
+    font-size: 250%;
+}
+h3{
+    font-size: 150%;
+}
+h2{
+    color: #4f65ca;
+    text-align: center;
+}
+.news{
+    text-align: left;
+    border-bottom: solid 4px #4f65ca;
+    margin-left: 8%;
+    padding:  0 20px;
+    color: #8591c8;
+}
+.title{
+    font-size: 200%;
+    color: orangered;
+    background-color: #1c1c1c;
+    align-self: center;
+    border-radius: 30px;
+    padding: 10px;
+}
+#index{
+    text-decoration: none;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: initial 5px;
+}
+.webPages{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 0;
+    padding: 0 5%;
+    overflow: hidden;
+    background-color: rgba(82, 83, 83, 0.425);
+    backdrop-filter: blur(10px);
+}
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.programmind{
+    font-family: Tahoma;
+    color: #2beaccfd;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+    align-self: center;
+}
+#mind{
+    color: purple;
+}
+.otherPages{
+    font-size: 100%;
+    align-self: center;
+    color: rgb(216, 68, 216);
+    text-decoration: underline;
+    margin-bottom: 2px;
+    margin: 1%;
+    padding: 8px;
+    border: none;
+    background: none;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+}
+.page{
+    color: #8591c8;
+    text-align: center;
+    justify-self: center;
+    padding: 10px;
+}
+button{
+    font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #1c1c1c;
+    color: #2beaccfd;
+    padding: 10px;
+    border: solid 2px orangered;
+    border-radius: 10px;
+    margin: 5px;
+    align-self: center;
+}
+section{
+    background-color: black;
+    color: #8591c8;
+    text-align: justify;
+    border: solid 2px #383838;
+    border-radius: 30px;
+    margin: 10px 0;
+    padding: 10px;
+}
+.sections{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 10px;
+    border-collapse: collapse;
+}
+.programmed, .updateNotes{
+    background-color: black;
+    border: solid 3px purple;
+    padding: 5px;
+    border-radius: 20px;
+}
+ul{
+    list-style-position: inside;
+}
+.postContainer{
+    background-color: black;
+}
+.postDiv{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    gap: 3%;
+    margin: 0;
+    border-radius: 30px;
+    padding: 10px 10px;
+    background-color: #1c1c1c;
+    justify-content: space-around;
+}
+.moreContent{
+    position: relative;
+    border-color: #4f65ca;
+    background-color: #383838;
+    margin: 0;
+    height: 50px;
+    width: 80px;;
+    bottom: 25px;
+}
+.post{
+    background-color: black;
+    color: purple;
+    border-radius: 20px;
+    border: solid 4px #2beaccfd;
+    font-size: 125%;
+    align-self: center;
+    text-align: center;
+    padding: 20px;
+    margin: 15px 0;
+}
+.cambios{
+    font-family: monospace;
+}
+.headerCombine{
+    color: #2beaccfd;
+    text-align: center;
+    background-color: black;
+    border: solid 2px #383838;
+    border-radius: 50px 50px 0 0;
+    padding: 10px;
+    margin-bottom: 0;
+}
+.combine{
+    color: #8591c8;
+    font-size: large;
+    background-color: black;
+    border: solid 2px purple;
+    border-top: none;
+    border-radius: 0 0 40px 40px;
+    padding: 15px 20px;
+    margin-top: 0;
+}
+.socialMediaImg{
+    width: 5%;
+    height: 5%;
+    background-color: #383838;
+    padding: 10px;
+    border-radius: 22px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px 5px;
+    background-color: black;
+    border: solid 4px #2beaccfd;
+    border-radius: 30px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 3px;
+}
