@@ -69,11 +69,19 @@ p{
     padding: 15px;
     line-height: 20px;
     border-radius: 20px;
+    margin: 10px 4px;
 }
 .question{
     color: orangered;
     font-size: 1.1rem;
-    background-color: #4f66ca91;
     padding: 2px;
-    border-radius: 5px;
+}
+.subtitle{
+    color: #4f66ca91;
+    text-decoration: underline;
+    text-decoration-color: orangered;
+    background-color: black;
+    padding: 15px;
+    border-radius: 20px;
+    padding-left: 25px;
 }
