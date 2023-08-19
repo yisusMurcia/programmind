@@ -3,7 +3,7 @@ html{
     background-color: #1c1c1c;
 }
 header{
-    background-image: url(../../Profile/banner.png);
+    background-image: url(../Profile/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
@@ -69,4 +69,11 @@ p{
     padding: 15px;
     line-height: 20px;
     border-radius: 20px;
+}
+.question{
+    color: orangered;
+    font-size: 1.1rem;
+    background-color: #4f66ca91;
+    padding: 2px;
+    border-radius: 5px;
 }

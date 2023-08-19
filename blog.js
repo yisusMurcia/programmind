@@ -7,7 +7,8 @@ let postArray=[
     ["Más que solo párrafos", "https://programmind.notion.site/HTML-es-m-s-que-p-rrafos-y-t-tulos-ac7ab7e1ed51448a941b521b6f40d016?pvs=4"],
     ["Definiendo el tamaño", "https://programmind.notion.site/Definiendo-el-tama-o-5cf14fa72a2c42799a12a43db6e816ff?pvs=4"],
     ["Agregando imágenes", "https://programmind.notion.site/Im-genes-34d1dcce90c44e4ba2cc6f809996ef4e?pvs=4"],
-    ["Implicaciones de la Inteligencia Artificial", "blogPosts/IA/index.html"]
+    ["Implicaciones de la Inteligencia Artificial", "blogPosts/IA/index.html"],
+    ["El costo de ser bueno", "blogPosts/serBueno/index.html"]
 ];
 postArray.reverse()
 let blogContent= document.getElementById("blogContent");
