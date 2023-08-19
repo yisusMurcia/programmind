@@ -8,7 +8,7 @@ let postArray=[
     ["Definiendo el tamaño", "https://programmind.notion.site/Definiendo-el-tama-o-5cf14fa72a2c42799a12a43db6e816ff?pvs=4"],
     ["Agregando imágenes", "https://programmind.notion.site/Im-genes-34d1dcce90c44e4ba2cc6f809996ef4e?pvs=4"],
     ["Implicaciones de la Inteligencia Artificial", "blogPosts/IA/index.html"],
-    ["El costo de ser bueno", "blogPosts/serBueno/index.html"]
+    ["El costo de ser bueno", "blogPosts/serBueno/index.html", "blogPosts/serBueno/imagen.jpg"]
 ];
 postArray.reverse()
 let blogContent= document.getElementById("blogContent");
@@ -18,6 +18,10 @@ for (let i= 0; i<4; i++){
     postTitle.setAttribute("class", "post");
     postTitle.innerText= postArray.length- postArray.indexOf(postArray[i]) + ". "+ postArray[i][0];
     postTitle.addEventListener("click", ()=>location.href=(postArray[i][1]));
+    if (postArray[i][3] != null){
+        postTitle.style.backgroundColor= null;
+        postTitle.style.backgroundImage= postArray[i][3];
+    };
     blogContent.appendChild(postTitle);
 };
 addContent.addEventListener("click", ()=>{
