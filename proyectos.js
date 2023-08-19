@@ -6,22 +6,27 @@ let myProyects=[
 let proyectsContent= document.getElementById("myProyects");
 let button= document.querySelector(".moreContent");
 myProyects.reverse();
-for (let i = 0; i < 2; i++) {
+button.remove();//Eliminar cuando haya otro proyecto
+for (let i = 0; i < 3; i++) {
     let post= myProyects[i];
-    let postTitle= document.createElement("button");
-    postTitle.setAttribute("class", "post")
+    let postDiv= document.createElement("div");
+    postDiv.setAttribute("class", "post");
+    let postTitle= document.createElement("p");
     postTitle.innerText= post[0];
-    proyectsContent.appendChild(postTitle);
-    postTitle.addEventListener("click", ()=>location.href=post[1]);
+    postDiv.appendChild(postTitle);
+    proyectsContent.appendChild(postDiv);
+    postDiv.addEventListener("click", ()=>location.href=post[1]);
 };
 button.addEventListener("click", ()=>{
     proyectsContent.innerHTML="";
     button.remove();
     for (let post of myProyects){
-        let postTitle= document.createElement("button");
-        postTitle.setAttribute("class", "post")
+        let postDiv= document.createElement("div");
+        postDiv.setAttribute("class", "post");
+        let postTitle= document.createElement("p");
         postTitle.innerText= post[0];
-        proyectsContent.appendChild(postTitle);
-        postTitle.addEventListener("click", ()=>location.href=post[1]);
+        postDiv.appendChild(postTitle);
+        proyectsContent.appendChild(postDiv);
+        postDiv.addEventListener("click", ()=>location.href=post[1]);
     };
 });

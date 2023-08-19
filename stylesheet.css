@@ -47,7 +47,6 @@ h2{
     align-content: center;
     margin: 0;
     padding: 0 5%;
-    overflow: hidden;
     background-color: rgba(82, 83, 83, 0.425);
     backdrop-filter: blur(10px);
 }
@@ -124,37 +123,46 @@ section{
 ul{
     list-style-position: inside;
 }
+.post{
+    background-color: black;
+    background-size: contain;
+    overflow: hidden;
+    aspect-ratio: 1;
+    color: purple;
+    border-radius: 20px;
+    border: solid 2px #2beaccfd;
+    font-size: 100%;
+    text-align: center;
+}
 .postContainer{
     background-color: black;
 }
 .postDiv{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
     justify-content: space-around;
     width: 95%;
     margin: 0;
+    row-gap: 25px;
     border-radius: 30px;
     padding: 10px 10px;
     background-color: #1c1c1c;
 }
-.post{
-    background-color: black;
-    color: purple;
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-    border: solid 4px #2beaccfd;
-    font-size: 100%;
-    text-align: center;
+.post > p{
+    font-size: 3vw;
+    background-color: #1c1c1cee;
+    margin-top: 0;
 }
 .moreContent{
+    font-size: 180%;
+    padding: 0;
     position: relative;
     border-color: #4f65ca;
     background-color: #383838;
     margin: 0;
-    height: 50px;
-    width: 80px;;
-    bottom: 30px;
+    height: 45px;
+    width: 75px;
+    bottom: 10px;
 }
 .cambios{
     font-family: monospace;

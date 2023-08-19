@@ -7,31 +7,33 @@ let postArray=[
     ["Más que solo párrafos", "https://programmind.notion.site/HTML-es-m-s-que-p-rrafos-y-t-tulos-ac7ab7e1ed51448a941b521b6f40d016?pvs=4"],
     ["Definiendo el tamaño", "https://programmind.notion.site/Definiendo-el-tama-o-5cf14fa72a2c42799a12a43db6e816ff?pvs=4"],
     ["Agregando imágenes", "https://programmind.notion.site/Im-genes-34d1dcce90c44e4ba2cc6f809996ef4e?pvs=4"],
-    ["Implicaciones de la Inteligencia Artificial", "blogPosts/IA/index.html"],
+    ["Inteligencia Artificial", "blogPosts/IA/index.html"],
     ["El costo de ser bueno", "blogPosts/serBueno/index.html", "blogPosts/serBueno/imagen.jpg"]
 ];
 postArray.reverse()
 let blogContent= document.getElementById("blogContent");
 let addContent= document.querySelector(".moreContent");
-for (let i= 0; i<4; i++){
-    let postTitle= document.createElement("button");
-    postTitle.setAttribute("class", "post");
-    postTitle.innerText= postArray.length- postArray.indexOf(postArray[i]) + ". "+ postArray[i][0];
-    postTitle.addEventListener("click", ()=>location.href=(postArray[i][1]));
-    if (postArray[i][3] != null){
-        postTitle.style.backgroundColor= null;
-        postTitle.style.backgroundImage= postArray[i][3];
-    };
-    blogContent.appendChild(postTitle);
+for (let i= 0; i<3; i++){
+    let post= document.createElement("div");
+    post.setAttribute("class", "post");
+    let postTitle= document.createElement("p");
+    postTitle.innerText= postArray[i][0];
+    post.addEventListener("click", ()=>location.href=(postArray[i][1]));
+    post.appendChild(postTitle);
+    blogContent.appendChild(post);
+    post.style.backgroundImage= `url(${postArray[i][2]})`;
 };
 addContent.addEventListener("click", ()=>{
         blogContent.innerHTML= "";
         for (let post of postArray){
-            let postTitle= document.createElement("button");
-            postTitle.setAttribute("class", "post");
-            postTitle.addEventListener("click", ()=>location.href=(post[1]));
-            postTitle.innerText= postArray.length- postArray.indexOf(post) + ". "+ post[0];
-            blogContent.appendChild(postTitle);
+            let postDiv= document.createElement("div");
+            postDiv.setAttribute("class", "post");
+            let postTitle= document.createElement("p");
+            postTitle.innerText= post[0];
+            postDiv.addEventListener("click", ()=>location.href=(post[1]));
+            postDiv.appendChild(postTitle);
+            blogContent.appendChild(postDiv);
+            postDiv.style.backgroundImage= `url(${post[2]})`;
         };
         button.remove();
     });
