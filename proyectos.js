@@ -5,11 +5,8 @@ let myProyects=[
 ];
 let proyectsContent= document.getElementById("myProyects");
 let button= document.querySelector(".moreContent");
-if (myProyects.length< 4){
-    button.remove();
-};
 myProyects.reverse();
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 2; i++) {
     let post= myProyects[i];
     let postTitle= document.createElement("button");
     postTitle.setAttribute("class", "post")
