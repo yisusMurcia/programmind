@@ -37,8 +37,6 @@ h2{
 }
 #index{
     text-decoration: none;
-    background-color: #1c1c1c;
-    border-radius: 15px;
     padding: initial 5px;
 }
 .webPages{
@@ -71,13 +69,18 @@ h2{
 .otherPages{
     font-size: 100%;
     align-self: center;
-    color: rgb(216, 68, 216);
+    color: #cc33cc;
     text-decoration: underline;
     margin-bottom: 2px;
     margin: 1%;
     padding: 8px;
-    border: none;
-    background: none;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+}
+.otherPages:hover{
+    color: #fa3efa;
+    background-color: #383838;
+    border-radius: 15px;
 }
 .description{
     display: flex;
@@ -98,6 +101,13 @@ button{
     border-radius: 10px;
     margin: 5px;
     align-self: center;
+}
+button:active{
+    border-color: #8591c8;
+    color: purple;
+}
+button:hover{
+    border-color: #db5304;
 }
 section{
     background-color: black;
@@ -192,6 +202,10 @@ ul{
     background-color: #383838;
     padding: 10px;
     border-radius: 22px;
+}
+.socialMediaImg:hover{
+    border: solid #1c1c1c 2px;
+    transition: rotate(360deg);
 }
 nav{
     display: flex;
