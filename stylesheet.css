@@ -62,6 +62,7 @@ h2{
     padding: 10px;
     background-color: #1c1c1c;
     align-self: center;
+    cursor: pointer;
 }
 #mind{
     color: purple;
@@ -92,6 +93,10 @@ h2{
     justify-self: center;
     padding: 10px;
 }
+.page:hover{
+    cursor: pointer;
+    color: #4f65ca;
+}
 button{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #1c1c1c;
@@ -108,6 +113,7 @@ button:active{
 }
 button:hover{
     border-color: #db5304;
+    color: #4f65ca;
 }
 section{
     background-color: black;
@@ -143,6 +149,10 @@ ul{
     border: solid 2px #2beaccfd;
     font-size: 100%;
     text-align: center;
+    cursor: pointer;
+}
+.post:hover{
+    border-width: 4px;
 }
 .postContainer{
     background-color: black;
@@ -162,6 +172,10 @@ ul{
     font-size: 3vw;
     background-color: #1c1c1cee;
     margin-top: 0;
+}
+.post:hover > p{
+    background-color: #111111;
+    color: rgb(100, 1, 100);
 }
 .moreContent{
     font-size: 180%;
@@ -204,8 +218,7 @@ ul{
     border-radius: 22px;
 }
 .socialMediaImg:hover{
-    border: solid #1c1c1c 2px;
-    transition: rotate(360deg);
+    border: solid #8591c8 4px;
 }
 nav{
     display: flex;

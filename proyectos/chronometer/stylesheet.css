@@ -42,6 +42,7 @@ header{
     padding: 10px;
     background-color: #1c1c1c;
     align-self: center;
+    cursor: pointer;
 }
 #mind{
     color: purple;
@@ -93,13 +94,18 @@ div [class= "no-style"]{
 .otherPages{
     font-size: 100%;
     align-self: center;
-    color: rgb(216, 68, 216);
+    color: #cc33cc;
     text-decoration: underline;
     margin-bottom: 2px;
     margin: 1%;
     padding: 8px;
-    border: none;
-    background: none;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+}
+.otherPages:hover{
+    color: #fa3efa;
+    background-color: #383838;
+    border-radius: 15px;
 }
 button{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -110,6 +116,14 @@ button{
     border-radius: 15px;
     padding: 8px;
     align-self: center;
+}
+button:active{
+    border-color: #8591c8;
+    color: purple;
+}
+button:hover{
+    border-color: #db5304;
+    color: #4f65ca;
 }
 #min, #sec, #msec{
     border-top: none;

@@ -35,5 +35,5 @@ addContent.addEventListener("click", ()=>{
             blogContent.appendChild(postDiv);
             postDiv.style.backgroundImage= `url(${post[2]})`;
         };
-        button.remove();
+        addContent.remove();
     });
