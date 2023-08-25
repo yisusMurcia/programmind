@@ -3,7 +3,7 @@ html{
     background-color: #1c1c1c;
 }
 header{
-    background-image: url(Profile/banner.png);
+    background-image: url(../../Profile/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
@@ -37,8 +37,6 @@ h2{
 }
 #index{
     text-decoration: none;
-    background-color: #1c1c1c;
-    border-radius: 15px;
     padding: initial 5px;
 }
 .webPages{
@@ -64,6 +62,7 @@ h2{
     padding: 10px;
     background-color: #1c1c1c;
     align-self: center;
+    cursor: pointer;
 }
 #mind{
     color: purple;
@@ -71,11 +70,25 @@ h2{
 .otherPages{
     font-size: 100%;
     align-self: center;
-    color: rgb(216, 68, 216);
+    color: #cc33cc;
     text-decoration: underline;
     margin-bottom: 2px;
     margin: 1%;
     padding: 8px;
-    border: none;
-    background: none;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+}
+.otherPages:hover{
+    color: #fa3efa;
+    background-color: #383838;
+    border-radius: 15px;
+}
+section{
+    background-color: black;
+    color: #8591c8;
+    text-align: justify;
+    border: solid 2px #383838;
+    border-radius: 30px;
+    margin: 10px 0;
+    padding: 10px;
 }
