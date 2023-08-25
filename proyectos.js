@@ -30,3 +30,5 @@ button.addEventListener("click", ()=>{
         postDiv.addEventListener("click", ()=>location.href=post[1]);
     };
 });
+let IAPost= document.querySelector("#IA");
+IAPost.addEventListener("click", ()=>{location.href= "proyectos/pythonIA/pythonIA.html"})
