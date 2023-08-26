@@ -18,14 +18,24 @@ h3{
 }
 h2{
     color: #4f65ca;
-    text-align: center;
+    padding: 0 20px;
 }
-.news{
-    text-align: left;
-    border-bottom: solid 4px #4f65ca;
-    margin-left: 8%;
-    padding:  0 20px;
-    color: #8591c8;
+a{
+    margin: 30px 30px;
+    color: orangered;
+    padding: 10px 30px;
+    font-size: larger;
+    background-color: #383838;
+    border-radius: 20px;
+}
+a:hover{
+    background-color: #1c1c1c;
+    color: #e0240b;
+    border: solid 2px #383838;
+    padding: 8px 28px;
+}
+.center{
+    text-align: center;
 }
 .title{
     font-size: 200%;
