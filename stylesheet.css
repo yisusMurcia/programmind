@@ -4,7 +4,8 @@ html{
 }
 ::-webkit-scrollbar{
     background-color: #383838;
-    width: 8px;
+    width: 5px;
+    height: 5px;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb{
@@ -104,6 +105,10 @@ h2{
     align-items: stretch;
     gap: 5px;
 }
+.carousel > .post{
+    width: 25%;
+    flex-shrink: 0;
+}
 .page{
     color: #8591c8;
     text-align: center;
@@ -155,7 +160,6 @@ ul{
     background-size: contain;
     overflow: hidden;
     aspect-ratio: 1;
-    width: 25%;
     color: purple;
     border-radius: 20px;
     border: solid 2px #2beaccfd;

@@ -13,7 +13,7 @@ let postArray=[
 postArray.reverse()
 let blogContent= document.getElementById("blogContent");
 let addContent= document.querySelector(".moreContent");
-for (let i= 0; i<3; i++){
+for (let i= 0; i<6; i++){
     let post= document.createElement("div");
     post.setAttribute("class", "post");
     let postTitle= document.createElement("p");
