@@ -25,11 +25,26 @@ h1{
 }
 h3{
     font-size: 150%;
+    color: orangered;
 }
 h2{
     color: #4f65ca;
     text-align: center;
     font-size: 200%;
+}
+.alignWithImage{
+    clear: left;
+}
+.textAndimg{
+    float: right;
+    border: solid 2px orangered;
+    border-radius: 20px;
+    width: 150px;
+    aspect-ratio: 1;
+    margin: 15px;
+}
+.noFloat{
+    overflow: auto;
 }
 .news{
     text-align: left;
