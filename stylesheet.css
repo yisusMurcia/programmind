@@ -5,7 +5,7 @@ html{
 ::-webkit-scrollbar{
     background-color: #383838;
     width: 5px;
-    height: 5px;
+    height: 10px;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb{
@@ -29,6 +29,7 @@ h3{
 h2{
     color: #4f65ca;
     text-align: center;
+    font-size: 200%;
 }
 .news{
     text-align: left;
@@ -101,9 +102,11 @@ h2{
     display: flex;
     flex-direction: row;
     overflow: auto;
-    justify-content: stretch;
+    border: solid 5px #383838;
+    border-radius: 20px;
+    padding: 15px;
     align-items: stretch;
-    gap: 5px;
+    gap: 15px;
 }
 .carousel > .post{
     width: 30%;
@@ -228,13 +231,15 @@ ul{
 }
 .socialMediaImg{
     width: 5%;
-    height: 5%;
+    max-width: 35px;
+    aspect-ratio: 1;
     background-color: #383838;
     padding: 10px;
     border-radius: 22px;
 }
 .socialMediaImg:hover{
     border: solid #8591c8 4px;
+    padding: 6px;
 }
 nav{
     display: flex;
@@ -243,8 +248,8 @@ nav{
     margin: 10px;
     padding: 10px 5px;
     background-color: black;
-    border: solid 4px #2beaccfd;
-    border-radius: 30px;
+    border: solid 3px #2beaccfd;
+    border-radius: 25px;
 }
 .center{
     display: flex;
