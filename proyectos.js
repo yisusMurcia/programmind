@@ -21,7 +21,7 @@ do {
     i++;
 } while (i< 3);
 button.addEventListener("click", ()=>{
-    proyectsDiv.innerHTML= "";
+    proyectsContent.innerHTML= "";
     button.remove();
     for (let post of myProyects){
         let postDiv= document.createElement("div");
