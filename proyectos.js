@@ -7,9 +7,6 @@ let myProyects=[
 let button= document.querySelector(".moreContent");
 let proyectsContent= document.querySelector("#myProyects");
 myProyects.reverse();
-if (button!= null){
-    button.remove();//Eliminar cuando haya otro proyecto
-};
 let i= 0;
 do {
     let post= myProyects[i];
