@@ -22,7 +22,7 @@ do {
     postDiv.addEventListener("click", ()=>location.href=post[1]);
     postDiv.style.backgroundImage= `url(${post[2]})`;
     i++;
-} while (i< 4);
+} while (i< 3);
 button.addEventListener("click", ()=>{
     proyectsDiv.innerHTML= "";
     button.remove();

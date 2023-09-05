@@ -106,7 +106,7 @@ h2{
     gap: 5px;
 }
 .carousel > .post{
-    width: 25%;
+    width: 30%;
     flex-shrink: 0;
 }
 .page{
@@ -175,7 +175,7 @@ ul{
 }
 .postDiv{
     display: grid;
-    grid-template-columns: repeat(3, 25%);
+    grid-template-columns: repeat(3, 30%);
     justify-content: space-around;
     width: 95%;
     margin: 0;
