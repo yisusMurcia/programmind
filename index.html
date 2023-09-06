@@ -40,6 +40,14 @@
         </div>
     </header>
     <main>
+        <nav class="navBar">
+            <a href="#programmindInfo">Acerca de programmind</a>
+            <a href="#autorInfo">Sobre el autor</a>
+            <a href="#blogContent">Blog</a>
+            <a href="#myProyects">Proyectos</a>
+            <a href="#futureChanges">futuros cambios</a>
+            <a href="#socialMedia">Redes Sociales</a>
+        </nav>
         <section class="description">
             <p>¡Bienvenido a este espacio donde la pasión por la programación se encuentra en cada línea de código!
                 Aqui podrás encontrar:</p>
@@ -50,8 +58,8 @@
             </ul>
             <button id="updateNotes">Últimos cambios</button>
         </section>
-        <section>
-            <h2>Acerca de programmind</h2>
+        <section id="programmindInfo">
+            <h2>Acerca de <h1 class="programmind">Program<strong id="mind">mind</strong></h1></h2>
             <p>
                 Programmind es un pequeño proyecto que surge como una forma de mostrarle al mundo mi trabajo,
                 de transmitir mis ideas y generar un impacto en los demás.
@@ -64,12 +72,17 @@
                 transmitir mis ideas y reflexiones, a lo mejor pueden ayudar a alguien o al menos que le parezca
                 interesante.
             </p>
-            <div class="noFloat">
+            <div id="autorInfo">
                 <h3> Acerca del autor</h3>
-                <img src="Profile/yisus.jpg" alt="Jesús Antonio Murcia" class="textAndimg">
+                <img src="Profile/yisus.png" alt="Jesús Antonio Murcia" class="textAndimg">
                 <p class="alignWithImage">
-                    Programmind está diseñado por Jesús Antonio Murcia Guzmán, una persona apasiona por la
+                    Programmind está diseñado por Jesús Antonio Murcia Guzmán, soy una persona apasiona por la
                     programación y que disfruta perder el tiempo pensando en grandes ideas.
+                </p>
+                <p class="alignWithImage">
+                    Mi sueño es llegar lejos, morir sin arrepentimientos y si pudiese repetir mi vida tal como
+                    la estoy viviendo. A través de programmind quiero darme a conocer al mundo y mostrar mis
+                    habilidades.
                 </p>
         </section>
             </div>
@@ -83,8 +96,18 @@
                 <div class="carousel" id="blogContent"></div>
             </div>
         </section>
+        <section id="futureChanges">
+            <h2 class="news">Futuros cambios de Programmind</h2>
+            <ul>
+                <li>Agregar animaciones adicionales.</li>
+                <li>Filtrar post de acuerdo a temas.</li>
+                <li>Página con recomendaciones para aprender a programar</li>
+                <li>Imánges para los post de las páginas de blog y proyectos</li>
+            </ul>
+        </section>
         <footer>
-            <nav>
+            <h2>Redes sociales</h2>
+            <nav id="socialMedia">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="Twitter bird logo by Twitter, Inc." class="socialMediaImg">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png" alt="GitHub logo by GitHub, Inc." class="socialMediaImg">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/320px-Threads_%28app%29_logo.svg.png" alt="Threads logo by Meta, Inc." class="socialMediaImg">
