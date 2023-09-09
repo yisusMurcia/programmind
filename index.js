@@ -1,5 +1,5 @@
 let socialMediaImg= document.getElementsByClassName("socialMediaImg");
-let socialMedia= ["https://twitter.com/theprogrammind", "https://github.com/yisusMurcia", "https://www.threads.net/@jesusantoniomurciaguzman"];
+let socialMedia= ["https://twitter.com/theprogrammind", "https://github.com/yisusMurcia", "https://www.threads.net/@jesusantoniomurciaguzman", "https://www.instagram.com/theProgrammind/"];
 let header= document.querySelectorAll(".header");
 let proyectH= header[0];
 let blogH= header[1];
