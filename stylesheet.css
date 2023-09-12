@@ -150,12 +150,12 @@ a:hover{
     color: #4f65ca;
 }
 button{
-    font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #1c1c1c;
-    color: #2beaccfd;
+    font-family: Tahoma;
+    background-color: #00aefffd;
+    color: black;
     padding: 10px;
-    border: solid 2px orangered;
-    border-radius: 10px;
+    border: solid 2px #2cdbc1b6;
+    border-radius: 8px;
     margin: 5px;
     align-self: center;
 }
