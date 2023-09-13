@@ -151,21 +151,25 @@ a:hover{
 }
 button{
     font-family: Tahoma;
-    background-color: #00aefffd;
-    color: black;
+    font-weight: bold;
+    background-color: #2beaccfd;
+    color: purple;
     padding: 10px;
-    border: solid 2px #2cdbc1b6;
-    border-radius: 8px;
+    border: solid 2px #383838;
+    border-radius: 5px;
     margin: 5px;
     align-self: center;
 }
 button:active{
-    border-color: #8591c8;
-    color: purple;
+    border-width: 4px;
+    color: #fa3efa;
+    border-color: #383838;
+    margin: 3px;
 }
 button:hover{
-    border-color: #db5304;
-    color: #4f65ca;
+    border-color: #383838;
+    background-color: #2bd4eafd;
+    color: #4b134b;
 }
 section{
     background-color: black;
@@ -225,14 +229,21 @@ ul{
 }
 .moreContent{
     font-size: 180%;
+    text-align: center;
     padding: 0;
+    rotate: 90deg;
     position: relative;
     border-color: #4f65ca;
-    background-color: #383838;
+    background-color: #1c1c1c;
+    border-radius: 15px;
     margin: 0;
-    height: 45px;
-    width: 75px;
-    bottom: 10px;
+    width: 45px;
+    height: 75px;
+    bottom: 27px;
+}
+.moreContent:hover{
+    font-weight: bolder;
+    background-color: #4f65ca;
 }
 .cambios{
     font-family: monospace;
