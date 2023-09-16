@@ -10,4 +10,4 @@ for (let i = 0; i < 3; i++) {
 };
 blogH.addEventListener("click", ()=>location.href="blog.html");
 proyectH.addEventListener("click", ()=>location.href="proyectos.html");
-updateNotes.addEventListener("click", ()=>location.href="https://github.com/yisusMurcia/programmind/commits/main");
+updateNotes.addEventListener("click", ()=>window.open("https://github.com/yisusMurcia/programmind/commits/main"));
