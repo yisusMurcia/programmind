@@ -189,6 +189,54 @@ section{
 ul{
     list-style-position: inside;
 }
+select{
+    background-color: black;
+    color: #2bd4eafd;
+    border-radius: 25px;
+    margin: 15px;
+    border: none;
+    width: 90%;
+    aspect-ratio: 10/1;
+}
+option{
+    border-radius: 20px;
+    color: #2bd4eafd;
+}
+option:hover{
+    background-color: #383838;
+    color: purple;
+}
+code{
+    background-color: black;
+    padding: 5px;
+    border: solid 2px purple;
+    border-radius: 10px;
+    margin: 5px;
+}
+.programQuestion{
+    background-color: #5f57ff;
+    padding: 10px 0;
+    overflow: hidden;
+}
+.programQuestion > h2{
+    color: orangered;
+    background-color: #1c1c1c;
+    border-radius: 30px;
+    padding: 15px;
+    margin: 5px 30%;
+}
+.codeContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #1c1c1c;
+    margin: -1;
+}
+.codeQuestion{
+    border-radius: 25px;
+    width: 350px;
+    padding: 8px;
+    background-color: #383838;
+}
 .post{
     background-color: black;
     background-size: contain;
