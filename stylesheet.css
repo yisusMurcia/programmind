@@ -189,29 +189,35 @@ section{
 ul{
     list-style-position: inside;
 }
-select{
+aside{
     background-color: black;
-    color: #2bd4eafd;
-    border-radius: 25px;
-    margin: 15px;
-    border: none;
-    width: 90%;
-    aspect-ratio: 10/1;
-}
-option{
-    border-radius: 20px;
-    color: #2bd4eafd;
-}
-option:hover{
-    background-color: #383838;
+    border-radius: 15px;
     color: purple;
+    padding: 5px;
+    margin-top: 10px;
 }
 code{
-    background-color: black;
-    padding: 5px;
-    border: solid 2px purple;
     border-radius: 10px;
     margin: 5px;
+}
+input[type= "radio"]{
+    accent-color: #2beaccfd;
+    background-color: black;
+}
+form{
+    margin: 10px;
+    background-color: #5f57ff;
+    padding: 5px;
+    border-color: purple;
+    border-radius: 20px;
+    width: 90%;
+}
+label{
+    color: black;
+    font-weight: 900;
+}
+fieldset{
+    border: none;
 }
 .programQuestion{
     background-color: #5f57ff;
@@ -230,12 +236,17 @@ code{
     flex-wrap: nowrap;
     background-color: #1c1c1c;
     margin: -1;
+    padding: 15px;
+    gap: 15px;
 }
 .codeQuestion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 25px;
     width: 350px;
     padding: 8px;
-    background-color: #383838;
+    background-color: black;
 }
 .post{
     background-color: black;
