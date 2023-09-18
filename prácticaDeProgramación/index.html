@@ -45,19 +45,19 @@
         <aside>
             <p>Selecciona la opción correcta, luego haz click en revisar</p>
         </aside>
-        <section class="programQuestions">
+        <section class="programQuestions javascript">
             <span class="programmingLanguage">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/320px-Unofficial_JavaScript_logo_2.svg.png" alt="Javascript">
                 <h2>Javascript</h2>
             </span>
-            <div class="codeContainer">
+            <div class="codeContainer ">
                 <div class="codeQuestion">
                     <h3>Práctica 1</h3>
                     <code>
                         let numero= prompt("Ingresa un número:");
                     </code>
                     <p>¿Cómo se verifica si es par o impar?</p>
-                    <form class="code">
+                    <form class="code javascript">
                         <fieldset>
                             <input type="radio" id="q1O1" name="q1" value="o1">
                             <label for="q1O1">
@@ -95,8 +95,12 @@
                             </label>
                         </fieldset>
                     </form>
-                    <p class="answer1"></p>
-                    <button class="button1">Revisar</button>
+                    <p class="answer" id="práctica1">
+                        Respuesta 2:
+                        Para verificar que un número sea par o impar, se obtiene el residuo de la división del número entre 2,
+                        si este es igual a 0 es par, sino es impar;
+                    </p>
+                    <button class="button1 javascript">Revisar</button>
                 </div>
                 <div class="codeQuestion">
                     <h3>Práctica 2</h3>
@@ -112,7 +116,7 @@
                           console.log(buscar([1, 2, 3, 4, 5], 3));
                     </code>
                     <p>¿Cúal es la salida del código?</p>
-                    <form class="code">
+                    <form class="code javascript">
                         <fieldset>
                             <input type="radio" id="q2O1" name="q2" value="o1">
                             <label for="q1O1">2</label>
@@ -131,8 +135,13 @@
                             <label for="q2O4">-1</label>
                         </fieldset>
                     </form>
-                    <p class="answer2"></p>
-                    <button class="button2">Revisar</button>
+                    <p class="answer" id="práctica2">
+                        Respuesta 1:
+                        El códigoanaliza todo el array buscando el elemento 3, y retorna el indexde elemento,
+                         el 3 está en la tercera posción, pero el index inicia desde 0, por lo que se le quita
+                         1 a 3.
+                    </p>
+                    <button class="button2 javascript">Revisar</button>
                 </div>
             </div>
         </section>

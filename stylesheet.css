@@ -201,7 +201,6 @@ input[type= "radio"]{
 }
 form{
     margin: 10px;
-    background-color: yellow;
     padding: 5px;
     border-color: purple;
     border-radius: 20px;
@@ -213,6 +212,16 @@ label{
 }
 fieldset{
     border: none;
+}
+.javascript{
+    background-color: yellow;
+}
+button.javascript{
+    color: black;
+}
+button.javascript:hover{
+    background-color: #ffe601;
+    color: #1c1c1c;
 }
 .programmingLanguage{
     display: flex;
@@ -235,7 +244,6 @@ fieldset{
     color: orangered;
 }
 .programQuestions{
-    background-color: yellow;
     padding: 10px 0;
     overflow: hidden;
 }
