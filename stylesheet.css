@@ -201,7 +201,7 @@ input[type= "radio"]{
 }
 form{
     margin: 10px;
-    background-color: #5f57ff;
+    background-color: yellow;
     padding: 5px;
     border-color: purple;
     border-radius: 20px;
@@ -214,18 +214,30 @@ label{
 fieldset{
     border: none;
 }
-.programQuestions{
-    background-color: #5f57ff;
-    padding: 10px 0;
-    overflow: hidden;
-}
-.programQuestions > h2{
-    color: orangered;
+.programmingLanguage{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 1rem;
     background-color: #1c1c1c;
     border-radius: 30px;
-    padding: 15px;
-    margin: 5px auto;
+    margin: 2rem auto;
+    padding: 1.5em;
     width: 60%;
+    height: 3em;
+}
+.programmingLanguage > img{
+    width: 2em;
+    border-radius: 15%;
+    margin: auto 5px;
+}
+.programmingLanguage > h2{
+    color: orangered;
+}
+.programQuestions{
+    background-color: yellow;
+    padding: 10px 0;
+    overflow: hidden;
 }
 .codeContainer{
     display: flex;
