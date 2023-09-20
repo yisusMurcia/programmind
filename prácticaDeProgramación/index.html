@@ -52,15 +52,15 @@
             </span>
             <div class="codeContainer ">
                 <div class="codeQuestion">
-                    <h3>Práctica 1</h3>
+                    <h3>Residuos</h3>
                     <code>
                         let numero= prompt("Ingresa un número:");
                     </code>
                     <p>¿Cómo se verifica si es par o impar?</p>
                     <form class="code javascript">
                         <fieldset>
-                            <input type="radio" id="q1O1" name="q1" value="o1">
-                            <label for="q1O1">
+                            <input type="radio" id="js1O1" name="js1" value="o1">
+                            <label for="js1O1">
                                 <code>
                                     if (numero== 2){
                                         console.log("par");
@@ -71,8 +71,8 @@
                             </label>
                         </fieldset>
                         <fieldset>
-                            <input type="radio" id="q1O2" name="q1" value="o2">
-                            <label for="q1O2">
+                            <input type="radio" id="js1O2" name="js1" value="o2">
+                            <label for="js1O2">
                                 <code>
                                     if (numero%2== 0){
                                         console.log("par");
@@ -83,8 +83,8 @@
                             </label>
                         </fieldset>
                         <fieldset>
-                            <input type="radio" id="q1O3" name="q1" value="o3">
-                            <label for="q1O3">
+                            <input type="radio" id="js1O3" name="js1" value="o3">
+                            <label for="js1O3">
                                 <code>
                                     if (numero%2== 0){
                                         console.log("impar");
@@ -95,53 +95,90 @@
                             </label>
                         </fieldset>
                     </form>
-                    <p class="answer" id="práctica1">
+                    <p class="answer" id="js1Answer">
                         Respuesta 2:
                         Para verificar que un número sea par o impar, se obtiene el residuo de la división del número entre 2,
                         si este es igual a 0 es par, sino es impar;
                     </p>
-                    <button class="button1 javascript">Revisar</button>
+                    <button class="buttonJs1 javascript">Revisar</button>
                 </div>
                 <div class="codeQuestion">
-                    <h3>Práctica 2</h3>
+                    <h3>Array e index</h3>
                     <code>
-                        function buscar(array, valor) {
-                            for (let i = 0; i < array.length; i++) {
-                              if (array[i] == valor) {
+                        function buscar(array, valor){
+                            for (let i = 0; i < array.length; i++){
+                              if (array[i] == valor){
                                 return i;
-                              }
-                            }
+                              };
+                            };
                             return -1;
-                          }
+                          };
                           console.log(buscar([1, 2, 3, 4, 5], 3));
                     </code>
                     <p>¿Cúal es la salida del código?</p>
                     <form class="code javascript">
                         <fieldset>
-                            <input type="radio" id="q2O1" name="q2" value="o1">
-                            <label for="q1O1">2</label>
+                            <input type="radio" id="js2O1" name="js2" value="o1">
+                            <label for="js2O1">2</label>
                         </fieldset>
                         <fieldset>
-                            <input type="radio" id="q2O2" name="q2" value="o2">
-                            <label for="q1O2">3</code>
+                            <input type="radio" id="js2O2" name="js2" value="o2">
+                            <label for="js1O2">3</code>
                             </label>
                         </fieldset>
                         <fieldset>
-                            <input type="radio" id="q2O3" name="q2" value="o3">
-                            <label for="q1O3">1</label>
+                            <input type="radio" id="js2O3" name="js2" value="o3">
+                            <label for="js2O3">1</label>
                         </fieldset>
                         <fieldset>
-                            <input type="radio" id="q2O4" name="q2" value="o3">
-                            <label for="q2O4">-1</label>
+                            <input type="radio" id="js2O4" name="js2" value="o3">
+                            <label for="js2O4">-1</label>
                         </fieldset>
                     </form>
-                    <p class="answer" id="práctica2">
+                    <p class="answer" id="js2Answer">
                         Respuesta 1:
-                        El códigoanaliza todo el array buscando el elemento 3, y retorna el indexde elemento,
+                        El código analiza todo el array buscando el elemento 3, y retorna el indexde elemento,
                          el 3 está en la tercera posción, pero el index inicia desde 0, por lo que se le quita
                          1 a 3.
                     </p>
-                    <button class="button2 javascript">Revisar</button>
+                    <button class="buttonJs2 javascript">Revisar</button>
+                </div>
+                <div class="codeQuestion">
+                    <h3>Array</h3>
+                    <code>
+                        let cadena= "Hola, mundo"
+                        let resultado = "";
+                        for (let i = cadena.length - 1; i >= 0; i--) {
+                            resultado += cadena[i];
+                        };
+                        console.log(resultado);
+                    </code>
+                    <p>¿Cúal es la salida del código?</p>
+                    <form class="code javascript">
+                        <fieldset>
+                            <input type="radio" id="js3O1" name="js3" value="o1">
+                            <label for="js3O1">"mundo"</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="js3O2" name="js3" value="o2">
+                            <label for="js3O2">"Hola"</code>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="js3O3" name="js3" value="o3">
+                            <label for="js3O3">"mundo, Hola"</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="q2O4" name="q2" value="o3">
+                            <label for="q2O4">"Hola, mundo"</label>
+                        </fieldset>
+                    </form>
+                    <p class="answer" id="js3Answer">
+                        Respuesta 3:
+                        El código toma el texto "Hola, mundo" e invierte el orden
+                        de las palabras a través del for loop
+                    </p>
+                    <button class="buttonJs3 javascript">Revisar</button>
                 </div>
             </div>
         </section>
@@ -149,6 +186,7 @@
             <h2 class="news">Futuros cambios de Programmind</h2>
             <ul>
                 <li>Problemas con Python</li>
+                <li>Botón de verficar respuesta</li>
             </ul>
         </section>
     </main>

@@ -5,25 +5,39 @@ for (let element of answers){
     answersExplain.push(element.innerText)
     element.innerHTML= "";
 };
-let question1= "q1O2";
-let button1= document.querySelector(`.button1`);
-let answer1= document.querySelector(`#práctica1`);
-button1.addEventListener("click",()=>{
-    let input= document.querySelector(`#${question1}`);
+//pregunta JS operación de residuo
+let js1= "js1O2";
+let buttonJs1= document.querySelector(`.buttonJs1`);
+let js1Answer= document.querySelector(`#js1Answer`);
+buttonJs1.addEventListener("click",()=>{
+    let input= document.querySelector(`#${js1}`);
     if (input.checked){
-        answer1.innerHTML= "Correcto <br>"+ answersExplain[0];
+        js1Answer.innerHTML= "Correcto <br>"+ answersExplain[0];
     }else{
-        answer1.innerHTML= "intentalo otra vez";
+        js1Answer.innerHTML= "intentalo otra vez";
     };
 });
-let question2= "q2O1";
-let button2= document.querySelector(`.button2`);
-let answer2= document.querySelector(`#práctica2`);
-button2.addEventListener("click",()=>{
-    let input= document.querySelector(`#${question2}`);
+//Pregunta JS array e index
+let js2= "js2O1";
+let buttonJs2= document.querySelector(`.buttonJs2`);
+let js2Answer= document.querySelector(`#js2Answer`);
+buttonJs2.addEventListener("click",()=>{
+    let input= document.querySelector(`#${js2}`);
     if (input.checked){
-        answer2.innerHTML= "Correcto <br>"+ answersExplain[1];
+        js2Answer.innerHTML= "Correcto <br>"+ answersExplain[1];
     }else{
-        answer2.innerHTML= "intentalo otra vez";
+        js2Answer.innerHTML= "intentalo otra vez";
+    };
+});
+//Pregunta JS array y string
+let js3= "js3O3";
+let buttonJs3= document.querySelector(`.buttonJs3`);
+let js3Answer= document.querySelector(`#js3Answer`);
+buttonJs3.addEventListener("click",()=>{
+    let input= document.querySelector(`#${js3}`);
+    if (input.checked){
+        js3Answer.innerHTML= "Correcto <br>"+ answersExplain[2];
+    }else{
+        js3Answer.innerHTML= "intentalo otra vez";
     };
 });
