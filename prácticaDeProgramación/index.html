@@ -169,8 +169,8 @@
                             <label for="js3O3">"mundo, Hola"</label>
                         </fieldset>
                         <fieldset>
-                            <input type="radio" id="q2O4" name="q2" value="o3">
-                            <label for="q2O4">"Hola, mundo"</label>
+                            <input type="radio" id="js3O4" name="js3" value="o3">
+                            <label for="js3O4">"Hola, mundo"</label>
                         </fieldset>
                     </form>
                     <p class="answer" id="js3Answer">
@@ -180,6 +180,89 @@
                     </p>
                     <button class="buttonJs3 javascript">Revisar</button>
                 </div>
+                <div class="codeQuestion">
+                    <h3>in y strings</h3>
+                    <code>
+                        function myFunc(cadena) {
+                            let count = 0;
+                            for (let i = 0; i < cadena.length; i++) {
+                              if (cadena[i] in "aeiouáéíóú") {
+                                count += 1;
+                              }
+                            }
+                            return count;
+                          }
+                          
+                          console.log(myFun("Hola, mundo"));
+                    </code>
+                    <p>¿Cúal es la salida del código?</p>
+                    <form class="code javascript">
+                        <fieldset>
+                            <input type="radio" id="js4O1" name="js4" value="o1">
+                            <label for="js4O1">0</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="js4O2" name="js4" value="o2">
+                            <label for="js4O2">11</code>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="js4O3" name="js4" value="o3">
+                            <label for="js4O3">4</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="js4O4" name="js4" value="o3">
+                            <label for="js4O4">3</label>
+                        </fieldset>
+                    </form>
+                    <p class="answer" id="js4Answer">
+                        Respuesta 3:
+                        El código va sumando a la variable count por cada vocal que
+                        se encuentra, por lo que al haber 4 vocales retorna el número
+                        4.
+                    </p>
+                    <button class="buttonJs4 javascript">Revisar</button>
+                </div>
+            </div>
+            <div class="codeQuestion">
+                <h3>Funciones dentor de Funciones</h3>
+                <code>
+                    function calcular(n) {
+                        if (n <= 1) {
+                          return 1;
+                        }
+                        return n * calcular(n - 1);
+                      }
+                      
+                      console.log(calcular(5));
+                </code>
+                <p>¿Cúal es la salida del código?</p>
+                <form class="code javascript">
+                    <fieldset>
+                        <input type="radio" id="js5O1" name="js5" value="o1">
+                        <label for="js5O1">1</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="js5O2" name="js5" value="o2">
+                        <label for="js5O2">5</code>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="js5O3" name="js5" value="o3">
+                        <label for="js5O3">Null</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="js5O4" name="js5" value="o3">
+                        <label for="js5O4">120</label>
+                    </fieldset>
+                </form>
+                <p class="answer" id="js5Answer">
+                    Respuesta 3:
+                    El código va sumando a la variable count por cada vocal que
+                    se encuentra, por lo que al haber 4 vocales retorna el número
+                    4.
+                </p>
+                <button class="buttonJs5 javascript">Revisar</button>
             </div>
         </section>
         <section id="futureChanges">
