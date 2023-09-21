@@ -41,3 +41,27 @@ buttonJs3.addEventListener("click",()=>{
         js3Answer.innerHTML= "intentalo otra vez";
     };
 });
+//Pregunta JS in + string
+let js4= "js4O3";
+let buttonJs4= document.querySelector(`.buttonJs4`);
+let js4Answer= document.querySelector(`#js4Answer`);
+buttonJs4.addEventListener("click",()=>{
+    let input= document.querySelector(`#${js4}`);
+    if (input.checked){
+        js4Answer.innerHTML= "Correcto <br>"+ answersExplain[3];
+    }else{
+        js4Answer.innerHTML= "intentalo otra vez";
+    };
+});
+//Pregunta JS Funciones dentor de funciones
+let js5= "js5O4";
+let buttonJs5= document.querySelector(`.buttonJs5`);
+let js5Answer= document.querySelector(`#js5Answer`);
+buttonJs5.addEventListener("click",()=>{
+    let input= document.querySelector(`#${js5}`);
+    if (input.checked){
+        js5Answer.innerHTML= "Correcto <br>"+ answersExplain[4];
+    }else{
+        js5Answer.innerHTML= "intentalo otra vez";
+    };
+});

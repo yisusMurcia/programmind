@@ -181,7 +181,7 @@
                     <button class="buttonJs3 javascript">Revisar</button>
                 </div>
                 <div class="codeQuestion">
-                    <h3>in y strings</h3>
+                    <h3>in + strings</h3>
                     <code>
                         function myFunc(cadena) {
                             let count = 0;
@@ -223,46 +223,46 @@
                     </p>
                     <button class="buttonJs4 javascript">Revisar</button>
                 </div>
-            </div>
-            <div class="codeQuestion">
-                <h3>Funciones dentor de Funciones</h3>
-                <code>
-                    function calcular(n) {
-                        if (n <= 1) {
-                          return 1;
+                <div class="codeQuestion">
+                    <h3>Funciones dentro de Funciones</h3>
+                    <code>
+                        function calcular(n) {
+                            if (n <= 1) {
+                            return 1;
+                            }
+                            return n * calcular(n - 1);
                         }
-                        return n * calcular(n - 1);
-                      }
-                      
-                      console.log(calcular(5));
-                </code>
-                <p>¿Cúal es la salida del código?</p>
-                <form class="code javascript">
-                    <fieldset>
-                        <input type="radio" id="js5O1" name="js5" value="o1">
-                        <label for="js5O1">1</label>
-                    </fieldset>
-                    <fieldset>
-                        <input type="radio" id="js5O2" name="js5" value="o2">
-                        <label for="js5O2">5</code>
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <input type="radio" id="js5O3" name="js5" value="o3">
-                        <label for="js5O3">Null</label>
-                    </fieldset>
-                    <fieldset>
-                        <input type="radio" id="js5O4" name="js5" value="o3">
-                        <label for="js5O4">120</label>
-                    </fieldset>
-                </form>
-                <p class="answer" id="js5Answer">
-                    Respuesta 3:
-                    El código va sumando a la variable count por cada vocal que
-                    se encuentra, por lo que al haber 4 vocales retorna el número
-                    4.
-                </p>
-                <button class="buttonJs5 javascript">Revisar</button>
+                        
+                        console.log(calcular(5));
+                    </code>
+                    <p>¿Cúal es la salida del código?</p>
+                    <form class="code javascript">
+                        <fieldset>
+                            <input type="radio" id="js5O1" name="js5" value="o1">
+                            <label for="js5O1">1</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="js5O2" name="js5" value="o2">
+                            <label for="js5O2">5</code>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="js5O3" name="js5" value="o3">
+                            <label for="js5O3">Null</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="radio" id="js5O4" name="js5" value="o3">
+                            <label for="js5O4">120</label>
+                        </fieldset>
+                    </form>
+                    <p class="answer" id="js5Answer">
+                        Respuesta 4:
+                        El código va sumando a la variable count por cada vocal que
+                        se encuentra, por lo que al haber 4 vocales retorna el número
+                        4.
+                    </p>
+                    <button class="buttonJs5 javascript">Revisar</button>
+                </div>
             </div>
         </section>
         <section id="futureChanges">
