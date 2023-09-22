@@ -249,6 +249,7 @@ button.javascript:hover{
 .codeContainer{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     background-color: #1c1c1c;
     margin: -1;
     padding: 15px;
