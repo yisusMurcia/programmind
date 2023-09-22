@@ -1,10 +1,14 @@
+:root{
+    --background: #464646;
+    --scroll-bar: black;
+}
 html{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #1c1c1c;
+    background-color: var(--background);
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
-    background-color: #383838;
+    background-color: var(--scroll-bar);
     width: 5px;
     height: 10px;
     border-radius: 10px;
