@@ -1,6 +1,8 @@
 :root{
-    --background: #464646;
-    --scroll-bar: black;
+    --background: #1c1c1c;
+    --scroll-bar: #4f65ca;
+    --h-color: orangered;
+    --section-color: black;
 }
 html{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -14,7 +16,7 @@ html{
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #4f65ca;
+    background-color: var(--scroll-bar);
     border-radius: 5px;
 }
 header{
@@ -30,7 +32,7 @@ h1{
 }
 h3{
     font-size: 150%;
-    color: orangered;
+    color: var(--h-color);
 }
 h2{
     color: #4f65ca;
@@ -73,7 +75,7 @@ a:hover{
 }
 .title{
     font-size: 200%;
-    color: orangered;
+    color: var(--h-color);
     background-color: #1c1c1c;
     align-self: center;
     border-radius: 30px;
@@ -171,7 +173,7 @@ button:hover{
     padding: 8px;
 }
 section{
-    background-color: black;
+    background-color: var(--section-color);
     color: #8591c8;
     text-align: justify;
     border: solid 2px #383838;
@@ -180,7 +182,7 @@ section{
     padding: 10px;
 }
 .programmed{
-    background-color: black;
+    background-color: var(--section-color);
     border: solid 3px purple;
     padding: 5px;
     border-radius: 20px;
@@ -189,7 +191,7 @@ ul{
     list-style-position: inside;
 }
 aside{
-    background-color: black;
+    background-color: var(--section-color);
     border-radius: 15px;
     color: purple;
     padding: 5px;
@@ -200,7 +202,7 @@ code{
 }
 input[type= "radio"]{
     accent-color: #2beaccfd;
-    background-color: black;
+    background-color: var(--section-color);
 }
 form{
     margin: 10px;
@@ -244,7 +246,7 @@ button.javascript:hover{
     margin: auto 5px;
 }
 .programmingLanguage > h2{
-    color: orangered;
+    color: var(--h-color);
 }
 .programQuestions{
     padding: 10px 0;
@@ -266,10 +268,10 @@ button.javascript:hover{
     border-radius: 25px;
     width: 350px;
     padding: 8px;
-    background-color: black;
+    background-color: var(--section-color);
 }
 .post{
-    background-color: black;
+    background-color: var(--section-color);
     background-size: contain;
     overflow: hidden;
     aspect-ratio: 1;
@@ -284,7 +286,7 @@ button.javascript:hover{
     border-width: 4px;
 }
 .postContainer{
-    background-color: black;
+    background-color: var(--section-color);
 }
 .postDiv{
     display: grid;
@@ -330,7 +332,7 @@ button.javascript:hover{
 .headerCombine{
     color: #2beaccfd;
     text-align: center;
-    background-color: black;
+    background-color: var(--section-color);
     border: solid 2px #383838;
     border-radius: 50px 50px 0 0;
     padding: 10px;
@@ -339,7 +341,7 @@ button.javascript:hover{
 .combine{
     color: #8591c8;
     font-size: large;
-    background-color: black;
+    background-color: var(--section-color);
     border: solid 2px purple;
     border-top: none;
     border-radius: 0 0 40px 40px;
@@ -371,7 +373,7 @@ nav{
     justify-content: space-around;
     margin: 10px;
     padding: 10px 5px;
-    background-color: black;
+    background-color: var(--section-color);
     border-radius: 10px;
     margin: 0;
 }
