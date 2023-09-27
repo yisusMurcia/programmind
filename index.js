@@ -15,4 +15,5 @@ updateNotes.addEventListener("click", ()=>window.open("https://github.com/yisusM
 document.documentElement.style.setProperty("--background", "#627e77");
 document.documentElement.style.setProperty("--h-color", "orange");
 document.documentElement.style.setProperty("--section-color", "#363636");
-document.documentElement.style.setProperty("--text-color", "#2beaccdf");
+document.documentElement.style.setProperty("--text-color", "white");
+document.documentElement.style.setProperty("--h2-color", "orange");

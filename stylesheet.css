@@ -1,9 +1,9 @@
 :root{
     --background: #1c1c1c;
-    --scroll-bar: #4f65ca;
     --h-color: orangered;
     --section-color: black;
     --text-color: #8591c8;
+    --h2-color: #4f65ca;
 }
 html{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -11,13 +11,13 @@ html{
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
-    background-color: var(--scroll-bar);
+    background-color: #4f65ca;
     width: 5px;
     height: 10px;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--scroll-bar);
+    background-color: #4f65ca;
     border-radius: 5px;
 }
 header{
@@ -36,7 +36,7 @@ h3{
     color: var(--h-color);
 }
 h2{
-    color: var(--h-color-2);
+    color: var(--h2-color);
     text-align: center;
     font-size: 200%;
 }
