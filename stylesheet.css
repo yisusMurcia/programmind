@@ -4,6 +4,10 @@
     --section-color: black;
     --text-color: #8591c8;
     --h2-color: #4f65ca;
+    --a-color: #cc33cc;
+    --a-color-hover: #fa3efa;
+    --footer-background: #4b134b;
+    --news-color: #8591c8;
 }
 html{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -11,7 +15,7 @@ html{
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
-    background-color: #4f65ca;
+    background-color: #383838;
     width: 5px;
     height: 10px;
     border-radius: 10px;
@@ -41,11 +45,11 @@ h2{
     font-size: 200%;
 }
 a{
-    color: #8777b3;
+    color: var(--a-color);
     padding: 8px;
 }
 a:hover{
-    color: #8591c8;
+    color: var(--a-color-hover);
     background-color: #1c1c1c;
     border-radius: 15px;
 }
@@ -72,7 +76,7 @@ a:hover{
     border-bottom: solid 4px #4f65ca;
     margin-left: 8%;
     padding:  0 20px;
-    color: #8591c8;
+    color: var(--news-color);
 }
 .title{
     font-size: 200%;
@@ -362,7 +366,7 @@ button.javascript:hover{
     padding: 6px;
 }
 footer{
-    background-color: #4b134b;
+    background-color: var(--footer-background);
     border: solid 3px #2beaccfd;
     border-radius: 30px;
     overflow: hidden;
