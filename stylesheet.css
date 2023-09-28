@@ -46,6 +46,19 @@ h2{
     text-align: center;
     font-size: 200%;
 }
+#mode{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 4%;
+    height: 4%;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: #1c1c1c;
+    padding: 8px;
+    border-radius: 35%;
+    border: solid 2px #627e77;
+}
 a{
     color: var(--a-color);
     padding: 8px;
