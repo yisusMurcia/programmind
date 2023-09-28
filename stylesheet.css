@@ -8,6 +8,8 @@
     --a-color-hover: #fa3efa;
     --footer-background: #4b134b;
     --news-color: #8591c8;
+    --news-border-color: #4f65ca;
+    --aside-color: purple;
 }
 html{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -73,7 +75,7 @@ a:hover{
 }
 .news{
     text-align: left;
-    border-bottom: solid 4px #4f65ca;
+    border-bottom: solid 4px var(--news-border-color);
     margin-left: 8%;
     padding:  0 20px;
     color: var(--news-color);
@@ -198,7 +200,7 @@ ul{
 aside{
     background-color: var(--section-color);
     border-radius: 15px;
-    color: purple;
+    color: var(--aside-color);
     padding: 5px;
     margin-top: 10px;
 }
@@ -273,7 +275,7 @@ button.javascript:hover{
     border-radius: 25px;
     width: 350px;
     padding: 8px;
-    background-color: var(--section-color);
+    background-color: var(--background);
 }
 .post{
     background-color: var(--section-color);
