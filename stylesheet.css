@@ -48,12 +48,11 @@ h2{
 }
 #mode{
     position: fixed;
-    bottom: 5px;
-    right: 5px;
-    width: 4%;
-    height: 4%;
-    min-width: 50px;
-    min-height: 50px;
+    bottom: 10px;
+    right: 10px;
+    width: 3%;
+    aspect-ratio: 1;
+    min-width: 35px;
     background-color: #1c1c1c;
     padding: 8px;
     border-radius: 35%;

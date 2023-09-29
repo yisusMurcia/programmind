@@ -1,14 +1,26 @@
 let modeButton= document.querySelector("#mode");
+let colors= [];
 modeButton.addEventListener("click", ()=>{
+    colors.push(document.documentElement.style.getPropertyValue("--background"));
     document.documentElement.style.setProperty("--background", "#627e77");
+    colors.push(document.documentElement.style.getPropertyValue("--h-color"));
     document.documentElement.style.setProperty("--h-color", "orange");
+    colors.push(document.documentElement.style.getPropertyValue("--section-color"));
     document.documentElement.style.setProperty("--section-color", "#363636");
+    colors.push(document.documentElement.style.getPropertyValue("--tect-color"));
     document.documentElement.style.setProperty("--text-color", "white");
+    colors.push(document.documentElement.style.getPropertyValue("--h2-color"));
     document.documentElement.style.setProperty("--h2-color", "orange");
+    colors.push(document.documentElement.style.getPropertyValue("---a-color"));
     document.documentElement.style.setProperty("--a-color", "#cc33cc");
+    colors.push(document.documentElement.style.getPropertyValue("--a-color-hover"));
     document.documentElement.style.setProperty("--a-color-hover", "#fa3efa");
+    colors.push(document.documentElement.style.getPropertyValue("--footer-background"));
     document.documentElement.style.setProperty("--footer-background", "#8d72b9");
+    colors.push(document.documentElement.style.getPropertyValue("--news-color"));
     document.documentElement.style.setProperty("--news-color", "#b247c7");
+    colors.push(document.documentElement.style.getPropertyValue("--news-border-color"));
     document.documentElement.style.setProperty("--news-border-color", "#994fca");
+    colors.push(document.documentElement.style.getPropertyValue("--aside-color"));
     document.documentElement.style.setProperty("--aside-color", "#994fca");
 });
