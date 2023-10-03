@@ -20,19 +20,19 @@ h2{
     color: #4f65ca;
     padding: 0 20px;
 }
-a{
-    margin: 30px 30px;
+a:not(.otherPages){
+    margin-left: 30px;
     color: orangered;
-    padding: 10px 30px;
+    padding: 8px 30px;
     font-size: larger;
-    background-color: #383838;
+    background-color: black;
     border-radius: 20px;
+    border: solid 2px #4f65ca;
 }
-a:hover{
-    background-color: #1c1c1c;
+a:hover:not(.otherPages){
+    background-color: #0f0f0f;
     color: #e0240b;
-    border: solid 2px #383838;
-    padding: 8px 28px;
+    border: solid 2px #2d49c7;
 }
 .center{
     text-align: center;
@@ -101,4 +101,11 @@ section{
     border-radius: 30px;
     margin: 10px 0;
     padding: 20px;
+}
+.proyect{
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 5px;
+    padding-bottom: 0;
 }
