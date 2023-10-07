@@ -11,7 +11,7 @@ let postArray=[
     ["El costo de ser bueno", "blogPosts/serBueno/index.html", "blogPosts/serBueno/img.jpg"],
     ["El sentido de la vida", "blogPosts/sentidoDeLaVida/index.html", "blogPosts/sentidoDeLaVida/img.jpg"]
 ];
-postArray.reverse()
+postArray.reverse();
 let blogContent= document.getElementById("blogContent");
 let addContent= document.querySelector(".moreContent");
 for (let i= 0; i<6; i++){
