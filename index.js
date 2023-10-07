@@ -5,7 +5,7 @@ let proyectH= header[0];
 let blogH= header[1];
 postDiv= document.querySelector("#proyects");
 let updateNotes= document.getElementById("updateNotes");
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 4; i++) {
     socialMediaImg[i].addEventListener("click", ()=>window.open(socialMedia[i]));
 };
 blogH.addEventListener("click", ()=>location.href="blog.html");
