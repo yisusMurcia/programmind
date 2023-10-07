@@ -27,12 +27,17 @@ html{
     border-radius: 5px;
 }
 header{
-    background-image: url(Profile/banner.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    border: solid 2px #8591c8;
-    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    background-color: #38383891;
+    width: 100vw;
+    margin: 0;
+}
+#programmind{
+    height: 25%;
+    margin: auto 0;
 }
 h1{
     font-size: 250%;
@@ -118,19 +123,6 @@ a:hover{
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-}
-.programmind{
-    font-family: Tahoma;
-    color: #2beaccfd;
-    border-radius: 30px;
-    text-align: center;
-    padding: 10px;
-    background-color: #1c1c1c;
-    align-self: center;
-    cursor: pointer;
-}
-#mind{
-    color: purple;
 }
 .otherPages{
     font-size: 100%;
