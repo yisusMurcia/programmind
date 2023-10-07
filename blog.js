@@ -8,7 +8,8 @@ let postArray=[
     ["Definiendo el tamaño", "https://programmind.notion.site/Definiendo-el-tama-o-5cf14fa72a2c42799a12a43db6e816ff?pvs=4"],
     ["Agregando imágenes", "https://programmind.notion.site/Im-genes-34d1dcce90c44e4ba2cc6f809996ef4e?pvs=4"],
     ["Inteligencia Artificial", "blogPosts/IA/index.html"],
-    ["El costo de ser bueno", "blogPosts/serBueno/index.html", "blogPosts/serBueno/imagen.jpg"]
+    ["El costo de ser bueno", "blogPosts/serBueno/index.html", "blogPosts/serBueno/img.jpg"],
+    ["El sentido de la vida", "blogPosts/sentidoDeLaVida/index.html", "blogPosts/sentidoDeLaVida/img.jpg"]
 ];
 postArray.reverse()
 let blogContent= document.getElementById("blogContent");
