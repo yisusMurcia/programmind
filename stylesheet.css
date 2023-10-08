@@ -27,20 +27,23 @@ html{
     border-radius: 5px;
 }
 header{
+    position: sticky;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0;
-    background-color: #38383891;
-    width: 100vw;
-    margin: 0;
+    top: 0px;
+    justify-content: space-around;
+    background-color: #383838bd;
+    border-radius: 10px;
 }
 #programmind{
-    height: 25%;
+    height: 80px;
+    width: 200px;
     margin: auto 0;
 }
 h1{
-    font-size: 250%;
+    font-size: 1.2rem;
+    color: var(--h-color);
 }
 h3{
     font-size: 150%;
@@ -109,15 +112,7 @@ a:hover{
     text-decoration: none;
     padding: initial 5px;
 }
-.webPages{
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    margin: 0;
-    padding: 0 5%;
-    background-color: rgba(82, 83, 83, 0.425);
-    backdrop-filter: blur(10px);
-}
+
 .principal{
     display: flex;
     flex-wrap: wrap;
