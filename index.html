@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Profile/halloweenLogo.png">
     <title>Programmind</title><script src="https://www.google-analytics.com/analytics.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCXPF4F656"></script>
@@ -30,88 +30,22 @@
 </head>
 <body>
     <header>
+        <button class="menu" id="open">☰</button>
         <img src="img/programmind.svg" alt="programmind" id="programmind">
-        <h1>Acerca de</h1>
-        <h1>Redes sociales</h1>
+        <nav id="navbar">
+            <ul class="navList">
+                <button class="menu" id="close">✖</button>
+                <li><a href="">Acerca de</a></li>
+                <li><a href="">Redes sociales</a></li>
+                <li><a href="">Notas de actualización</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <nav class="navBar">
-            <a href="#programmindInfo">Programmind</a>
-            <a href="#autorInfo">Autor</a>
-            <a href="#blogContent">Blog</a>
-            <a href="#myProyects">Proyectos</a>
-            <a href="#futureChanges">futuros cambios</a>
-            <a href="#socialMedia">Redes Sociales</a>
-        </nav>
-        <section class="description">
-            <p>¡Bienvenido a este espacio donde la pasión por la programación se encuentra en cada línea de código!
-                Aqui podrás encontrar:</p>
-            <ul>
-                <li>Lecciones prácticas para a poner tu conocimiento de programación</li>
-                <li>Proyectos de programación para inspirarte a crear y desarrollar tus propias ideas.</li>
-                <li>Mi visión de las cosas</li>
-            </ul>
-            <button id="updateNotes">Últimos cambios</button>
+        <section>
+            
         </section>
-        <section id="programmindInfo">
-            <h2>Acerca de <h1 class="programmind">Program<strong id="mind">mind</strong></h1></h2>
-            <p>
-                Programmind es un pequeño proyecto que surge como una forma de mostrarle al mundo mi trabajo,
-                de transmitir mis ideas y generar un impacto en los demás.
-                Poco a poco programmind se ha convertido en este sitio web, donde cada día trabajo por
-                mejorar este sitio y traer nuevas novedades.
-            </p>
-            <p>
-                A través de programmind busco mostrar mis pequeños proyectos de programación, con la esperanza
-                de inspirar a otros. Además tengo que agregar un toque de mi a este sitio, así que he decidido
-                transmitir mis ideas y reflexiones, a lo mejor pueden ayudar a alguien o al menos que le parezca
-                interesante.
-            </p>
-            <div id="autorInfo">
-                <h3> Acerca del autor</h3>
-                <img src="Profile/yisus.png" alt="Jesús Antonio Murcia" class="textAndimg">
-                <p class="alignWithImage">
-                    Programmind está diseñado por Jesús Antonio Murcia Guzmán, soy una persona apasiona por la
-                    programación y que disfruta perder el tiempo pensando en grandes ideas.
-                </p>
-                <p class="alignWithImage">
-                    Mi sueño es llegar lejos, morir sin arrepentimientos y si pudiese repetir mi vida tal como
-                    la estoy viviendo. A través de programmind quiero darme a conocer al mundo y mostrar mis
-                    habilidades.
-                </p>
-        </section>
-            </div>
-        <section class="programmed">
-            <div class="page">
-                <h2 class="header">Proyectos</h2>
-                <div class="carousel" id="myProyects"></div>
-            </div>
-            <div class="page">
-                <h2 class="header">Blog</h2>
-                <div class="carousel" id="blogContent"></div>
-            </div>
-        </section>
-        <section id="futureChanges">
-            <h2 class="news">Futuros cambios de Programmind</h2>
-            <ul>
-                <li>Nuevo diseño</li>
-                <li>Página con recomendaciones para aprender a programar</li>
-            </ul>
-        </section>
-        <footer>
-            <h2>Redes sociales</h2>
-            <nav id="socialMedia">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="Twitter bird logo by Twitter, Inc." class="socialMediaImg">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png" alt="GitHub logo by GitHub, Inc." class="socialMediaImg">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/320px-Threads_%28app%29_logo.svg.png" alt="Threads logo by Meta, Inc." class="socialMediaImg">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram logo" class="socialMediaImg">
-            </nav>
-        </footer>
-        <img src="img/lightMode.png" alt="sun" id="mode">
     </main>
-    <script src="script.js"></script>
-    <script src="proyectos/proyectos.js"></script>
     <script src="index.js"></script>
-    <script src="blog/blog.js"></script>
 </body>
 </html>

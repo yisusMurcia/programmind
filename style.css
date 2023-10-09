@@ -11,6 +11,11 @@
     --news-border-color: #4f65ca;
     --aside-color: purple;
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 html{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--background);
@@ -28,14 +33,81 @@ html{
 }
 header{
     display: flex;
-    flex-direction: row;
+    background-color: #383838c2;
+    justify-content: space-between;
     align-items: center;
-    padding: 0;
-    background-color: #38383891;
-    width: 100vw;
-    margin: 0;
+    border-radius: 5px;
 }
 #programmind{
-    height: 25%;
-    margin: auto 0;
+    height: 80px;
+    width: 200px;
+}
+.menu{
+    display: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color:var(--text-color);
+    border: none;
+    padding: 5px;
+}
+.navList{
+    display: flex;
+    gap: 10px;
+}
+.navList li{
+    list-style: none;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: var(--a-color);
+}
+li:hover{
+    color: var(--a-color-hover);
+    background-color: #1c1c1c;
+    border-radius: 5px;
+}
+@media (max-width: 550px){
+    header{
+        align-items: center;
+        padding: 0 5px;
+    }
+    #programmind{
+        margin-right: 25%;
+    }
+    #navbar{
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #191919;
+        padding: 5px;
+        width: 30%;
+        box-shadow: 0 0 0 100vmax #0000007c;
+    }
+    #navbar.visible{
+        visibility: visible;
+        opacity: 1;
+    }
+    .navList{
+        flex-direction: column;
+        align-items: start;
+    }
+    .menu{
+        display: inline;
+    }
+    .menu:hover{
+        background-color: #383838;
+        border-radius: 5px;
+    }
+    #open:hover{
+        background-color: #191919;
+    }
+    .menu:active{
+        background-color: black;
+        color: #909dd8;
+    }
 }
