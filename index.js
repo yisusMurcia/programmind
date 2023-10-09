@@ -6,4 +6,4 @@ openButton.addEventListener("click", ()=>{
 });
 closeButton.addEventListener("click", ()=>{
     navbar.classList.remove("visible");
-})
+});
