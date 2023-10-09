@@ -1,7 +1,7 @@
 :root{
     --background: #1c1c1c;
     --h-color: orangered;
-    --section-color: black;
+    --section-color: #111111;
     --text-color: #8591c8;
     --h2-color: #4f65ca;
     --a-color: #cc33cc;
@@ -36,11 +36,30 @@ header{
     background-color: #383838c2;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     border-radius: 5px;
 }
 #programmind{
+    display: block;
     height: 80px;
     width: 200px;
+    margin: 0 auto;
+}
+h1, h2{
+    color: var(--h-color);
+    text-align: center;
+}
+section{
+    background-color: var(--section-color);
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--text-color);
+    margin: 10px;
+    line-height: 1.25rem;
+    text-align: justify;
+}
+ul{
+    list-style-position: inside;
 }
 .menu{
     display: none;
@@ -54,7 +73,7 @@ header{
     display: flex;
     gap: 10px;
 }
-.navList li{
+li.navLink{
     list-style: none;
     padding: 5px;
 }
@@ -62,10 +81,16 @@ a{
     text-decoration: none;
     color: var(--a-color);
 }
-li:hover{
+.navLink:hover{
     color: var(--a-color-hover);
     background-color: #1c1c1c;
     border-radius: 5px;
+}
+.futureChanges{
+    color: var(--news-color);
+    border-bottom: 2px solid var(--news-border-color);
+    margin-left: 10px;
+    text-align: left;
 }
 @media (max-width: 550px){
     header{
@@ -95,6 +120,9 @@ li:hover{
     .navList{
         flex-direction: column;
         align-items: start;
+    }
+    .navLink:hover{
+        background-color: #383838;
     }
     .menu{
         display: inline;
