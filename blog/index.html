@@ -3,44 +3,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jesús Murcia">
-    <meta name="description" content="Pagína principal de programmind, un sitio para inspirarce a crear">
+    <meta name="description" content="Blog de programmind, un sitio para aprender y reflexionar">
+    <meta name="keywords" content="programmind, reflexiones, ideas, blog, post">
     <meta name="image" content="https://yisusmurcia.github.io/programmind/img/imagePreview.png">
-    <meta name="keywords" content="programmind, programación, reflexiones, proyectos de programación">
-    <meta property="og:title" content="Programmind">
-    <meta property="og:description" content="Pagína principal de programmind, un sitio para inspirarce a crear">
+    <meta property="og:title" content="Blog de programmind">
+    <meta property="og:description" content="Blog de programmind, un sitio para aprender y reflexionar">
     <meta property="og:image" content="https://yisusmurcia.github.io/programmind/img/imagePreview.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="programmind">
-    <meta name="twitter:description" content="Pagína principal de programmind, un sitio para inspirarce a crear">
+    <meta name="twitter:title" content="Blog de programmind">
+    <meta name="twitter:description" content="Blog de programmind, un sitio para aprender y reflexionar">
     <meta name="twitter:image" content="https://yisusmurcia.github.io/programmind/img/imagePreview.png">
+    <title>Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/halloweenLogo.png">
-    <title>Programmind</title><script src="https://www.google-analytics.com/analytics.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="./img/halloweenLogo.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCXPF4F656"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        gtag('config', 'G-FCXPF4F656');
+    gtag('config', 'G-FCXPF4F656');
     </script>
 </head>
 <body>
     <header id="header">
         <button class="menu" id="open">☰</button>
-        <img src="img/programmind.svg" alt="programmind" id="programmind">
+        <img src="../img/programmind.svg" alt="programmind" id="programmind">
         <ul id="programmindHidden" class="hidden">
             <li class="noStyle">
-                <a href="/blog/index.html">Blog</a>
+                <a href="index.html">Blog</a>
             </li>
             <li class="noStyle">
-                <a href="proyectos/index.html">Proyectos</a>
+                <a href="../proyectos/index.html">Proyectos</a>
             </li>
             <li class="noStyle">
-                <a href="prácticaDeProgramación/index.html">Práctica</a>
+                <a href="../prácticaDeProgramación/index.html">Práctica</a>
             </li>
         </ul>
         <nav id="navbar">
@@ -89,42 +89,24 @@
     </header>
     <main>
         <section>
-            <p>!Bienvenido a este espacio donde la pasión por la programación se encuentra en cada línea de código! Aqui podrás encontrar:</p>
-            <ul>
-                <li>Lecciones prácticas para a poner tu conocimiento de programación</li>
-                <li>Proyectos de programación para inspirarte a crear y desarrollar tus propias ideas.</li>
-                <li>Ideas que pueden cambiar tu visión del mundo</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Acerca de</h1>
-            <img id="programmind" src="img/programmind.svg" alt="programmind">
             <p>
-                Programmind es un pequeño proyecto que surge como una forma de mostrarle al mundo mi trabajo, de transmitir mis ideas y generar
-                un impacto en los demás. Poco a poco programmind se ha convertido en este sitio web, donde cada día trabajo por mejorar este
-                sitio y traer nuevas novedades.
-            </p><p>
-                A través de programmind busco mostrar mis pequeños proyectos de programación, con la esperanza de inspirar a otros. Además
-                tengo que agregar un toque de mi a este sitio, así que he decidido transmitir mis ideas y reflexiones, a lo mejor pueden ayudar
-                a alguien o al menos que le parezca interesante.
-            </p><br>
-            <h2>Acerca del autor</h2><br>
-            <p>
-                Programmind fue creado por Jesús Antonio Murcia Guzmán, soy una persona apasionada por la programación y que disfruta perder el
-                tiempo en su cabeza, pensando en grandes ideas.
-            </p><p>
-                Soy una persona que quiere llegar lejos, morir sin arrepentimientos estando dispuesto vivir esta vida tal cual como la estoy
-                viviendo. A través de programmind quiero darme a conocer al mundo, mostrando mis ideas y habilidades.
+                Este blog fue creado para transmitir mis ideas al mundo, inspirar a las personas y generar
+                un cambio, disfruta de estos post para reflexionar
             </p>
+            <div id="blogContent" class="postDiv"></div>
+            <button class="moreContent">➜</button>
         </section>
         <section>
             <h2 class="futureChanges">Futuros cambios</h2>
             <ul>
-                <li>Portafolio sobre el autor</li>
-                <li>Página con recomendaciones sobre donde programar</li>
+                <li>Nueva forma de contenido (en desarrollo)</li>
+                <li>Etiquetas para clasificar los post</li>
+                <li>Podcast de contenido</li>
             </ul>
         </section>
+        <img src="img/lightMode.png" alt="sun" id="mode">
     </main>
-    <script src="header.js"></script>
+    <script src="../header.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
