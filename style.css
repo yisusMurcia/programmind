@@ -60,10 +60,70 @@ section #programmind{
     margin: 0 auto;
 }
 
+#programmindHidden{
+    left: 10px;
+    top: 45px;
+}
+
+.menu{
+    display: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color:var(--text-color);
+    border: none;
+    padding: 5px;
+}
+
+.navList{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5;
+    margin: 0;
+}
+
+li.navLink{
+    list-style: none;
+    padding: 5px;
+    color: var(--a-color);
+    cursor: pointer;
+}
+
+.navLink:hover{
+    color: var(--a-color-hover);
+    background-color: var(--section-color);
+    border-radius: 5px;
+}
+
+.hidden{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible{
+    display: block;
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+}
+
+.socialMediaImg{
+    display: inline;
+    max-width: 25px;
+    aspect-ratio: 1;
+}
+
+li.noStyle{
+    list-style: none;
+}
+
+/*HTML elements*/
 h1, h2{
     color: var(--h-color);
     text-align: center;
 }
+
 section{
     background-color: var(--section-color);
     padding: 15px;
@@ -73,9 +133,11 @@ section{
     line-height: 1.25rem;
     text-align: justify;
 }
+
 p{
     color: var(--text-color)
 }
+
 ul{
     list-style-position: inside;
     margin: 5px;
@@ -84,9 +146,11 @@ ul{
     background-color: var(--background);
     color: var(--text-color);
 }
+
 li{
     padding: inherit;
 }
+
 button{
     background-color: #2beaccdf;
     border: none;
@@ -94,76 +158,35 @@ button{
     border-radius: 8px;
     color: purple;
 }
-#programmindHidden{
-    left: 10px;
-    top: 45px;
-}
-.menu{
-    display: none;
-    font-size: 1.2rem;
-    background-color: transparent;
-    color:var(--text-color);
-    border: none;
-    padding: 5px;
-}
-.navList{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 5;
-    margin: 0;
-}
-li.navLink{
-    list-style: none;
-    padding: 5px;
-    color: var(--a-color);
-    cursor: pointer;
-}
+
 a{
     text-decoration: none;
     color: var(--a-color);
 }
-.navLink:hover{
-    color: var(--a-color-hover);
-    background-color: var(--section-color);
-    border-radius: 5px;
-}
-.hidden{
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-}
-.visible{
-    display: block;
-    position: absolute;
-    visibility: visible;
-    opacity: 1;
-}
-.socialMediaImg{
-    display: inline;
-    max-width: 25px;
-    aspect-ratio: 1;
-}
-li.noStyle{
-    list-style: none;
-}
+
+/*future Changes*/
 .futureChanges{
     color: var(--news-color);
     border-bottom: 2px solid var(--news-border-color);
     margin-left: 8%;
     text-align: left;
 }
+
+/*Post blog and proyectos, .post at the end*/
 .post > h3{
     color: purple;
 }
+
 .post >p{
     text-align: left;
     color: yellow;
 }
+
 .post p, .post h3{
     background-color: #1c1c1ce0;
     padding: 5px;
 }
+
 .moreContent{
     display: block;
     margin: 0 auto;
@@ -178,6 +201,7 @@ li.noStyle{
     bottom: 45px;
     border: solid 2px #4f65ca;
 }
+
 .postDiv{
     display: flex;
     flex-wrap: wrap;
@@ -188,17 +212,22 @@ li.noStyle{
     border-radius: 10px;
     margin: 5px;
 }
+
+/*Media Query for mobile devices*/
 @media (max-width: 550px){
     header{
         align-items: center;
         padding: 0 5px;
     }
+
     #programmind{
         margin-right: 25%;
     }
+
     #programmindHidden{
         left: 45%;
     }
+
     #navbar{
         opacity: 0;
         visibility: hidden;
@@ -212,35 +241,44 @@ li.noStyle{
         width: 50%;
         box-shadow: 0 0 0 100vmax #0000007c;
     }
+
     #navbar.visible{
         visibility: visible;
         opacity: 1;
     }
+
     .navList{
         flex-direction: column;
         align-items: start;
     }
+
     .navLink:hover{
         background-color: #383838;
     }
+
     .menu{
         display: inline;
     }
+
     .menu:hover{
         background-color: #383838;
         border-radius: 5px;
     }
+
     #open:hover{
         background-color: #191919;
     }
+
     .menu:active{
         background-color: black;
         color: #909dd8;
     }
+
     .post{
         width: 180px;
     }
 }
+
 .post{
     background-size: cover;
     background-repeat: no-repeat;
