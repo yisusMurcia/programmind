@@ -58,10 +58,12 @@ section{
     background-color: var(--section-color);
     padding: 15px;
     border-radius: 20px;
-    color: var(--text-color);
     margin: 10px;
     line-height: 1.25rem;
     text-align: justify;
+}
+p{
+    color: var(--text-color)
 }
 ul{
     list-style-position: inside;
@@ -69,6 +71,10 @@ ul{
     padding: 5px;
     border-radius: 5px;
     background-color: var(--background);
+    color: var(--text-color);
+}
+li{
+    padding: inherit;
 }
 button{
     background-color: #2beaccdf;
