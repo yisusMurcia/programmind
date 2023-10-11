@@ -170,7 +170,7 @@ li.noStyle{
 .postDiv{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
     background-color: var(--background);
     padding: 10px;
