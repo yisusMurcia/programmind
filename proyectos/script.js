@@ -20,7 +20,11 @@ do {
     postDiv.appendChild(postLenguage);
     proyectsContent.appendChild(postDiv);
     postDiv.addEventListener("click", ()=>location.href=post[1]);
-    postDiv.style.backgroundImage= `url(${post[3]})`;
+    if (post[3]== undefined){
+        postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
+    }else{
+        postDiv.style.backgroundImage= `url(${post[3]})`;
+    };
     i++;
 } while (i< 2);
 button.addEventListener("click", ()=>{
@@ -37,6 +41,10 @@ button.addEventListener("click", ()=>{
         postDiv.appendChild(postLenguage);
         proyectsContent.appendChild(postDiv);
         postDiv.addEventListener("click", ()=>location.href=post[1]);
-        postDiv.style.backgroundImage= `url(${post[3]})`;
+        if (post[3]== undefined){
+            postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
+        }else{
+            postDiv.style.backgroundImage= `url(${post[3]})`;
+        };
     };
 });

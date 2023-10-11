@@ -22,7 +22,11 @@ for (let i= 0; i<4; i++){
     post.addEventListener("click", ()=>location.href=(postArray[i][1]));
     post.appendChild(postTitle);
     blogContent.appendChild(post);
-    post.style.backgroundImage= `url(${postArray[i][2]})`;
+    if (postArray[i][2]== undefined){
+        post.style.backgroundImage= `url(../img/imagePreview.png)`;
+    }else{
+        post.style.backgroundImage= `url(${postArray[i][2]})`;
+    };
 };
 addContent.addEventListener("click", ()=>{
         blogContent.innerHTML= "";
@@ -34,7 +38,11 @@ addContent.addEventListener("click", ()=>{
             postDiv.addEventListener("click", ()=>location.href=(post[1]));
             postDiv.appendChild(postTitle);
             blogContent.appendChild(postDiv);
-            postDiv.style.backgroundImage= `url(${post[2]})`;
+            if (post[2]== undefined){
+                postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
+            }else{
+                postDiv.style.backgroundImage= `url(${post[2]})`;
+            };
         };
         addContent.remove();
     });

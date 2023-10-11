@@ -11,26 +11,32 @@
     --news-border-color: #4f65ca;
     --aside-color: purple;
 }
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 html{
     font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--background);
     scroll-behavior: smooth;
 }
+
 ::-webkit-scrollbar{
     background-color: #383838;
     width: 5px;
     height: 10px;
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb{
     background-color: #4f65ca;
     border-radius: 5px;
 }
+
+/*Header*/
 header{
     display: flex;
     position: sticky;
@@ -41,15 +47,19 @@ header{
     gap: 10px;
     padding: 2px;
     border-radius: 5px;
+    margin: 8px;
 }
+
 #programmind{
     height: 60px;
     width: 180px;
 }
+
 section #programmind{
     display: block;
     margin: 0 auto;
 }
+
 h1, h2{
     color: var(--h-color);
     text-align: center;
@@ -57,8 +67,9 @@ h1, h2{
 section{
     background-color: var(--section-color);
     padding: 15px;
-    border-radius: 20px;
     margin: 10px;
+    border: dotted 2px orangered;
+    border-radius: 20px;
     line-height: 1.25rem;
     text-align: justify;
 }
@@ -147,10 +158,10 @@ li.noStyle{
 }
 .post >p{
     text-align: left;
-    color: #df1c41;
+    color: yellow;
 }
 .post p, .post h3{
-    background-color: #1c1c1cbd;
+    background-color: #1c1c1ce0;
     padding: 5px;
 }
 .moreContent{
@@ -232,6 +243,8 @@ li.noStyle{
 }
 .post{
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: 25%;
     min-width: 180px;
     overflow: hidden;
