@@ -36,6 +36,72 @@ html{
     border-radius: 5px;
 }
 
+/*HTML elements*/
+h1, h2{
+    color: var(--h-color);
+    text-align: center;
+}
+
+section, aside{
+    background-color: var(--section-color);
+    padding: 15px;
+    margin: 10px;
+    border: dotted 2px orangered;
+    border-radius: 15px;
+    line-height: 1.25rem;
+    text-align: justify;
+}
+
+p{
+    color: var(--text-color)
+}
+
+ul{
+    list-style-position: inside;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+li{
+    padding: inherit;
+}
+
+button{
+    background-color: #2beaccdf;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 8px;
+    color: purple;
+}
+
+a{
+    text-decoration: none;
+    color: var(--a-color);
+}
+
+form{
+    width: 90%;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+label{
+    color: #111111;
+    font-weight: 900;
+}
+
+input[type="radio"]{
+    background-color: var(--section-color);
+}
+
+fieldset{
+    border: none;
+}
+
 /*Header*/
 header{
     display: flex;
@@ -118,52 +184,6 @@ li.noStyle{
     list-style: none;
 }
 
-/*HTML elements*/
-h1, h2{
-    color: var(--h-color);
-    text-align: center;
-}
-
-section{
-    background-color: var(--section-color);
-    padding: 15px;
-    margin: 10px;
-    border: dotted 2px orangered;
-    border-radius: 20px;
-    line-height: 1.25rem;
-    text-align: justify;
-}
-
-p{
-    color: var(--text-color)
-}
-
-ul{
-    list-style-position: inside;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--background);
-    color: var(--text-color);
-}
-
-li{
-    padding: inherit;
-}
-
-button{
-    background-color: #2beaccdf;
-    border: none;
-    padding: 3px 8px;
-    border-radius: 8px;
-    color: purple;
-}
-
-a{
-    text-decoration: none;
-    color: var(--a-color);
-}
-
 /*future Changes*/
 .futureChanges{
     color: var(--news-color);
@@ -211,6 +231,61 @@ a{
     padding: 10px;
     border-radius: 10px;
     margin: 5px;
+}
+
+/*Elements from the page práctica*/
+.programQuestions{
+    border: none;
+    padding: 10px 0;
+}
+
+.programmingLanguage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #1c1c1c;
+    margin: 2rem auto;
+    padding: 15px;
+    border-radius: 15px;
+    width: 75%;
+}
+
+.programmingLanguage  img{
+    width: 35px;
+    border-radius: 15%;
+    margin: auto 0;
+}
+
+.codeContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--section-color);
+    padding: 15px;
+    gap: 10px;
+}
+
+.codeQuestion{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--text-color);
+    align-items: center;
+    width: 30%;
+    min-width: 250px;
+}
+
+.codeQuestion h3{
+    color: var(--h-color);
+}
+
+.javascript{
+    background-color: yellow;
+    accent-color: yellow;
+    color: #111111;
 }
 
 /*Media Query for mobile devices*/
