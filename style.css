@@ -74,7 +74,7 @@ button{
     font-family: "comfortaa";
     background-color: #2beaccdf;
     border: none;
-    padding: 5px 8px;
+    padding: 8px 12px;
     border-radius: 8px;
     color: var(--purple-border);
 }
@@ -102,7 +102,7 @@ button, input {
 
 input{
     background-color: var(--background);
-    border: none;
+    border: solid 2px #2c2c2c;
     border-radius: 8px;
     padding: 8px;
     align-self: center;
@@ -114,7 +114,7 @@ input::-webkit-input-placeholder{
 }
 
 input:focus{
-    border: 2px solid #383838;
+    border: 2px solid #474747;
     outline: none;
 }
 
@@ -124,6 +124,7 @@ fieldset{
 
 /*Header*/
 header{
+    z-index: 1;
     display: flex;
     position: sticky;
     top: 0;
@@ -357,6 +358,28 @@ li.noStyle{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.proyect{
+    background-color: var(--background);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 20px 10px;
+}
+
+.proyect h2{
+    padding: 5px 20px;
+    text-align: left;
+}
+
+.GitHubLink{
+    position: relative;
+    top: 7px;
+    margin-left: 25px;
+    padding: 8px 20px;
+    background-color: var(--section-color);
+    border-radius: 20px;
+    border: solid 2px var(--news-border-color);
 }
 
 /*Media Query for mobile devices*/

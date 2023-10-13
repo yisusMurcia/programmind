@@ -6,42 +6,85 @@
     <meta name="author" content="Jesús Murcia">
     <meta name="description" content="Utiliza estas herramientas de IA para solucionar problemas reales">
     <meta name="keywords" content="programmind, IA, Python, solución de problemas">
-    <meta name="image" content="https://yisusmurcia.github.io/programmind/proyectos/images/pythonIA.jpg">
+    <meta name="image" content="https://yisusmurcia.github.io/programmind/proyectos/pythonIA/img.jpg">
     <meta property="og:title" content="IA con Python 🐍">
     <meta property="og:description" content="Utiliza estas herramientas de IA para solucionar problemas reales">
-    <meta property="og:image" content="https://yisusmurcia.github.io/programmind/proyectos/images/pythonIA.jpg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="IA con Python 🐍">
-    <meta name="twitter:description" content="Utiliza estas herramientas de IA para solucionar problemas reales">
-    <meta name="twitter:image" content="https://yisusmurcia.github.io/programmind/proyectos/images/pythonIA.jpg">
+    <meta property="og:image" content="https://yisusmurcia.github.io/programmind/proyectos/pythonIA/img.jpg">
     <title>IA con Python 🐍</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="icon" href="../../Profile/halloweenLogo.png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="../../img/halloweenLogo.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCXPF4F656"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-FCXPF4F656');
     </script>
 </head>
 <body>
     <header>
-        <article class="webPages">
-            <a class="otherPages" id="index" href="../../index.html">Programmind</a>
-            <a class="otherPages" href="../../blog.html">Blog</a>
-            <a class="otherPages" href="../../proyectos.html">Proyectos</a>
-            <a class="otherPages" href="../../prácticaDeProgramación/index.html">Prácticar</a>
-        </article>
-        <div class="principal">
-            <h1 class="programmind">Program<strong id="mind">mind</strong></h1>
-            <h2 class="title">IA con Python 🐍</h2>
-        </div>
-    </header>
+        <button class="menu" id="open">☰</button>
+        <img src="../../img/programmind.svg" alt="programmind" id="programmind">
+        <ul id="programmindHidden" class="hidden">
+            <li class="noStyle">
+                <a href="../../index.html">Programmind</a>
+            </li>
+            <li class="noStyle">
+                <a href="../blog/index.html">Blog</a>
+            </li>
+            <li class="noStyle">
+                <a href="../index.html">Proyectos</a>
+            </li>
+            <li class="noStyle">
+                <a href="../../prácticaDeProgramación/index.html">Práctica</a>
+            </li>
+        </ul>
+        <nav id="navbar">
+            <ul class="navList">
+                <button class="menu" id="close">✖</button>
+                <li class="navLink" id="about">
+                    Acerca de
+                    <ul id="aboutHidden" class="hidden">
+                        <li class="noStyle"><p>programmind</p></li>
+                        <li class="noStyle"><p>Jesús Murcia</p></li>
+                    </ul>
+                </li>
+                <li class="navLink" id="socialMedia">Redes sociales
+                    <ul id="socialMediaHidden" class="hidden">
+                        <li class="noStyle">
+                            <a href="https://twitter.com/theprogrammind" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="x" class="socialMediaImg">
+                            </a>
+                            <p>X</p>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://github.com/yisusMurcia" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png" alt="GitHub" class="socialMediaImg">
+                                <p>GitHub</p>
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://www.threads.net/@jesusantoniomurciaguzman" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/320px-Threads_%28app%29_logo.svg.png" alt="Threads" class="socialMediaImg">
+                                <p>Threads</p>
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://www.instagram.com/theProgrammind/" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" class="socialMediaImg">
+                                <p>Instagram</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navLink">
+                    <a href="https://github.com/yisusMurcia/programmind/commits/main" target="_blank">Notas de actualización</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <section>
         <p>En este espacio se presentan diferetnes códigos que he ehecho para solucionar problemas
@@ -53,7 +96,7 @@
                 Este archivo es usado en muchos códigos, sirve para crear un objeto con propiedades para
                 relacionarlos con otros nodos y sus valores.
             </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/tree.py">tree.py</a>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/tree.py" class="GitHubLink">tree.py</a>
         </div>
         <div class="proyect">
             <h2>Puzzle.py</h2>
@@ -62,7 +105,7 @@
                 solución del rompecabezas y el orden inical de los números, la salida del código es la secuencia
                 de pasos para resolver el rompecabezas.
             </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/puzzle.py">Puzzle.py</a><br>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/puzzle.py" class="GitHubLink">Puzzle.py</a><br>
         </div>
         <div class="proyect">
             <h2>RoadTrip.py</h2>
@@ -71,7 +114,7 @@
                 entre las carreteras (rutas) y se emplean las coordenadas para hacer un estimación de la distancia,
                 el código retorna el mejor camino para ir de una ciudad a otra.
             </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/roadTrip.py">RoadTrip.py</a><br>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/roadTrip.py" class="GitHubLink">RoadTrip.py</a><br>
         </div>
         <div class="proyect">
             <h2>GraphTraversal.py</h2>
@@ -80,7 +123,7 @@
                 distancia, por lo que se busca es recorrer todos los puntos con el menor coste posible, el código
                 retorna dicho camino.
             </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/graphTraversal.py">GraphTraversal.py</a><br>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/graphTraversal.py" class="GitHubLink">GraphTraversal.py</a><br>
         </div>
         <div class="proyect">
             <h2>Inequation.py</h2>
@@ -92,7 +135,7 @@
                 7x + 4y ≤ 150 <br>
                 6x + 5y ≤ 160
             </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/inequation.py">inequation.py</a><br>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/inequation.py" class="GitHubLink">inequation.py</a><br>
         </div>
         <div class="proyect">
             <h2>SavingsAlgorithm</h2>
@@ -101,7 +144,7 @@
                 para ello se tiene en cuanta aquellos pedidos que se pueden conectar en una misma ruta y que
                 no sobrepasen el peso máximo.
             </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/savingsAlgorithm.py">savingsAlgorithm.py</a><br>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/savingsAlgorithm.py" class="GitHubLink">savingsAlgorithm.py</a><br>
         </div>
         <div class="proyect">
             <h2>SearchMinCost</h2>
@@ -109,8 +152,9 @@
                 El código busca encontrar la mejor forma de organizar un pedido donde se tomen cuatro tipos
                 y se compren uno por cada proveedor y aquel pedido tenga el menor coste.
             </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/searchMinCost.py">searchMinCost.py</a><br>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/searchMinCost.py" class="GitHubLink">searchMinCost.py</a><br>
         </div>
     </section>
+    <script src="../../header.js"></script>
 </body>
 </html>
