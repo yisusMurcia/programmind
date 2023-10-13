@@ -6,7 +6,7 @@
     --h2-color: #4f65ca;
     --a-color: #cc33cc;
     --a-color-hover: #fa3efa;
-    --footer-background: #4b134b;
+    --purple-border: #4b134b;
     --news-color: #8591c8;
     --news-border-color: #4f65ca;
     --aside-color: purple;
@@ -16,10 +16,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 html{
-    font-family: "comfortaa", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--background);
     scroll-behavior: smooth;
 }
@@ -54,7 +54,7 @@ section, aside{
 
 p{
     color: var(--text-color);
-    margin: 10px 5px;
+    margin: 10px 0;
 }
 
 ul{
@@ -71,11 +71,12 @@ li{
 }
 
 button{
+    font-family: "comfortaa";
     background-color: #2beaccdf;
     border: none;
-    padding: 3px 8px;
+    padding: 5px 8px;
     border-radius: 8px;
-    color: purple;
+    color: var(--purple-border);
 }
 
 a{
@@ -95,8 +96,26 @@ label{
     font-weight: 900;
 }
 
-input[type="radio"]{
-    background-color: var(--section-color);
+button, input {
+    margin: 5px;
+}
+
+input{
+    background-color: var(--background);
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    align-self: center;
+    color: var(--text-color)
+}
+
+input::-webkit-input-placeholder{
+    color: var(--h-color);
+}
+
+input:focus{
+    border: 2px solid #383838;
+    outline: none;
 }
 
 fieldset{
@@ -285,8 +304,8 @@ li.noStyle{
 
 .javascript{
     background-color: yellow;
-    accent-color: yellow;
-    color: #111111;
+    accent-color: #111;
+    color: #111;
 }
 
 /*ELements from blogPost*/
@@ -299,6 +318,45 @@ li.noStyle{
     padding: 8px;
     padding-left: 15px;
     border-radius: 15px;
+}
+
+/*Elements from proyectos*/
+.chronometer{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    row-gap: 10px;
+}
+.buttonsConsole{
+    display: flex;
+    justify-content: space-around;
+}
+
+.time{
+    background-color: var(--background);
+    border-radius: 15px;
+}
+
+.time h2{
+    border: solid 2px var(--purple-border);
+    border-radius: 15px 15px 0 0;
+    color: #2beaccdf;
+    padding: 15px;
+}
+
+#min, #sec, #msc{
+    padding-top: 8px;
+    border: solid 2px #383838;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*Media Query for mobile devices*/

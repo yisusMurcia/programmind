@@ -5,60 +5,119 @@
     <meta name="author" content="Jesús Murcia">
     <meta name="description" content="Selecciona items aleatorios a partir de tu propia lista">
     <meta name="keywords" content="programmind, lista, item">
-    <meta name="image" content="https://yisusmurcia.github.io/programmind/Profile/imagePreview.png">
+    <meta name="image" content="https://yisusmurcia.github.io/programmind/img/imagePreview.png">
     <meta property="og:title" content="Selecionar items">
     <meta property="og:description" content="Selecciona items aleatorios a partir de tu propia lista">
-    <meta property="og:image" content="https://yisusmurcia.github.io/programmind/Profile/imagePreview.png">
+    <meta property="og:image" content="https://yisusmurcia.github.io/programmind/img/imagePreview.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Seleccionar items">
     <meta name="twitter:description" content="Selecciona items aleatorios a partir de tu propia lista">
-    <meta name="twitter:image" content="https://yisusmurcia.github.io/programmind/Profile/imagePreview.png">
+    <meta name="twitter:image" content="https://yisusmurcia.github.io/programmind/img/imagePreview.png">
     <title>Creando listas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="icon" href="../../Profile/halloweenLogo.png">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="../../../img/halloweenLogo.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCXPF4F656"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-FCXPF4F656');
     </script>
 </head>
 <body>
     <header>
-        <article class="webPages">
-            <a class="otherPages" id="index" href="../../index.html">Programmind</a>
-            <a class="otherPages" href="../../blog.html">Blog</a>
-            <a class="otherPages" href="../../proyectos.html">Proyectos</a>
-            <a class="otherPages" href="../../prácticaDeProgramación/index.html">Prácticar</a>
-        </article>
-        <div class="principal">
-            <h1 class="programmind">Program<strong id="mind">mind</strong></h1>
-        </div>
+        <button class="menu" id="open">☰</button>
+        <img src="../../img/programmind.svg" alt="programmind" id="programmind">
+        <ul id="programmindHidden" class="hidden">
+            <li class="noStyle">
+                <a href="../../../index.html">Programmind</a>
+            </li>
+            <li class="noStyle">
+                <a href="../../index.html">Blog</a>
+            </li>
+            <li class="noStyle">
+                <a href="../../../proyectos/index.html">Proyectos</a>
+            </li>
+            <li class="noStyle">
+                <a href="../../../prácticaDeProgramación/index.html">Práctica</a>
+            </li>
+        </ul>
+        <nav id="navbar">
+            <ul class="navList">
+                <button class="menu" id="close">✖</button>
+                <li class="navLink" id="about">
+                    Acerca de
+                    <ul id="aboutHidden" class="hidden">
+                        <li class="noStyle"><p>programmind</p></li>
+                        <li class="noStyle"><p>Jesús Murcia</p></li>
+                    </ul>
+                </li>
+                <li class="navLink" id="socialMedia">Redes sociales
+                    <ul id="socialMediaHidden" class="hidden">
+                        <li class="noStyle">
+                            <a href="https://twitter.com/theprogrammind" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="x" class="socialMediaImg">
+                            </a>
+                            <p>X</p>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://github.com/yisusMurcia" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png" alt="GitHub" class="socialMediaImg">
+                                <p>GitHub</p>
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://www.threads.net/@jesusantoniomurciaguzman" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/320px-Threads_%28app%29_logo.svg.png" alt="Threads" class="socialMediaImg">
+                                <p>Threads</p>
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://www.instagram.com/theProgrammind/" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" class="socialMediaImg">
+                                <p>Instagram</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navLink">
+                    <a href="https://github.com/yisusMurcia/programmind/commits/main" target="_blank">Notas de actualización</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     </header>
-    <br>
-    <p>En este código, se generará una lista aleatoria o se seleccionará una cantidad específica de elementos.
-        Ya sea que necesites una lista de números aleatorios para realizar pruebas o desees obtener una
-        muestra aleatoria de elementos de una lista existente.</p>
-    <div id="inputConsole">
-        <button>Añadir item</button>
-        <input type="text">
-    </div>
-    <div class="controlPanel">
-        <button>Eliminar último item</button>
-        <button>Reorganizar</button>
-        <p class="pContainer">
-            Selecciona una cantidad de items
-            <input type="number" value="1">
-            <button>Seleccionar</button>
-        </p>
-    </div>
-    <p id="result"> En este espacio se mostrará las modificaciones</p>
+    <main>
+        <section>
+            <p>
+                En este código, se generará una lista aleatoria o se seleccionará una cantidad
+                específica de elementos. Ya sea que necesites una lista de números aleatorios para
+                realizar pruebas o desees obtener una muestra aleatoria de elementos de una listaexistente.
+            </p>
+        </section>
+        <section>
+            <div id="inputConsole" class="flex">
+                <button id="add">Añadir item</button>
+                <input type="text">
+            </div>
+            <div class="flex">
+                <button id="delete">Eliminar último item</button>
+                <button id="set">Reorganizar</button>
+                <p class="pContainer">
+                    Selecciona una cantidad de items
+                    <input type="number" value="1">
+                    <button id="select">Seleccionar</button>
+                </p>
+            </div>
+        </section>
+        <section>
+            <p id="result"> En este espacio se mostrará las modificaciones</p>
+        </section>
+    </main>
     <script src="script.js"></script>
+    <script src="../../header.js"></script>
 </body>
 </html>

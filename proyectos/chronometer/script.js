@@ -1,5 +1,5 @@
 let chronometer;
-let msecHTML= document.getElementById("msec");
+let msecHTML= document.getElementById("msc");
 let secHTML= document.getElementById("sec");
 let minHTML= document.getElementById("min");
 let increase= (itemHTML, max)=>{;

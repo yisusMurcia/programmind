@@ -1,5 +1,4 @@
 let inputsDiv= document.getElementById("inputConsole");
-let buttons= document.getElementsByTagName("button");
 let inputs= document.getElementsByTagName("input");
 let list=[];
 let newList=[];
@@ -24,18 +23,23 @@ let setItems=(times)=>{
     list= [];
     newList= [];
 }
-buttons[3].addEventListener("click", ()=>{
+let addButton= document.querySelector("#add");
+addButton.addEventListener("click", ()=>{
     inputsDiv.appendChild(document.createElement("input"));
 });
-buttons[4].addEventListener("click", ()=>{
-    if (inputs.length>1){
+let deleteButton= document.querySelector("#delete");
+deleteButton.addEventListener("click", ()=>{
+    alert(inputs.length)
+    if (inputs.length >1){
         inputs[inputs.length-2].remove();
     };
 });
-buttons[5].addEventListener("click", ()=>{
+let setButton= document.querySelector("#set");
+setButton.addEventListener("click", ()=>{
     setItems(inputs.length-1)
-})
-buttons[6].addEventListener("click", ()=>{
+});
+let selectButton= document.querySelector("#select");
+selectButton.addEventListener("click", ()=>{
     let numOfItems= +inputs[inputs.length-1].value;
     setItems(numOfItems);
 });
