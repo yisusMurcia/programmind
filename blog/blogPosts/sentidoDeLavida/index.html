@@ -5,80 +5,131 @@
     <meta name="author" content="Jesús Murcia">
     <meta name="description" content="¿Hay algun senido en esta vida?, ¿realmente necesita un sentido?">
     <meta name="keywords" content="programmind, vida, sentido,  blog">
-    <meta name="image" content="https://yisusmurcia.github.io/programmind/blogPost/sentodioDeLAvida/img.png">
+    <meta name="image" content="https://yisusmurcia.github.io/programmind/blog/blogPost/sentodioDeLAvida/img.png">
     <meta property="og:title" content="¿la vida tiene sentido?">
     <meta property="og:description" content="¿La IA va a reemplazarnos?, esta es la pregunta que nos plantemaso con el surgimiento  te todas estas nuevas herramientas de IA">
-    <meta property="og:image" content="https://yisusmurcia.github.io/programmind/blogPost/sentodioDeLAvida/img.png">
+    <meta property="og:image" content="https://yisusmurcia.github.io/programmind/blog/blogPost/sentodioDeLAvida/img.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="¿La vida tiene sentido?">
     <meta name="twitter:description" content="¿Hay algun senido en esta vida?, ¿realmente necesita un sentido?">
-    <meta name="twitter:image" content="https://yisusmurcia.github.io/programmind/blogPost/sentodioDeLAvida/img.png">
+    <meta name="twitter:image" content="https://yisusmurcia.github.io/programmind/blog/blogPost/sentodioDeLAvida/img.png">
     <title>¿la vida tiene sentido?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
-    <link rel="icon" href="../../Profile/halloweenLogo.png">
-    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="icon" href="../../../img/halloweenLogo.png">
+    <link rel="stylesheet" href="../../../style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCXPF4F656"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-FCXPF4F656');
     </script>
 </head>
 <body>
-    <header>
-        <article class="webPages">
-            <a class="otherPages" id="index" href="../../index.html">Programmind</a>
-            <a class="otherPages" href="../../blog.html">Blog</a>
-            <a class="otherPages" href="../../proyectos.html">Proyectos</a>
-            <a class="otherPages" href="../../prácticaDeProgramación/index.html">Prácticar</a>
-        </article>
-        <div class="principal">
-            <h2 class="title">¿la vida tiene sentido?</h2>
-            <h1 class="programmind">Program<strong id="mind">mind</strong></h1>
-        </div>
+    <header id="header">
+        <button class="menu" id="open">☰</button>
+        <img src="../../../img/programmind.svg" alt="programmind" id="programmind">
+        <ul id="programmindHidden" class="hidden">
+            <li class="noStyle">
+                <a href="../../../index.html">Programmind</a>
+            </li>
+            <li class="noStyle">
+                <a href="../../index.html">Blog</a>
+            </li>
+            <li class="noStyle">
+                <a href="../../../proyectos/index.html">Proyectos</a>
+            </li>
+            <li class="noStyle">
+                <a href="../../../prácticaDeProgramación/index.html">Práctica</a>
+            </li>
+        </ul>
+        <nav id="navbar">
+            <ul class="navList">
+                <button class="menu" id="close">✖</button>
+                <li class="navLink" id="about">
+                    Acerca de
+                    <ul id="aboutHidden" class="hidden">
+                        <li class="noStyle"><p>programmind</p></li>
+                        <li class="noStyle"><p>Jesús Murcia</p></li>
+                    </ul>
+                </li>
+                <li class="navLink" id="socialMedia">Redes sociales
+                    <ul id="socialMediaHidden" class="hidden">
+                        <li class="noStyle">
+                            <a href="https://twitter.com/theprogrammind" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="x" class="socialMediaImg">
+                            </a>
+                            <p>X</p>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://github.com/yisusMurcia" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png" alt="GitHub" class="socialMediaImg">
+                                <p>GitHub</p>
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://www.threads.net/@jesusantoniomurciaguzman" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/320px-Threads_%28app%29_logo.svg.png" alt="Threads" class="socialMediaImg">
+                                <p>Threads</p>
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://www.instagram.com/theProgrammind/" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" class="socialMediaImg">
+                                <p>Instagram</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navLink">
+                    <a href="https://github.com/yisusMurcia/programmind/commits/main" target="_blank">Notas de actualización</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <p>
-            Seguramente te has preguntado ¿Cuál es nuestro proposito aquí? ¿Por qué exisitmos? ¿Cuál es el sentido de
-            la vida?, y si no lo habias hecho, pues posiblemente ahora te lo estas planteando, es por eso que vamos a
-            tratar de dar una respuesta.
-        </p>
-        <p>
-            En nuestro día a día, comemos para tener energía, tranajamos por dinero o miramos tiktok para
-            distraernos. Todo lo que hacemos en nuestra vida tiene una razón, un propósito, es por eso que lo
-            hacemos, pero ¿cuál es el proposito de nuestra vida?, ¿Por qué razón hacemos nuestras actividades diarias?
-        </p>
-        <h2 class="subtitle">¿La vida no tiene sentidio?</h2>
-        <p>
-            Al plantearnos estas preguntas nos damos cuenta que tal vez la vida no tiene sentido, estamos tan ocupados
-            realizamos actividades monotonas en nuestro día a día, actividades que realizamos casí de manera automática,
-            desperdiciando el tiempo y realmente no nos tomamos el tiempo de disfrutarlas, pero un día nos damos
-            cuanta que dejaremos este mundo y moriremos. Es irónico, que esa necesidad de buscar una razón para todo
-            nos quite aquel propósito más grande, un sentido por que vivir.
-        </p>
-        <p>
-            Esto nos lleva a plantearnos la pregunta: <span class="question">si la vida no tiene un sentido, ¿por
-            qué vivir?</span><br>
-            Pero es este mismo aspecto de la vida es la que tal vez le puede dar un sentido.
-        </p>
-        <h2 class="subtitle">El sentido de la vida</h2>
-        <p>
-            Si la vida no tiene un proposito, y sin importar lo que hagamos vamos a morir, entonces también podemos
-            plantearnos porque no vivir disfrutarndo esta vida sin sentido tal como queramos, siguiendo nuestros
-            sueños para poder decir que morimos sin arrepentimientos.
-        </p>
-        <p>
-            El hecho de que solo tenemos una vida y no hay vuelta a atras, es una invitación a disfrutar y ser feliz,
-            ¿cómo? ¡simple!, siguiendo tus sueños y disfrutando la vida de la manera que se quiera, mejorando cada día,
-            centrandose en el presente y divertirse, o persiguiendo una meta a futuro, esa razón es diferente para
-            cada uno. La vida no se trata de un proposito claro, se trata de hacer lo que amas y poder decir: "disfrute
-            esta vida".
-        </p>
-        <p>La vida se trata de darle el sentido que se desea.</p>
+        <section>
+            <p>
+                Seguramente te has preguntado ¿Cuál es nuestro proposito aquí? ¿Por qué exisitmos? ¿Cuál es el sentido de
+                la vida?, y si no lo habias hecho, pues posiblemente ahora te lo estas planteando, es por eso que vamos a
+                tratar de dar una respuesta.
+            </p>
+            <p>
+                En nuestro día a día, comemos para tener energía, tranajamos por dinero o miramos tiktok para
+                distraernos. Todo lo que hacemos en nuestra vida tiene una razón, un propósito, es por eso que lo
+                hacemos, pero ¿cuál es el proposito de nuestra vida?, ¿Por qué razón hacemos nuestras actividades diarias?
+            </p>
+            <h2 class="subtitle">¿La vida no tiene sentidio?</h2>
+            <p>
+                Al plantearnos estas preguntas nos damos cuenta que tal vez la vida no tiene sentido, estamos tan ocupados
+                realizamos actividades monotonas en nuestro día a día, actividades que realizamos casí de manera automática,
+                desperdiciando el tiempo y realmente no nos tomamos el tiempo de disfrutarlas, pero un día nos damos
+                cuanta que dejaremos este mundo y moriremos. Es irónico, que esa necesidad de buscar una razón para todo
+                nos quite aquel propósito más grande, un sentido por que vivir.
+            </p>
+            <p>
+                Esto nos lleva a plantearnos la pregunta: <span class="question">si la vida no tiene un sentido, ¿por
+                qué vivir?</span><br>
+                Pero es este mismo aspecto de la vida es la que tal vez le puede dar un sentido.
+            </p>
+            <h2 class="subtitle">El sentido de la vida</h2>
+            <p>
+                Si la vida no tiene un proposito, y sin importar lo que hagamos vamos a morir, entonces también podemos
+                plantearnos porque no vivir disfrutarndo esta vida sin sentido tal como queramos, siguiendo nuestros
+                sueños para poder decir que morimos sin arrepentimientos.
+            </p>
+            <p>
+                El hecho de que solo tenemos una vida y no hay vuelta a atras, es una invitación a disfrutar y ser feliz,
+                ¿cómo? ¡simple!, siguiendo tus sueños y disfrutando la vida de la manera que se quiera, mejorando cada día,
+                centrandose en el presente y divertirse, o persiguiendo una meta a futuro, esa razón es diferente para
+                cada uno. La vida no se trata de un proposito claro, se trata de hacer lo que amas y poder decir: "disfrute
+                esta vida".
+            </p>
+            <p>La vida se trata de darle el sentido que se desea.</p>
+        </section>
     </main>
+    <script src="../../../header.js"></script>
 </body>
 </html>

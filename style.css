@@ -53,7 +53,8 @@ section, aside{
 }
 
 p{
-    color: var(--text-color)
+    color: var(--text-color);
+    margin: 10px 5px;
 }
 
 ul{
@@ -192,7 +193,7 @@ li.noStyle{
     text-align: left;
 }
 
-/*Post blog and proyectos, .post at the end*/
+/*blog´s and proyectos´s elements, .post at the end*/
 .post > h3{
     color: purple;
 }
@@ -286,6 +287,18 @@ li.noStyle{
     background-color: yellow;
     accent-color: yellow;
     color: #111111;
+}
+
+/*ELements from blogPost*/
+.subtitle{
+    color: var(--h2-color);
+    text-decoration: underline;
+    text-decoration-color: orangered;
+    text-align: left;
+    background-color: var(--background);
+    padding: 8px;
+    padding-left: 15px;
+    border-radius: 15px;
 }
 
 /*Media Query for mobile devices*/
