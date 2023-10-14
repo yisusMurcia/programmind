@@ -148,11 +148,13 @@ header{
 #programmind{
     height: 60px;
     width: 180px;
+    cursor: pointer;
 }
 
 section #programmind{
     display: block;
     margin: 0 auto;
+    cursor: default;
 }
 
 #programmindHidden{
