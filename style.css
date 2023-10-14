@@ -245,8 +245,16 @@ li.noStyle{
 }
 
 /*blog´s and proyectos´s elements, .post at the end*/
+.post:hover{
+    border: 2px solid #2bbeeadf;
+}
+
 .post > h3{
     color: purple;
+}
+
+.post:hover h3{
+    color: #cc33cc;
 }
 
 .post >p{
@@ -254,9 +262,17 @@ li.noStyle{
     color: yellow;
 }
 
+.post:hover p{
+    color: #ffbb00;
+}
+
 .post p, .post h3{
     background-color: #1c1c1ce0;
     padding: 5px;
+}
+
+.post:hover p, .post:hover h3{
+    background-color: #1c1c1cef;
 }
 
 .moreContent{
@@ -266,6 +282,7 @@ li.noStyle{
     position: relative;
     font-size: 150%;
     text-align: center;
+    color: purple;
     rotate: 90deg;
     background-color: #1c1c1c;
     border-radius: 15px;
@@ -273,6 +290,12 @@ li.noStyle{
     height: 75px;
     bottom: 45px;
     border: solid 2px #4f65ca;
+}
+
+.moreContent:hover{
+    background-color: #2f2f2f;
+    color: purple;
+    border-color: #0084ff;
 }
 
 .postDiv{
@@ -488,7 +511,6 @@ li.noStyle{
     width: 25%;
     min-width: 180px;
     overflow: hidden;
-    color: purple;
     border-radius: 20px;
     border: solid 2px #2f2f2f;
     text-align: center;
