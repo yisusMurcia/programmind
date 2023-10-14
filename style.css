@@ -72,11 +72,19 @@ li{
 
 button{
     font-family: "comfortaa";
-    background-color: #2beaccdf;
+    background-color: #2bbeeadf;
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
-    color: var(--purple-border);
+    color: #1c1c1c;
+}
+
+button:hover{
+    background-color: #2beaccdf;
+    color: black;
+}
+button:active{
+    background-color: #0084ff;
 }
 
 a{
@@ -161,6 +169,10 @@ section #programmind{
     padding: 5px;
 }
 
+.menu:hover{
+    color: var(--text-color);
+}
+
 .navList{
     display: flex;
     align-items: center;
@@ -188,17 +200,34 @@ li.navLink{
     visibility: hidden;
 }
 
+.webPage:hover{
+    background-color: #0000007c;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .visible{
     display: block;
     position: absolute;
     visibility: visible;
     opacity: 1;
+    border: solid 2px #2f2f2f;
+    border-top: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 }
 
 .socialMediaImg{
     display: inline;
-    max-width: 25px;
-    aspect-ratio: 1;
+    width: 35px;
+    height: 35px;
+    background-color: #444444;
+    padding: 5px;
+    border-radius: 25%;
+}
+
+.socialMediaImg:hover{
+    border: solid 2px #909dd8;
 }
 
 li.noStyle{
@@ -231,6 +260,7 @@ li.noStyle{
 .moreContent{
     display: block;
     margin: 0 auto;
+    padding: 5px 8px;
     position: relative;
     font-size: 150%;
     text-align: center;
@@ -414,6 +444,7 @@ li.noStyle{
     #navbar.visible{
         visibility: visible;
         opacity: 1;
+        border: none;
     }
 
     .navList{
