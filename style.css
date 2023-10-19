@@ -50,6 +50,7 @@ section, aside{
     border-radius: 15px;
     line-height: 1.25rem;
     text-align: justify;
+    overflow: hidden;
 }
 
 p{
@@ -60,8 +61,8 @@ p{
 ul{
     list-style-position: inside;
     margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 8px;
+    border-radius: 8px;
     background-color: var(--background);
     color: var(--text-color);
 }
@@ -242,6 +243,63 @@ li.noStyle{
     border-bottom: 2px solid var(--news-border-color);
     margin-left: 8%;
     text-align: left;
+}
+
+/*About pages*/
+#profilePic{
+    width: 30%;
+    max-width: 150px;
+    min-width: 100px;
+    border-radius: 25%;
+    float: left;
+    margin: 5px;
+    margin-bottom: 0px;
+    border: solid 2px #2c2c2c;
+}
+
+#profileResume{
+    background-color: var(--background);
+    padding: 15px;
+    border-radius: 15px;
+    border: solid 2px #4f65ca;
+}
+
+#profileResume h1{
+    color: #2beaccdf;
+    line-height: 30px;
+}
+
+#profileResume p{
+    color: #f6f6f8;
+    background-color: #111;
+    padding: 8px;
+    border-radius: 25px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: minmax(8rem, 30%) 1fr;
+    column-gap: 5px;
+}
+
+.grid div{
+    background-color: var(--background);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#mySocialMedia{
+    border: none;
+    background-color: var(--background);
+    border-radius: 10px;
+}
+
+#mySocialMedia h1{
+    color: #4f65ca;
+}
+
+.verdana{
+    font-family: Verdana, Tahoma;
 }
 
 /*blog´s and proyectos´s elements, .post at the end*/
