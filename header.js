@@ -19,7 +19,6 @@ let changeVisibility= (element)=>{
 //Establecer elementos del header expandibles
 const aboutLink= document.querySelector("#about");
 aboutLink.addEventListener("click", ()=>{
-    return alert("Esto aún esta en desarrollo 😉");
     changeVisibility("aboutHidden");
 });
 const socialMediaLink= document.querySelector("#socialMedia");
