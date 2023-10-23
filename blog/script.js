@@ -9,7 +9,8 @@ let postArray=[
     ["Agregando imágenes", "https://programmind.notion.site/Im-genes-34d1dcce90c44e4ba2cc6f809996ef4e?pvs=4"],
     ["Inteligencia Artificial", "blogPosts/IA/index.html"],
     ["El costo de ser bueno", "blogPosts/serBueno/index.html", "blogPosts/serBueno/img.jpg"],
-    ["El sentido de la vida", "blogPosts/sentidoDeLavida/index.html", "blogPosts/sentidoDeLavida/img.jpg"]
+    ["El sentido de la vida", "blogPosts/sentidoDeLavida/index.html", "blogPosts/sentidoDeLavida/img.jpg"],
+    ["La necesidad de ser productivo", "blogPosts/productividad/index.html", "blogPosts/productividad/img.jpg"]
 ];
 postArray.reverse();
 let blogContent= document.getElementById("blogContent");

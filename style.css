@@ -85,7 +85,8 @@ button:hover{
     color: black;
 }
 button:active{
-    background-color: #0084ff;
+    background-color: inherit;
+    color: #0084ff;
 }
 
 a{
@@ -432,7 +433,6 @@ button.javascript:hover{
 }
 button.javascript:active{
     color: #ffc400;
-    background-color: inherit;
 }
 
 /*ELements from blogPost*/
