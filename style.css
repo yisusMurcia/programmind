@@ -422,6 +422,19 @@ li.noStyle{
     color: #111;
 }
 
+button.javascript{
+    background-color: #111;
+    color: yellow;
+}
+button.javascript:hover{
+    background-color: yellow;
+    color: #111;
+}
+button.javascript:active{
+    color: #ffc400;
+    background-color: inherit;
+}
+
 /*ELements from blogPost*/
 .subtitle{
     color: var(--h2-color);
