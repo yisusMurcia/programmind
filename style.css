@@ -3,7 +3,7 @@
     --h-color: orangered;
     --section-color: #111111;
     --text-color: #8591c8;
-    --h2-color: #4f65ca;
+    --h-color-2: #4f65ca;
     --a-color: #cc33cc;
     --a-color-hover: #fa3efa;
     --purple-border: #4b134b;
@@ -41,7 +41,9 @@ h1, h2{
     color: var(--h-color);
     text-align: center;
 }
-
+h3{
+    color: var(--h-color-2);
+}
 section, aside{
     background-color: var(--section-color);
     padding: 15px;
@@ -301,6 +303,10 @@ li.noStyle{
 
 .verdana{
     font-family: Verdana, Tahoma;
+}
+
+.right{
+    float: right;
 }
 
 /*blog´s and proyectos´s elements, .post at the end*/
