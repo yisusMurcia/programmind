@@ -9,7 +9,6 @@
     --purple-border: #4b134b;
     --news-color: #8591c8;
     --news-border-color: #4f65ca;
-    --aside-color: purple;
 }
 
 *{
@@ -30,10 +29,16 @@ html{
     height: 10px;
     border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb{
     background-color: #4f65ca;
     border-radius: 5px;
+}
+
+#mode{
+    position: fixed;
+    width: 35px;
+    bottom: 5px;
+    right: 3px;
 }
 
 /*HTML elements*/
@@ -48,7 +53,6 @@ section, aside{
     background-color: var(--section-color);
     padding: 15px;
     margin: 10px;
-    border: dotted 2px orangered;
     border-radius: 15px;
     line-height: 1.25rem;
     text-align: justify;
@@ -170,13 +174,13 @@ section #programmind{
     display: none;
     font-size: 1.2rem;
     background-color: transparent;
-    color:var(--text-color);
+    color: var(--news-color);
     border: none;
     padding: 5px;
 }
 
 .menu:hover{
-    color: var(--text-color);
+    color: var(--news-color);
 }
 
 .navList{
@@ -221,6 +225,9 @@ li.navLink{
     border-top: none;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+}
+ul.visible{
+    background-color: var(--section-color);
 }
 
 .socialMediaImg{
