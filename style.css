@@ -1,12 +1,11 @@
 :root{
     --background: #1c1c1c;
     --h-color: orangered;
-    --section-color: #111111;
+    --section-color: #111;
     --text-color: #8591c8;
     --h-color-2: #4f65ca;
     --a-color: #cc33cc;
     --a-color-hover: #fa3efa;
-    --purple-border: #4b134b;
     --news-color: #8591c8;
     --news-border-color: #4f65ca;
 }
