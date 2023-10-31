@@ -36,14 +36,6 @@ let src= modeButton.getAttribute("src");
 let changeImg=(search, replace)=>{
         return src.replace(new RegExp(search, "g"), replace);
 };
-//Revisar el tema de acuerdo a al imagen usada
-let checkTheme=()=>{
-    alert(src.match("dark"));
-    if (src.match("dark")==null){
-        return true;
-    };
-    return false;
-};
 modeButton.addEventListener("click", ()=>{
     if (document.documentElement.style.getPropertyValue("--background")== "#5e8178"){
         document.documentElement.style.setProperty("--section-color", "111111");
