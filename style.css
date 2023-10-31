@@ -226,7 +226,7 @@ li.navLink{
     border-top-left-radius: 0;
 }
 ul.visible{
-    background-color: var(--section-color);
+    background-color: var(--background);
 }
 
 .socialMediaImg{
@@ -280,7 +280,7 @@ li.noStyle{
 
 #profileResume p{
     color: #f6f6f8;
-    background-color: #111;
+    background-color: var(--background);
     padding: 8px;
     border-radius: 25px;
 }
@@ -453,7 +453,7 @@ button.javascript:active{
 
 /*ELements from blogPost*/
 .subtitle{
-    color: var(--h2-color);
+    color: var(--h-color-2);
     text-decoration: underline;
     text-decoration-color: orangered;
     text-align: left;
@@ -522,6 +522,7 @@ button.javascript:active{
     background-color: var(--section-color);
     border-radius: 20px;
     border: solid 2px var(--news-border-color);
+    color: #cc33cc;
 }
 
 /*Media Query for mobile devices*/
