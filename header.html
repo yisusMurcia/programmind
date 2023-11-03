@@ -1,126 +1,67 @@
-<head>
-    <link rel="stylesheet" href="style.css">
-</head>
-<header id="header">
-    <button class="menu" id="open">☰</button>
-    <img src="../img/programmind.svg" alt="programmind" id="programmind">
-    <ul id="programmindHidden" class="hidden">
-        <li class="noStyle">
-            <a href="../index.html" class="webPage">Programmind</a>
-        </li>
-        <li class="noStyle">
-            <a href="../blog/index.html" class="webPage">Blog</a>
-        </li>
-        <li class="noStyle">
-            <a href="../proyectos/index.html" class="webPage">Proyectos</a>
-        </li>
-    </ul>
-    <nav id="navbar">
-        <ul class="navList">
-            <button class="menu" id="close">✖</button>
-            <li class="navLink" id="about">
-                Acerca de
-                <ul id="aboutHidden" class="hidden">
-                    <li class="noStyle">
-                        <a href="../acercaDeProgrammind/index.html">programmind</a>
-                    </li>
-                    <li class="noStyle">
-                        <a href="../acercaDeMi/index.html">Jesús Murcia</a>
-                    </li>
-                </ul>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <header id="header">
+        <button class="menu" id="open">☰</button>
+        <img src="https://yisusmurcia.github.io/programmind/img/programmind.svg" alt="programmind" id="programmind">
+        <ul id="programmindHidden" class="hidden">
+            <li class="noStyle">
+                <a href="https://yisusmurcia.github.io/programmind/index.html" class="webPage">Programmind</a>
             </li>
-            <li class="navLink" id="socialMedia">Redes sociales
-                <ul id="socialMediaHidden" class="hidden">
-                    <li class="noStyle">
-                        <a href="https://twitter.com/theprogrammind" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="x" class="socialMediaImg">
-                        </a>
-                    </li>
-                    <li class="noStyle">
-                        <a href="https://github.com/yisusMurcia" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png" alt="GitHub" class="socialMediaImg">
-                        </a>
-                    </li>
-                    <li class="noStyle">
-                        <a href="https://www.threads.net/@jesusantoniomurciaguzman" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/320px-Threads_%28app%29_logo.svg.png" alt="Threads" class="socialMediaImg">
-                        </a>
-                    </li>
-                    <li class="noStyle">
-                        <a href="https://www.instagram.com/theProgrammind/" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" class="socialMediaImg">
-                        </a>
-                    </li>
-                </ul>
+            <li class="noStyle">
+                <a href="https://yisusmurcia.github.io/programmind/blog/index.html" class="webPage">Blog</a>
             </li>
-            <li class="navLink">
-                <a href="https://github.com/yisusMurcia/programmind/commits/main" target="_blank">Notas de actualización</a>
+            <li class="noStyle">
+                <a href="https://yisusmurcia.github.io/programmind/proyectos/index.html" class="webPage">Proyectos</a>
+            </li>
+            <li class="noStyle">
+                <a href="https://yisusmurcia.github.io/programmindhttps://yisusmurcia.github.io/programmind/pr%C3%A1cticaDeProgramaci%C3%B3n/index.html">Práctica</a>
             </li>
         </ul>
-    </nav>
-</header>
-<script>
-    //Definir variables para el encabezado expandible
-    const navbar= document.querySelector("#navbar");
-    const openButton= document.querySelector("#open");
-    const closeButton= document.querySelector("#close");
-    openButton.addEventListener("click", ()=>{
-            navbar.classList.add("visible");
-    });
-    closeButton.addEventListener("click", ()=>{
-        navbar.classList.remove("visible");
-    });
-    //Crear función hacer visible-invisible
-    let changeVisibility= (element)=>{
-        element= document.querySelector(`#${element}`);
-        if (element.classList.contains("visible")){
-            return element.classList.remove("visible");
-        };
-        return element.classList.add("visible");
-    }
-    //Establecer elementos del header expandibles
-    const aboutLink= document.querySelector("#about");
-    aboutLink.addEventListener("click", ()=>{
-        changeVisibility("aboutHidden");
-    });
-    const socialMediaLink= document.querySelector("#socialMedia");
-    socialMediaLink.addEventListener("click", ()=>{
-        changeVisibility("socialMediaHidden");
-    })
-    const programmindLink= document.querySelector("#programmind");
-    programmindLink.addEventListener("click", ()=>{
-        changeVisibility("programmindHidden");
-    })
-    //Modo claro-oscuro
-    let modeButton= document.querySelector("#mode");
-    let src= modeButton.getAttribute("src");
-    //Change the source of the image
-    let changeImg=(search, replace)=>{
-            return src.replace(new RegExp(search, "g"), replace);
-    };
-    modeButton.addEventListener("click", ()=>{
-        if (document.documentElement.style.getPropertyValue("--background")== "#5e8178"){
-            document.documentElement.style.setProperty("--section-color", "111111");
-            document.documentElement.style.setProperty("--background", "#1c1c1c");
-            document.documentElement.style.setProperty("--h-color", "orangered");
-            document.documentElement.style.setProperty("--text-color", "#8591c8");
-            document.documentElement.style.setProperty("--h-color-2", "#4f65ca");
-            document.documentElement.style.setProperty("--a-color", "#cc33cc");
-            document.documentElement.style.setProperty("--a-color-hover", "#fa3efa");
-            document.documentElement.style.setProperty("--news-color", "#8591c8");
-            document.documentElement.style.setProperty("--news-border-color", "#4f65ca");
-            modeButton.setAttribute("src", changeImg("dark","light"));
-        }else{
-            document.documentElement.style.setProperty("--background", "#5e8178");
-            document.documentElement.style.setProperty("--h-color", "orange");
-            document.documentElement.style.setProperty("--section-color", "#c7c7c7");
-            document.documentElement.style.setProperty("--text-color", "1c1c1c");
-            document.documentElement.style.setProperty("--h-color-2", "blue");
-            document.documentElement.style.setProperty("--a-color", "#ddcedd");
-            document.documentElement.style.setProperty("--a-color-hover", "#fa3efa");
-            document.documentElement.style.setProperty("--news-color", "blue");
-            document.documentElement.style.setProperty("--news-border-color", "#994fca");
-            modeButton.setAttribute("src",changeImg("light", "dark"));
-        };
-    });
-</script>
+        <nav id="navbar">
+            <ul class="navList">
+                <button class="menu" id="close">✖</button>
+                <li class="navLink" id="about">
+                    Acerca de
+                    <ul id="aboutHidden" class="hidden">
+                        <li class="noStyle">
+                            <a href="https://yisusmurcia.github.io/programmind/acercaDeProgrammind/index.html">programmind</a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://yisusmurcia.github.io/programmind/acercaDeMi/index.html">Jesús Murcia</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navLink" id="socialMedia">Redes sociales
+                    <ul id="socialMediaHidden" class="hidden">
+                        <li class="noStyle">
+                            <a href="https://twitter.com/theprogrammind" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="x" class="socialMediaImg">
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://github.com/yisusMurcia" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png" alt="GitHub" class="socialMediaImg">
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://www.threads.net/@jesusantoniomurciaguzman" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/320px-Threads_%28app%29_logo.svg.png" alt="Threads" class="socialMediaImg">
+                            </a>
+                        </li>
+                        <li class="noStyle">
+                            <a href="https://www.instagram.com/theProgrammind/" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" class="socialMediaImg">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navLink">
+                    <a href="https://github.com/yisusMurcia/programmind/commits/main" target="_blank">Notas de actualización</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</html>
