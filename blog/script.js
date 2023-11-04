@@ -30,20 +30,21 @@ for (let i= 0; i<4; i++){
     };
 };
 addContent.addEventListener("click", ()=>{
-        blogContent.innerHTML= "";
-        for (let post of postArray){
-            let postDiv= document.createElement("div");
-            postDiv.setAttribute("class", "post");
-            let postTitle= document.createElement("h3");
-            postTitle.innerText= post[0];
-            postDiv.addEventListener("click", ()=>location.href=(post[1]));
-            postDiv.appendChild(postTitle);
-            blogContent.appendChild(postDiv);
-            if (post[2]== undefined){
-                postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
-            }else{
-                postDiv.style.backgroundImage= `url(${post[2]})`;
-            };
+    blogContent.innerHTML= "";
+    for (let post of postArray){
+        let postDiv= document.createElement("div");
+        postDiv.setAttribute("class", "post");
+        let postTitle= document.createElement("h3");
+        postTitle.innerText= post[0];
+        postDiv.addEventListener("click", ()=>location.href=(post[1]));
+        postDiv.appendChild(postTitle);
+        blogContent.appendChild(postDiv);
+        if (post[2]== undefined){
+            postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
+        }else{
+            postDiv.style.backgroundImage= `url(${post[2]})`;
         };
-        addContent.remove();
-    });
+    };
+    addContent.remove();
+});
+export {postArray};
