@@ -1,9 +1,4 @@
-let myProyects=[
-    ["Números aleatorios", "randomNums/index.html", "Desarrollo web"],
-    ["listas", "list/index.html", "Desarrollo web"],
-    ["Cronómetro", "chronometer/index.html", "Desarrollo web"],
-    ["IA con Python 🐍", "pythonIA/index.html", "Python", "pythonIA/img.jpg"]
-];
+//Los proyectos estan en otro script que se llama antes de este en el archivo html
 let button= document.querySelector(".moreContent");
 let proyectsContent= document.querySelector("#myProyects");
 myProyects.reverse();
