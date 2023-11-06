@@ -47,4 +47,3 @@ addContent.addEventListener("click", ()=>{
     };
     addContent.remove();
 });
-export {postArray};
