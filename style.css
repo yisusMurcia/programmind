@@ -254,13 +254,24 @@ ul.visible{
     padding: 5px;
     border-radius: 25%;
 }
-
 .socialMediaImg:hover{
     border: solid 2px #909dd8;
 }
 
 li.noStyle{
     list-style: none;
+}
+
+/*main page*/
+.divided{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+}
+.divided .postDiv{
+    display: grid;
+    align-content: flex-start;
+    justify-items: center;
 }
 
 /*Update notes*/
@@ -612,6 +623,10 @@ button.javascript:active{
     .post{
         width: 180px;
     }
+
+    .divided{
+        grid-template-columns: 1fr;
+    }
 }
 
 .post{
@@ -630,4 +645,4 @@ button.javascript:active{
     justify-content: space-between;
     flex-direction: column;
     aspect-ratio: 1;
-};
+}
