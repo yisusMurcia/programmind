@@ -4,3 +4,4 @@ let myProyects=[
     ["Cronómetro", "chronometer/index.html", "Desarrollo web"],
     ["IA con Python 🐍", "pythonIA/index.html", "Python", "pythonIA/img.jpg"]
 ];
+myProyects.reverse();

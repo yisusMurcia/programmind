@@ -1,7 +1,6 @@
 //Los proyectos estan en otro script que se llama antes de este en el archivo html
 let button= document.querySelector(".moreContent");
 let proyectsContent= document.querySelector("#myProyects");
-myProyects.reverse();
 let i= 0;
 do {
     let post= myProyects[i];

@@ -1,12 +1,20 @@
-//Añadir preguntas a la sección de práctica de la página principal
-let questDiv= document.querySelector("#questContainer")
-const fecthFile = async () => {
-    let headerFile= "prácticaDeProgramación/index.html"
-    response = await fetch(headerFile);
-  return response.text();
-};
-async function importContent() {
-    const questContent = await fecthFile();
-    document.querySelector("#questContainer").innerHTML = questContent;
-};
-document.addEventListener("DOMContentLoaded", importContent);
+//Añadir proyectos a la página principal
+let proyectsContent= document.querySelector("#myProyects")
+for (let i = 0; i < 3; i++) {
+    let post= myProyects[i];
+    let postDiv= document.createElement("div");
+    postDiv.setAttribute("class", "post");
+    let postTitle= document.createElement("h3");
+    postTitle.innerText= post[0];
+    postDiv.appendChild(postTitle);
+    let postLenguage= document.createElement("p");
+    postLenguage.innerText= post[2];
+    postDiv.appendChild(postLenguage);
+    proyectsContent.appendChild(postDiv);
+    postDiv.addEventListener("click", ()=>location.href=post[1]);
+    if (post[3]== undefined){
+        postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
+    }else{
+        postDiv.style.backgroundImage= `url(proyectos/${post[3]})`;
+    };    
+}
