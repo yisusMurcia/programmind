@@ -1,6 +1,17 @@
 let proyectsContent= document.querySelector("#myProyects");
 let blogContent= document.querySelector("#blog");
 let postNum= 4;
+//Arreglar ruta de los poryectos y post del blog
+myProyects.map(
+    project=>{
+        return project[1]= "proyectos/"+ project[1];
+    }
+);
+postArray.map(
+    post=>{
+        post[1]= "blog/"+ post[1];
+    }
+)
 //Añadir proyectos
 for (let i = 0; i < postNum; i++) {
     let post= myProyects[i];
@@ -32,6 +43,6 @@ for (let i= 0; i<postNum; i++){
     if (postArray[i][2]== undefined){
         post.style.backgroundImage= `url(../img/imagePreview.png)`;
     }else{
-        post.style.backgroundImage= `url(${postArray[i][2]})`;
+        post.style.backgroundImage= `url(blog/${postArray[i][2]})`;
     };
 };

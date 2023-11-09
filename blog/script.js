@@ -1,5 +1,4 @@
 //el postArray esta en otro archivo, se llama en el archivo html
-postArray.reverse();
 let blogContent= document.getElementById("blogContent");
 let addContent= document.querySelector(".moreContent");
 for (let i= 0; i<4; i++){

@@ -12,3 +12,4 @@ let postArray=[
     ["El sentido de la vida", "blogPosts/sentidoDeLavida/index.html", "blogPosts/sentidoDeLavida/img.jpg"],
     ["La necesidad de ser productivo", "blogPosts/productividad/index.html", "blogPosts/productividad/img.jpg"]
 ];
+postArray.reverse();
