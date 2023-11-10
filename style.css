@@ -334,6 +334,7 @@ li.noStyle{
     display: grid;
     grid-template-columns: minmax(8rem, 30%) 1fr;
     column-gap: 5px;
+    align-items: start;
 }
 
 .grid div{
