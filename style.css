@@ -312,22 +312,19 @@ li.noStyle{
 }
 
 #profileResume{
-    background-color: var(--background);
+    background-color: #1c1c1c;
     padding: 15px;
     border-radius: 15px;
     border: solid 2px #4f65ca;
 }
 
 #profileResume h1{
-    color: #2beaccdf;
+    color: var(--h-color-2);
     line-height: 30px;
 }
-
 #profileResume p{
     color: #f6f6f8;
-    background-color: var(--background);
     padding: 8px;
-    border-radius: 25px;
 }
 
 .grid{

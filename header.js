@@ -55,7 +55,6 @@ let changeImg=(search, replace)=>{
 };
 modeButton.addEventListener("click", ()=>{
     if (document.documentElement.style.getPropertyValue("--background")== "#5e8178"){
-        document.documentElement.style.setProperty("--section-color", "111111");
         document.documentElement.style.setProperty("--background", "#1c1c1c");
         document.documentElement.style.setProperty("--h-color", "orangered");
         document.documentElement.style.setProperty("--text-color", "#8591c8");
@@ -64,6 +63,7 @@ modeButton.addEventListener("click", ()=>{
         document.documentElement.style.setProperty("--a-color-hover", "#fa3efa");
         document.documentElement.style.setProperty("--news-color", "#8591c8");
         document.documentElement.style.setProperty("--news-border-color", "#4f65ca");
+        document.documentElement.style.setProperty("--section-color", "#111111");
         modeButton.setAttribute("src", changeImg("dark","light"));
     }else{
         document.documentElement.style.setProperty("--background", "#5e8178");
