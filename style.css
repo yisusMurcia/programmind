@@ -288,6 +288,18 @@ li.noStyle{
 }
 
 /*About pages*/
+.recaps{
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.recap{
+    background-color: var(--background);
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
 #profilePic{
     width: 30%;
     max-width: 150px;
@@ -626,6 +638,11 @@ button.javascript:active{
 
     .divided{
         grid-template-columns: 1fr;
+    }
+
+    .recaps{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
