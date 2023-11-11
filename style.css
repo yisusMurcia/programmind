@@ -64,7 +64,7 @@ p{
     margin: 10px 0;
 }
 
-ul{
+ul, ol{
     list-style-position: inside;
     margin: 5px;
     padding: 8px;
