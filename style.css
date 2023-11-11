@@ -56,6 +56,7 @@ section, aside{
     line-height: 1.25rem;
     text-align: justify;
     overflow: hidden;
+    border: dotted 4px red;
 }
 
 p{
@@ -347,7 +348,7 @@ li.noStyle{
 }
 
 #mySocialMedia h1{
-    color: #4f65ca;
+    color: var(--h-color-2);
 }
 
 .verdana{
