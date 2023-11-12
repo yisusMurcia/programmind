@@ -452,7 +452,7 @@ li.noStyle{
     margin: auto 0;
 }
 
-.codeContainer{
+.questContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -475,6 +475,12 @@ li.noStyle{
 
 .codeQuestion h3{
     color: var(--h-color);
+}
+
+.programmingConcepts{
+    background-color: #2563eb;
+    accent-color: var(--section-color);
+    color: var(--section-color);
 }
 
 .javascript{
