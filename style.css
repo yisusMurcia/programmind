@@ -56,7 +56,7 @@ section, aside{
     line-height: 1.25rem;
     text-align: justify;
     overflow: hidden;
-    border: dotted 4px red;
+    border: solid 2px red;
 }
 
 p{
