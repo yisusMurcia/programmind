@@ -11,6 +11,7 @@ let postArray=[
     ["El costo de ser bueno", "blogPosts/serBueno/index.html", "blogPosts/serBueno/img.jpg"],
     ["El sentido de la vida", "blogPosts/sentidoDeLavida/index.html", "blogPosts/sentidoDeLavida/img.jpg"],
     ["La necesidad de ser productivo", "blogPosts/productividad/index.html", "blogPosts/productividad/img.jpg"],
-    ["¿Cómo iniciar un día productivo", "blogPosts/iniciarElDía/index.html", "blogPosts/iniciarElDía/img.jpg"]
+    ["¿Cómo iniciar un día productivo", "blogPosts/iniciarElDía/index.html", "blogPosts/iniciarElDía/img.jpg"],
+    ["La lucha por tu atención", "blogPosts/luchaPorTuAtención/index.html", "blogPosts/luchaPorTuAtención/img.jpg"]
 ];
 postArray.reverse();
