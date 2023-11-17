@@ -428,6 +428,14 @@ li.noStyle{
     margin: 5px;
 }
 
+.question{
+    color: var(--h-color-2);
+    background-color: var(--background);
+    margin: 5px;
+    padding: 3px 5px;
+    border-radius: 8px;
+}
+
 /*Elements from the page práctica*/
 .programQuestions{
     border: none;
