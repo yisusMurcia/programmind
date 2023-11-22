@@ -48,6 +48,9 @@ h1, h2{
 h3{
     color: var(--h-color-2);
 }
+h3{
+    font-size: 1.5rem;
+}
 section, aside{
     background-color: var(--section-color);
     padding: 15px;
@@ -99,7 +102,7 @@ a{
     text-decoration: none;
     color: var(--a-color);
 }
-a:hover{
+a:hover, .navLink:hover> a{
     color: var(--a-color-hover);
 }
 
