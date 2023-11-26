@@ -9,7 +9,7 @@ myProyects.map(
 );
 postArray.map(
     post=>{
-        post[1]= "blog/"+ post[1];
+        post[2]= "blog/"+ post[2];
     }
 )
 //Añadir proyectos
@@ -37,12 +37,15 @@ for (let i= 0; i<postNum; i++){
     post.setAttribute("class", "post");
     let postTitle= document.createElement("h3");
     postTitle.innerText= postArray[i][0];
-    post.addEventListener("click", ()=>location.href=(postArray[i][1]));
     post.appendChild(postTitle);
+    let postTag= document.createElement("p");
+    postTag.innerText= postArray[i][1];
+    post.appendChild(postTag);
+    post.addEventListener("click", ()=>location.href=(postArray[i][2]));
     blogContent.appendChild(post);
-    if (postArray[i][2]== undefined){
+    if (postArray[i][3]== undefined){
         post.style.backgroundImage= `url(../img/imagePreview.png)`;
     }else{
-        post.style.backgroundImage= `url(blog/${postArray[i][2]})`;
+        post.style.backgroundImage= `url(${postArray[i][3]})`;
     };
 };
