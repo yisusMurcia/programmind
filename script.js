@@ -26,7 +26,7 @@ for (let i = 0; i < postNum; i++) {
     proyectsContent.appendChild(postDiv);
     postDiv.addEventListener("click", ()=>location.href=post[1]);
     if (post[3]== undefined){
-        postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
+        postDiv.style.backgroundImage= `url(img/imagePreview.png)`;
     }else{
         postDiv.style.backgroundImage= `url(proyectos/${post[3]})`;
     };    
@@ -41,7 +41,7 @@ for (let i= 0; i<postNum; i++){
     post.appendChild(postTitle);
     blogContent.appendChild(post);
     if (postArray[i][2]== undefined){
-        post.style.backgroundImage= `url(../img/imagePreview.png)`;
+        post.style.backgroundImage= `url(/img/imagePreview.png)`;
     }else{
         post.style.backgroundImage= `url(blog/${postArray[i][2]})`;
     };
