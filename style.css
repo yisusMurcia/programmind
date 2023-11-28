@@ -172,11 +172,9 @@ header{
     top: 0;
     background-color: #383838c2;
     justify-content: space-between;
-    align-items: center;
     gap: 10px;
     padding: 2px;
     border-radius: 5px;
-    margin: 8px;
 }
 
 #programmind{
@@ -275,13 +273,20 @@ li.noStyle{
 /*main page*/
 .divided{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 5px;
 }
-.divided .postDiv{
+.divided>div{
     display: grid;
-    align-content: flex-start;
+    align-content: center;
+    justify-content: center;
     justify-items: center;
+    padding: 15px;
+    background-color: #57575777;
+    border-radius: 5px;
+}
+.divided div .aButton{
+    margin: 10px;
 }
 
 /*Update notes*/
@@ -661,10 +666,6 @@ button.javascript:active{
 
     .post{
         width: 180px;
-    }
-
-    .divided{
-        grid-template-columns: 1fr;
     }
 
     .recaps{
