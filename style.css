@@ -154,6 +154,12 @@ fieldset{
     border: none;
 }
 
+hr{
+    margin: 10px;
+    border-color: var(--news-border-color);
+    box-shadow: 0 5px 10px var(--news-border-color);
+}
+
 /*Header*/
 header{
     position: sticky;
