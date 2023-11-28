@@ -308,7 +308,7 @@ li.noStyle{
     width: 30%;
     max-width: 150px;
     min-width: 100px;
-    border-radius: 25%;
+    border-radius: 15%;
     float: left;
     margin: 5px;
     margin-bottom: 0px;
@@ -316,21 +316,26 @@ li.noStyle{
 }
 
 #profileResume{
-    background-color: #1c1c1c;
     padding: 15px;
     border-radius: 15px;
     border: solid 2px #4f65ca;
+    box-shadow: none;
 }
-
 #profileResume h1{
     color: var(--h-color-2);
     line-height: 30px;
 }
 #profileResume p{
-    color: #f6f6f8;
+    color: var(--text-color);
     padding: 8px;
 }
-
+#socialMediaNav{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
 .grid{
     display: grid;
     grid-template-columns: minmax(8rem, 30%) 1fr;
