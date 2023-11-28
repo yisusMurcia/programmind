@@ -109,6 +109,7 @@ a:hover, .navLink:hover> a{
 .aButton{
     background-color: #383838;
     padding: 8px 12px;
+    margin: 12px;
     border-radius: 12px;
     margin-left: 30%;
 }
@@ -282,7 +283,7 @@ li.noStyle{
     justify-content: center;
     justify-items: center;
     padding: 15px;
-    background-color: #57575777;
+    background-color: #50505060;
     border-radius: 5px;
 }
 .divided div .aButton{
@@ -370,7 +371,7 @@ li.noStyle{
     color: var(--h-color-2);
 }
 
-.verdana{
+.verdana, h1{
     font-family: Verdana, Tahoma;
 }
 
