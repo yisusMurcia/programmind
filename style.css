@@ -290,6 +290,22 @@ li.noStyle{
     margin: 10px;
 }
 
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+    padding: 8px;
+    margin-top: 12px;
+    background-color: #50505060;
+}
+.gallery img{
+    height: 120px;
+    background-color: #2f2f2f;
+    padding: 2px;
+    border-radius: 10px;
+}
+
 /*Update notes*/
 .updateNotes{
     color: var(--h-color-2);
@@ -604,7 +620,7 @@ button.javascript:active{
 }
 
 /*Media Query for mobile devices*/
-@media (max-width: 550px){
+@media (max-width: 500px){
     header{
         align-items: center;
         padding: 0 5px;
@@ -663,6 +679,10 @@ button.javascript:active{
     .menu:active{
         background-color: black;
         color: #909dd8;
+    }
+
+    .gallery img{
+        height: 80px;
     }
 
     .post{
