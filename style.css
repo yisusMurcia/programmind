@@ -257,8 +257,8 @@ ul.visible{
 
 .socialMediaImg{
     display: inline;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     background-color: #444444;
     padding: 5px;
     border-radius: 25%;
@@ -376,17 +376,6 @@ li.noStyle{
     border-radius: 5px;
     padding: 5px;
 }
-
-#mySocialMedia{
-    border: none;
-    background-color: var(--background);
-    border-radius: 10px;
-}
-
-#mySocialMedia h1{
-    color: var(--h-color-2);
-}
-
 .verdana, h1{
     font-family: Verdana, Tahoma;
 }
@@ -679,6 +668,11 @@ button.javascript:active{
     .menu:active{
         background-color: black;
         color: #909dd8;
+    }
+
+    .socialMediaImg{
+        width: 35px;
+        height: 35px;
     }
 
     .gallery img{
