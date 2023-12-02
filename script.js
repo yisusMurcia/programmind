@@ -50,3 +50,11 @@ for (let i= 0; i<postNum; i++){
         post.style.backgroundImage= `url(${postArray[i][3]})`;
     };
 };
+let date= new Date()
+if (date.getDate()== 24){
+    let message= document.createElement("h1");
+    message.innerHTML="Feliz navidad";
+    message.setAttribute("class", "message")
+    let section= document.querySelector("section");
+    section.insertBefore(message, document.querySelector("p")); 
+}
