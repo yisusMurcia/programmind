@@ -3,17 +3,18 @@ const seeAnswer= (obj, paragraph)=>{
 }
 const checkAnswer= (answer, text)=>{
     let input= document.querySelector(`#${answer}`);
-    if (input.checked){
-        text.innerHTML= `Correcto`;
-    }else{
-        text.innerHTML= "Intenta otra vez";
+    if (!input.checked){
+        return text.innerHTML= "Correcto";
     };
-}
+        text.innerHTML= "Intenta otra vez";
+};
 let addQuestion=(section, obj)=>{
     const div= document.createElement("div");
     div.setAttribute("class", "codeQuestion");
     const title= document.createElement("h3");
-    title.innerHTML= obj.subject;
+    //Reemplazar - por espacio
+    let subjectText= obj.subject.split("-");
+    title.innerHTML= subjectText.join(" ");
     div.appendChild(title);
     const questionP= document.createElement("p");
     questionP.innerHTML= obj.question;
@@ -46,13 +47,13 @@ let addQuestion=(section, obj)=>{
     div.appendChild(answerButton);
     const checkAnswerButton= document.createElement("button");
     checkAnswerButton.innerHTML= "Revisar";
-    checkAnswerButton.addEventListener("click", ()=>{checkAnswer((obj.subject+obj.answer), paragraph)})
+    checkAnswerButton.addEventListener("click", ()=>{checkAnswer((obj.subject+ obj.answer), paragraph)})
     div.appendChild(checkAnswerButton);
     section.appendChild(div);
 };
 const programmingConceptsSection= document.querySelector("#questionsProgrammingConcepts");
 let q2= {
-    subject: "Funciones recursivas",
+    subject: "Funciones-Recursivas",
     question: "¿Qué significa que una función sea recursiva?",
     options: [
         "Una función que no puede terminar",
@@ -60,7 +61,7 @@ let q2= {
         "Una función basada en la iteración",
         "Una función que se llama a si misma"
     ],
-    answer: 1,
+    answer: "3",
     explication: "Una función recursiva es una función que se ejecuta dentro de esta dada ciertas condiciones."
 };
 let q1= {
@@ -76,6 +77,5 @@ let q1= {
     explication: "POO se refiere a una forma de programación basda en el concepto de objetos, una programación orientada a objetos"
 };
 addQuestion(programmingConceptsSection, q2);
-addQuestion(programmingConceptsSection, q1);
 /*
 */
