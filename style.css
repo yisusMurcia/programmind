@@ -69,7 +69,6 @@ section, aside{
     overflow: hidden;
     box-shadow: 0 3px 7px red;
 }
-
 p{
     color: var(--text-color);
     margin: 10px 0;
@@ -386,10 +385,6 @@ li.noStyle{
 }
 .verdana, h1{
     font-family: Verdana, Tahoma;
-}
-
-.right{
-    float: right;
 }
 
 /*blog´s and proyectos´s elements, .post at the end*/
