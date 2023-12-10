@@ -31,7 +31,7 @@ let addQuestion=(section, obj)=>{
         answerFiledset.appendChild(input);
         answerContainer.appendChild(answerFiledset);
         const label= document.createElement("label");
-        const text= document.createElement("P");
+        const text= document.createElement("b");
         text.innerHTML= obj.options[i];
         label.appendChild(text)
         label.setAttribute("name", obj.subject);
