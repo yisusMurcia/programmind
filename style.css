@@ -553,7 +553,18 @@ button.javascript:active{
 #playConsole{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    gap: 5%;
+}
+#playConsole>.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-between;
     align-items: center;
+    gap: 2%;
 }
 .chronometer{
     display: flex;

@@ -3,6 +3,14 @@
 let getABoast=(num)=>{
     return Math.random< num;
 };
+let updateStats= ()=>{
+    let title1= document.querySelector("#player1Title");
+    title1.innerHTML= `${player1.name}: ${player1.live}`;
+    let title2= document.querySelector("#player2Title");
+    title2.innerHTML= `${player2.name}: ${player2.live}`;
+}
+//Crear la clase d epersonajes
+//Create class character
 class Character{
     constructor(name, live, damage, critic, criticNum, heal, healNum){
         this.name= name;
@@ -20,8 +28,9 @@ class Character{
             attack= this.critic;
         };
         enemy.live-= attack;
+        updateStats();
     };
-    heal(){
+    healing(){
         let heal= 20;
         if (getABoast(this.healNum)){
             heal= this.heal;
@@ -32,6 +41,7 @@ class Character{
         if (this.live> this.maxLive){
             this.live= this.maxLive;
         };
+        updateStats()
     };
 };
 //Crear clases para los personajes
@@ -60,20 +70,31 @@ const characters= [Ninja, Gentleman, Raptor, Caveman];
 //Definir botones
 //define buttons
 const readyButton= document.querySelector("#ready");
+const attack1= document.querySelector("#player1Attack");
+const heal1= document.querySelector("#player1Heal");
+const attack2= document.querySelector("#player2Attack");
+const heal2= document.querySelector("#player2Heal");
 //Establecer los personajes de los jugadores
 //Set player´s characters
 let player1;
 let player2
 const setCharacters=()=>{
+    //Mostrar botones
+    //Show buttons
+    const hidden= document.querySelectorAll("button.hidden");
+    for (const element of hidden){
+        element.removeAttribute("class", "visible");
+    };
     //Player 1
-    player1 = new characters[document.querySelector("#player1").value];
-    let title1= document.querySelector("#player1Title");
-    title1.innerHTML= `${player1.name}: ${player1.live}`;
+    let select= document.querySelector("#player1");
+    select.setAttribute("class", "hidden");
+    player1 = new characters[select.value];
     //Player 2
-    player2 = new characters[document.querySelector("#player2").value];
-    let title2= document.querySelector("#player2Title");
-    title2.innerHTML= `${player2.name}: ${player2.live}`;
+    select= document.querySelector("#player2");
+    select.setAttribute("class", "hidden");
+    player2 = new characters[select.value];
     readyButton.replaceWith(document.createElement("br"));
+    updateStats();
 };
 //Configurar botones
 //Set buttons
@@ -81,3 +102,7 @@ readyButton.addEventListener("click", ()=>{
     setCharacters();
     readyButton.removeEventListener("click");
 });
+attack1.addEventListener("click", ()=> player1.attack(player2));
+attack2.addEventListener("click", ()=>player2.attack(player1));
+heal1.addEventListener("click", ()=> player1.healing());
+heal2.addEventListener("click", ()=>player2.healing());

@@ -30,25 +30,36 @@
     <header></header>
     <main>
         <section id="playConsole">
+            <div class="header">
+                <div>
+                    <h1 id="player1Title">Seleccione un personaje</h1>
+                </div>
+                <div>
+                    <h1 id="player2Title">Seleccione un personaje</h1>
+                </div>
+            </div>
             <div>
-                <h1 id="player1Title">Seleccione un personaje</h1>
                 <select name="character" id="player1">
                     <option value="0">Ninja</option>
                     <option value="1">Caballero</option>
                     <option value="2">Raptor</option>
                     <option value="3">Cavernícola</option>
                 </select>
+                <button class="hidden" id="player1Attack">Atacar</button>
+                <button class="hidden" id="player1Heal">Curar</button>
             </div>
-                <button id="ready">Ready</button>
+            <button id="ready">Listo</button>
             <div>
-                <h1 id="player2Title">Seleccione un personaje</h1>
                 <select name="character" id="player2">
                     <option value="0">Ninja</option>
                     <option value="1">Caballero</option>
                     <option value="2">Raptor</option>
                     <option value="3">Cavernícola</option>
                 </select>
+                <button class="hidden" id="player2Attack">Atacar</button>
+                <button class="hidden" id="player2Heal">Curar</button>
             </div>
+                
         </section>
     </main>
     <img src="../../img/lightMode.png" alt="modo claro" id="mode">
