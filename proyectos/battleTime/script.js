@@ -56,3 +56,28 @@ class Caveman extends Character{
         super("Caveman", 600, 15, 20, 0.2, 50, 0.5);
     };
 };
+const characters= [Ninja, Gentleman, Raptor, Caveman];
+//Definir botones
+//define buttons
+const readyButton= document.querySelector("#ready");
+//Establecer los personajes de los jugadores
+//Set player´s characters
+let player1;
+let player2
+const setCharacters=()=>{
+    //Player 1
+    player1 = new characters[document.querySelector("#player1").value];
+    let title1= document.querySelector("#player1Title");
+    title1.innerHTML= `${player1.name}: ${player1.live}`;
+    //Player 2
+    player2 = new characters[document.querySelector("#player2").value];
+    let title2= document.querySelector("#player2Title");
+    title2.innerHTML= `${player2.name}: ${player2.live}`;
+    readyButton.replaceWith(document.createElement("br"));
+};
+//Configurar botones
+//Set buttons
+readyButton.addEventListener("click", ()=>{
+    setCharacters();
+    readyButton.removeEventListener("click");
+});
