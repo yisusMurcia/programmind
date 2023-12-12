@@ -1,13 +1,14 @@
 //Probabilidad de mejora, entre 0 y 1
 //Boast chance, between 0 and 1
 let getABoast=(num)=>{
-    return Math.random< num;
+    return Math.random()< num;
 };
-let updateStats= ()=>{
+let updateStats= (message= "")=>{
     let title1= document.querySelector("#player1Title");
     title1.innerHTML= `${player1.name}: ${player1.live}`;
     let title2= document.querySelector("#player2Title");
     title2.innerHTML= `${player2.name}: ${player2.live}`;
+    statsP.innerHTML= message
 };
 //Definir quién inicia
 //Define who start
@@ -27,7 +28,7 @@ class Character{
     };
     attack(enemy){
         if (this.play!= startPlayer1){
-            return statsP.innerHTML="No es tu turno";
+            return updateStats("No es tu turno");
         }else{
             startPlayer1= !startPlayer1;
         };
@@ -36,7 +37,18 @@ class Character{
             attack= this.critic;
         };
         enemy.live-= attack;
-        updateStats();
+        if (enemy.live<=0){
+            enemy.live= 0;
+            updateStats(`Ganador: ${this.name}`);
+            readyButton.removeAttribute("class");
+            readyButton.innerHTML="Otra vez";
+            readyButton.addEventListener("click", ()=> window.location.reload);
+            for (let button of document.querySelectorAll(".play")){
+                button.setAttribute("class", "hidden");
+            };
+        }else{
+            updateStats();
+        };
     };
     healing(){
         if (this.play!= startPlayer1){
@@ -54,7 +66,7 @@ class Character{
         if (this.live> this.maxLive){
             this.live= this.maxLive;
         };
-        updateStats()
+        updateStats();
     };
 };
 //Crear clases para los personajes
@@ -97,7 +109,8 @@ const setCharacters=()=>{
     //Show buttons
     const hidden= document.querySelectorAll("button.hidden");
     for (const element of hidden){
-        element.removeAttribute("class", "visible");
+        element.removeAttribute("class");
+        element.setAttribute("class", "play")
     };
     //Player 1
     let select= document.querySelector("#player1");
@@ -113,8 +126,7 @@ const setCharacters=()=>{
     //Remove button and define who start
     readyButton.setAttribute("class", "hidden");
     const initialPLayer= startPlayer1?1:2;
-    statsP.innerHTML=`Inicia jugador ${initialPLayer}`;
-    updateStats();
+    updateStats(`Inicia jugador ${initialPLayer}`);
 };
 //Configurar botones
 //Set buttons
