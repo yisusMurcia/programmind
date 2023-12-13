@@ -3,6 +3,6 @@ let myProyects=[
     ["listas", "list/index.html", "Desarrollo web"],
     ["Cronómetro", "chronometer/index.html", "Desarrollo web"],
     ["IA con Python 🐍", "pythonIA/index.html", "Python", "pythonIA/img.jpg"],
-    ["Battle time", "battle/time/index.html", "Desarrollo Web"]
+    ["Battle time", "battle/time/index.html", "Desarrollo Web", "battleTime/img.jpg"]
 ];
 myProyects.reverse();
