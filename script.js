@@ -51,7 +51,7 @@ for (let i= 0; i<postNum; i++){
     };
 };
 let date= new Date()
-if (date.getDate()== 24){
+if (date.getDate()== 24 || date.getDate()== 25){
     let message= document.createElement("h1");
     message.innerHTML="Feliz navidad";
     message.setAttribute("class", "message")
