@@ -10,6 +10,14 @@
     --news-border-color: #4f65ca;
 }
 
+.message{
+    font-size: 300%;
+    background-color: green;
+    color: #e41010;
+    padding: 20px;
+    border-radius: 8px;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -54,14 +62,13 @@ h3{
 section, aside{
     background-color: var(--section-color);
     padding: 15px;
-    margin: 10px;
-    border-radius: 15px;
+    margin: 10px 0;
+    border-radius: 2px;
     line-height: 1.25rem;
     text-align: justify;
     overflow: hidden;
-    border: solid 2px red;
+    box-shadow: 0 3px 7px red;
 }
-
 p{
     color: var(--text-color);
     margin: 10px 0;
@@ -109,6 +116,7 @@ a:hover, .navLink:hover> a{
 .aButton{
     background-color: #383838;
     padding: 8px 12px;
+    margin: 12px;
     border-radius: 12px;
     margin-left: 30%;
 }
@@ -154,6 +162,12 @@ fieldset{
     border: none;
 }
 
+hr{
+    margin: 10px;
+    border-color: var(--news-border-color);
+    box-shadow: 0 5px 10px var(--news-border-color);
+}
+
 /*Header*/
 header{
     position: sticky;
@@ -166,11 +180,9 @@ header{
     top: 0;
     background-color: #383838c2;
     justify-content: space-between;
-    align-items: center;
     gap: 10px;
     padding: 2px;
     border-radius: 5px;
-    margin: 8px;
 }
 
 #programmind{
@@ -252,8 +264,8 @@ ul.visible{
 
 .socialMediaImg{
     display: inline;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     background-color: #444444;
     padding: 5px;
     border-radius: 25%;
@@ -269,13 +281,36 @@ li.noStyle{
 /*main page*/
 .divided{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 5px;
 }
-.divided .postDiv{
+.divided>div{
     display: grid;
-    align-content: flex-start;
+    align-content: center;
+    justify-content: center;
     justify-items: center;
+    padding: 15px;
+    background-color: #50505060;
+    border-radius: 5px;
+}
+.divided div .aButton{
+    margin: 10px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+    padding: 8px;
+    margin-top: 12px;
+    background-color: #50505060;
+}
+.gallery img{
+    height: 120px;
+    background-color: #2f2f2f;
+    padding: 2px;
+    border-radius: 10px;
 }
 
 /*Update notes*/
@@ -308,7 +343,7 @@ li.noStyle{
     width: 30%;
     max-width: 150px;
     min-width: 100px;
-    border-radius: 25%;
+    border-radius: 15%;
     float: left;
     margin: 5px;
     margin-bottom: 0px;
@@ -316,21 +351,26 @@ li.noStyle{
 }
 
 #profileResume{
-    background-color: #1c1c1c;
     padding: 15px;
     border-radius: 15px;
     border: solid 2px #4f65ca;
+    box-shadow: none;
 }
-
 #profileResume h1{
     color: var(--h-color-2);
     line-height: 30px;
 }
 #profileResume p{
-    color: #f6f6f8;
+    color: var(--text-color);
     padding: 8px;
 }
-
+#socialMediaNav{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
 .grid{
     display: grid;
     grid-template-columns: minmax(8rem, 30%) 1fr;
@@ -343,23 +383,8 @@ li.noStyle{
     border-radius: 5px;
     padding: 5px;
 }
-
-#mySocialMedia{
-    border: none;
-    background-color: var(--background);
-    border-radius: 10px;
-}
-
-#mySocialMedia h1{
-    color: var(--h-color-2);
-}
-
-.verdana{
+.verdana, h1{
     font-family: Verdana, Tahoma;
-}
-
-.right{
-    float: right;
 }
 
 /*blog´s and proyectos´s elements, .post at the end*/
@@ -525,6 +550,21 @@ button.javascript:active{
 }
 
 /*Elements from proyectos*/
+#playConsole{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5%;
+}
+#playConsole>.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
 .chronometer{
     display: flex;
     flex-wrap: wrap;
@@ -587,7 +627,7 @@ button.javascript:active{
 }
 
 /*Media Query for mobile devices*/
-@media (max-width: 550px){
+@media (max-width: 500px){
     header{
         align-items: center;
         padding: 0 5px;
@@ -648,12 +688,17 @@ button.javascript:active{
         color: #909dd8;
     }
 
-    .post{
-        width: 180px;
+    .socialMediaImg{
+        width: 35px;
+        height: 35px;
     }
 
-    .divided{
-        grid-template-columns: 1fr;
+    .gallery img{
+        height: 80px;
+    }
+
+    .post{
+        width: 180px;
     }
 
     .recaps{

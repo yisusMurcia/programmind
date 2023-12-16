@@ -4,12 +4,13 @@ let postNum= 4;
 //Arreglar ruta de los poryectos y post del blog
 myProyects.map(
     project=>{
-        return project[1]= "proyectos/"+ project[1];
+        project[1]= "proyectos/"+ project[1];
     }
 );
 postArray.map(
     post=>{
-        post[1]= "blog/"+ post[1];
+        post[2]= "blog/"+ post[2];
+        post[3]= "blog/"+ post[3];
     }
 )
 //Añadir proyectos
@@ -37,12 +38,23 @@ for (let i= 0; i<postNum; i++){
     post.setAttribute("class", "post");
     let postTitle= document.createElement("h3");
     postTitle.innerText= postArray[i][0];
-    post.addEventListener("click", ()=>location.href=(postArray[i][1]));
     post.appendChild(postTitle);
+    let postTag= document.createElement("p");
+    postTag.innerText= postArray[i][1];
+    post.appendChild(postTag);
+    post.addEventListener("click", ()=>location.href=(postArray[i][2]));
     blogContent.appendChild(post);
-    if (postArray[i][2]== undefined){
-        post.style.backgroundImage= `url(/img/imagePreview.png)`;
+    if (postArray[i][3]== undefined){
+        post.style.backgroundImage= `url(img/imagePreview.png)`;
     }else{
-        post.style.backgroundImage= `url(blog/${postArray[i][2]})`;
+        post.style.backgroundImage= `url(${postArray[i][3]})`;
     };
 };
+let date= new Date()
+if (date.getDate()== 24 || date.getDate()== 25){
+    let message= document.createElement("h1");
+    message.innerHTML="Feliz navidad";
+    message.setAttribute("class", "message")
+    let section= document.querySelector("section");
+    section.insertBefore(message, document.querySelector("p")); 
+}
