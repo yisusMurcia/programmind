@@ -47,7 +47,6 @@ async function importHeader() {
 // Llama a la función importHeader() al cargar la página y activar modo claro
 document.addEventListener("DOMContentLoaded", ()=>{
     importHeader();
-    changeMode();
 });
 //Modo claro-oscuro
 let modeButton= document.querySelector("#mode");
