@@ -67,7 +67,7 @@ section, aside{
     line-height: 1.25rem;
     text-align: justify;
     overflow: hidden;
-    box-shadow: 0 3px 7px red;
+    box-shadow: 0 3px 7px var(--news-border-color);
 }
 p{
     color: var(--text-color);
