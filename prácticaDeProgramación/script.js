@@ -194,9 +194,11 @@ const programmingConceptsSection= document.querySelector("#questionsProgrammingC
 const javascriptSection= document.querySelector("#questionsJavascript")
 const programminConcepts= [q1, q2, q3];
 const javascript= [q4, q5, q6, q7];
-for (let question of programminConcepts){
-    addQuestion(programmingConceptsSection, question)
-};
-for (let question of javascript){
-    addQuestion(javascriptSection, question)
-};
+document.addEventListener("DOMContentLoaded", ()=>{
+    for (let question of programminConcepts){
+        addQuestion(programmingConceptsSection, question)
+    };
+    for (let question of javascript){
+        addQuestion(javascriptSection, question)
+    };
+});

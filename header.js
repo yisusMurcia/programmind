@@ -52,37 +52,29 @@ document.addEventListener("DOMContentLoaded", ()=>{
 let modeButton= document.querySelector("#mode");
 let src= modeButton.getAttribute("src");
 
+//Cambiar el src de la imagen
 //Change the source of the image
 let changeImg=(search, replace)=>{
         return src.replace(new RegExp(search, "g"), replace);
 };
 
 //Cambiar modo
+//Change Mode
+let darkMode= true
 let changeMode= ()=>{
-    if (document.documentElement.style.getPropertyValue("--background")== "#5e8178"){
-        //Modo oscuro
-        document.documentElement.style.setProperty("--background", "#1c1c1c");
-        document.documentElement.style.setProperty("--h-color", "orangered");
-        document.documentElement.style.setProperty("--text-color", "#8591c8");
-        document.documentElement.style.setProperty("--h-color-2", "#4f65ca");
-        document.documentElement.style.setProperty("--a-color", "#cc33cc");
-        document.documentElement.style.setProperty("--a-color-hover", "#fa3efa");
-        document.documentElement.style.setProperty("--news-color", "#8591c8");
-        document.documentElement.style.setProperty("--news-border-color", "#4f65ca");
-        document.documentElement.style.setProperty("--section-color", "#111111");
-        modeButton.setAttribute("src", changeImg("dark","light"));
+    if (darkMode){
+        modeButton.setAttribute("src", changeImg("light","dark"));
+        for (let element of document.querySelectorAll("*:not(#header *)")){
+            element.classList.add("ligth");
+        };
+        darkMode= false;
     }else{
         //Modo claro
-        document.documentElement.style.setProperty("--background", "#5e8178");
-        document.documentElement.style.setProperty("--h-color", "green");
-        document.documentElement.style.setProperty("--section-color", "#c7c7c7");
-        document.documentElement.style.setProperty("--text-color", "1c1c1c");
-        document.documentElement.style.setProperty("--h-color-2", "red");
-        document.documentElement.style.setProperty("--a-color", "#ddcedd");
-        document.documentElement.style.setProperty("--a-color-hover", "#fa3efa");
-        document.documentElement.style.setProperty("--news-color", "blue");
-        document.documentElement.style.setProperty("--news-border-color", "#994fca");
-        modeButton.setAttribute("src",changeImg("light", "dark"));
+        for (let element of document.querySelectorAll("*:not(#header *)")) {
+            element.classList.remove("ligth");
+        };
+        modeButton.setAttribute("src",changeImg("dark", "ligth"));
+        darkMode= true;
     };
 };
 modeButton.addEventListener("click", ()=>{

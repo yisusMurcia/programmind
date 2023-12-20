@@ -9,6 +9,17 @@
     --news-color: #8591c8;
     --news-border-color: #4f65ca;
 }
+.ligth{
+    --background: #5e8178;
+    --h-color: orange;
+    --section-color: #c7c7c7;
+    --text-color: #1c1c1c;
+    --h-color-2: blue;
+    --a-color: #ddcedd;
+    --a-color-hover: #fa3efa;
+    --news-color: blue;
+    --news-border-color: #9994fca;
+}
 
 .message{
     font-size: 300%;
@@ -518,6 +529,9 @@ li.noStyle{
     color: var(--section-color);
 }
 
+label{
+    color: var(--text-color);
+}
 .javascript{
     background-color: yellow;
     accent-color: #111;
