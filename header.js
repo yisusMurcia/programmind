@@ -64,13 +64,13 @@ let darkMode= true
 let changeMode= ()=>{
     if (darkMode){
         modeButton.setAttribute("src", changeImg("light","dark"));
-        for (let element of document.querySelectorAll("*:not(#header *)")){
+        for (let element of document.querySelectorAll("*")){
             element.classList.add("ligth");
         };
         darkMode= false;
     }else{
         //Modo claro
-        for (let element of document.querySelectorAll("*:not(#header *)")) {
+        for (let element of document.querySelectorAll("*")) {
             element.classList.remove("ligth");
         };
         modeButton.setAttribute("src",changeImg("dark", "ligth"));
