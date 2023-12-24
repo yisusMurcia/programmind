@@ -7,7 +7,7 @@ let postArray=[
     ["Más que solo párrafos", "desarrollo web", "https://programmind.notion.site/HTML-es-m-s-que-p-rrafos-y-t-tulos-ac7ab7e1ed51448a941b521b6f40d016?pvs=4"],
     ["Definiendo el tamaño", "desarrollo web", "https://programmind.notion.site/Definiendo-el-tama-o-5cf14fa72a2c42799a12a43db6e816ff?pvs=4"],
     ["Agregando imágenes", "desarrollo web", "https://programmind.notion.site/Im-genes-34d1dcce90c44e4ba2cc6f809996ef4e?pvs=4"],
-    ["Inteligencia Artificial", "tecnología", "blogPosts/IA/index.html"],
+    ["Inteligencia Artificial", "tecnología", "blogPosts/IA/index.html", "blogPosts/IA/img.jpg"],
     ["El costo de ser bueno", "reflexionar", "blogPosts/serBueno/index.html", "blogPosts/serBueno/img.jpg"],
     ["El sentido de la vida", "reflexionar", "blogPosts/sentidoDeLavida/index.html", "blogPosts/sentidoDeLavida/img.jpg"],
     ["La necesidad de ser productivo", "productividad", "blogPosts/productividad/index.html", "blogPosts/productividad/img.jpg"],
