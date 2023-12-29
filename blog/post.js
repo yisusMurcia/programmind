@@ -12,6 +12,7 @@ let postArray=[
     ["El sentido de la vida", "reflexionar", "blogPosts/sentidoDeLavida/index.html", "blogPosts/sentidoDeLavida/img.jpg"],
     ["La necesidad de ser productivo", "productividad", "blogPosts/productividad/index.html", "blogPosts/productividad/img.jpg"],
     ["¿Cómo iniciar un día productivo", "productividad", "blogPosts/iniciarElDía/index.html", "blogPosts/iniciarElDía/img.jpg"],
-    ["La lucha por tu atención", "productividad", "blogPosts/luchaPorTuAtención/index.html", "blogPosts/luchaPorTuAtención/img.jpg"]
+    ["La lucha por tu atención", "productividad", "blogPosts/luchaPorTuAtención/index.html", "blogPosts/luchaPorTuAtención/img.jpg"],
+    ["Aprovechando el tiempo libre", "productividad", "blogPosts/tiempoLibre/index.html"]
 ];
 postArray.reverse();
