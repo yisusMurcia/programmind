@@ -466,14 +466,6 @@ li.noStyle{
     margin: 5px;
 }
 
-.question{
-    color: var(--h-color-2);
-    background-color: var(--background);
-    margin: 5px;
-    padding: 3px 5px;
-    border-radius: 8px;
-}
-
 /*Elements from the page práctica*/
 .programQuestions{
     border: none;
@@ -560,6 +552,26 @@ button.javascript:active{
     padding: 8px;
     padding-left: 15px;
     border-radius: 15px;
+}
+
+.question{
+    color: var(--h-color);
+    background-color: var(--background);
+    margin: 5px;
+    padding: 3px 5px;
+    border-radius: 8px;
+}
+
+.twitter-tweet{
+    margin: 0 auto;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 10px;
+}
+.twitter-tweet:hover{
+    background-color: var(--section-color);
+    border: solid 5px var(--background);
+    padding: 8px;
 }
 
 /*Elements from proyectos*/
