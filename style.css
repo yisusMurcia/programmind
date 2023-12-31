@@ -125,14 +125,18 @@ a:hover, .navLink:hover> a{
 }
 
 .aButton{
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
     background-color: #383838;
     padding: 8px 12px;
-    margin: 12px;
     border-radius: 12px;
-    margin-left: 30%;
+    text-align: center;
 }
 .aButton:hover{
     background-color: #2c2c2c;
+    border: solid 2px var(--h-color-2);
+    padding: 6px 10px;
 }
 
 form{
