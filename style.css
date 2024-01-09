@@ -528,6 +528,10 @@ li.noStyle{
 label{
     color: var(--text-color);
 }
+
+label{
+    color: var(--text-color);
+}
 .javascript{
     background-color: yellow;
     accent-color: #111;
