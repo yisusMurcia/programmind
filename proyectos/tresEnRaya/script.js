@@ -13,8 +13,10 @@ const seeBoard= (board)=>{
 const mark=(board, num)=>{
     if (board[num]== 0){
         board[num]= player;
-    };
-    return board;
+        return board;
+    }else{
+        return mark(board, num);
+    }
 };
 
 const declareTurn=(turn)=>{
@@ -23,11 +25,12 @@ const declareTurn=(turn)=>{
 
 for (let button of squaresBtns){
     button.addEventListener("click", ()=>{
-        seeBoard(mark(board,  button.id, player));
-        player*= -1;
+        board= mark(board,  button.id, player)
         declareTurn(player);
+        seeBoard(board);
+        player*= -1;
     });
 };
 
-const board= [].concat(...startedBoard);
+let board= [].concat(...startedBoard);
 player= 1;
