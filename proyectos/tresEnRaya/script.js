@@ -1,8 +1,23 @@
+const boardElement= document.getElementById("grid");
+const settingsDiv= document.getElementById("settings");
 const turnText= document.getElementById("turn");
 const twoPlayersBtn= document.getElementById("players-btn");
 const onePlayerBtn= document.getElementById("one-player-btn");
 const squaresBtns= document.querySelectorAll("button.square");
 const startedBoard= [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+let twoPlayers;
+
+onePlayerBtn.addEventListener("click", ()=>{
+    boardElement.classList.remove("hidden");
+    settingsDiv.classList.add("hidden");
+});
+
+twoPlayersBtn.addEventListener("click", ()=>{
+    boardElement.classList.remove("hidden");
+    settingsDiv.classList.add("hidden");
+    twoPlayers= true;
+})
 
 const seeBoard= (board)=>{
     for(let i=0; i<board.length; i++){
@@ -60,13 +75,18 @@ for (let button of squaresBtns){
         board= mark(board,  button.id, player)
         declareTurn(player);
         seeBoard(board);
-        player*= -1;
+        if (twoPlayers){ 
+            player*= -1;
+        };
         if (tie(board) || win(board)){
             turnText.innerText= "Game over";
-            if (win(board)){
+            if (win(board) && twoPlayers){
                 turnText.innerText+= `\nGanador: '${win(board)== 1? "o": "x"}'`;
-            }
-            board= [].concat(...startedBoard)
+            };
+            //Restaurar todo
+            //Restore everything
+            board= [].concat(...startedBoard);
+            settingsDiv.classList.remove("hidden");
         };
     });
 };
