@@ -7,7 +7,7 @@ const squaresBtns= document.querySelectorAll("button.square");
 const startedBoard= [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 let twoPlayers;
-
+let machineMoves= [];
 onePlayerBtn.addEventListener("click", ()=>{
     boardElement.classList.remove("hidden");
     settingsDiv.classList.add("hidden");
@@ -18,6 +18,33 @@ twoPlayersBtn.addEventListener("click", ()=>{
     settingsDiv.classList.add("hidden");
     twoPlayers= true;
 })
+
+const minMax= (board, turn)=>{
+    let auxBoard= [].concat(...board);
+    let movements= [];
+    if (win(board)){
+        return win(board);
+    }else if(tie(board)){
+        return 0;
+    }
+    for (let i= 0; i< 9; i++){
+        if (board[i]== 0){
+            auxBoard[i]= turn;
+            const puntuation= minMax(auxBoard, turn*(-1));
+            movements.push([puntuation, i]);
+        };
+    };
+    if (turn== 1){
+        movements.sort((a,b)=>a[0]- b[0]);
+        const movement= movements[0];
+        machineMoves.push(movement[1]);
+        return movement[0];
+    }else{
+        movements.sort((a,b)=>b[0]- a[0]);
+        const movement= movements[0];
+        return movement[0];
+    };
+};
 
 const seeBoard= (board)=>{
     for(let i=0; i<board.length; i++){
@@ -77,6 +104,12 @@ for (let button of squaresBtns){
         seeBoard(board);
         if (twoPlayers){ 
             player*= -1;
+        }else{ 
+                minMax(board, 1)
+                const machineMove= machineMoves[machineMoves.length-1]
+                board[machineMove]= 1;
+                seeBoard(board);
+                turnText.innerText= `Seleccionar casilla ${machineMove +1}`
         };
         if (tie(board) || win(board)){
             turnText.innerText= "Game over";
@@ -92,4 +125,4 @@ for (let button of squaresBtns){
 };
 
 let board= [].concat(...startedBoard);
-player= 1;
+player= -1;
