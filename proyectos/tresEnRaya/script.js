@@ -34,13 +34,13 @@ const minMax= (board, turn)=>{
             movements.push([puntuation, i]);
         };
     };
+    movements.sort((a,b)=>b[0]- a[0]);
     if (turn== 1){
-        movements.sort((a,b)=>a[0]- b[0]);
         const movement= movements[0];
         machineMoves.push(movement[1]);
         return movement[0];
     }else{
-        movements.sort((a,b)=>b[0]- a[0]);
+        movements= movements.reverse();
         const movement= movements[0];
         return movement[0];
     };
