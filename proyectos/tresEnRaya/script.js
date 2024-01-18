@@ -11,14 +11,17 @@ let machineMoves= [];
 onePlayerBtn.addEventListener("click", ()=>{
     boardElement.classList.remove("hidden");
     settingsDiv.classList.add("hidden");
-    seeBoard(startedBoard);
+    twoPlayers= false;
+    player= -1;
+    seeBoard(board);
 });
 
 twoPlayersBtn.addEventListener("click", ()=>{
     boardElement.classList.remove("hidden");
     settingsDiv.classList.add("hidden");
     twoPlayers= true;
-    seeBoard(startedBoard);
+    seeBoard(board);
+    declareTurn(player);
 })
 
 const minMax= (board, turn)=>{
@@ -42,7 +45,7 @@ const minMax= (board, turn)=>{
         machineMoves.push(movement[1]);
         return movement[0];
     }else{
-        movements= movements.reverse();
+        movements.reverse();
         const movement= movements[0];
         return movement[0];
     };
@@ -90,10 +93,6 @@ const win= (board)=>{
             continue;
         };
         if (board[point[0]]== board[point[1]] && board[point[1]]== board[point[2]]){
-            //Mostrar linea
-            //Show line
-            point.forEach((num)=>squaresBtns[num].style.color= "purple");
-            
             return board[point[0]];
         }
     }
@@ -102,10 +101,10 @@ const win= (board)=>{
 for (let button of squaresBtns){
     button.addEventListener("click", ()=>{
         board= mark(board,  button.id, player)
-        declareTurn(player);
         seeBoard(board);
         if (twoPlayers){ 
             player*= -1;
+            declareTurn(player);
         }else{ 
                 minMax(board, 1)
                 const machineMove= machineMoves[machineMoves.length-1]
@@ -126,8 +125,12 @@ for (let button of squaresBtns){
             board= [].concat(...startedBoard);
             settingsDiv.classList.remove("hidden");
         };
+        localStorage.setItem("triqui", JSON.stringify(board));
+        localStorage.setItem("player", JSON.stringify(player));
     });
 };
 
-let board= [].concat(...startedBoard);
-player= -1;
+let savedBoard= JSON.parse(localStorage.getItem("triqui"));
+let savedPlayer= JSON.parse(localStorage.getItem("player"))
+let board= savedBoard ||[].concat(...startedBoard);
+let player=savedPlayer|| -1;
