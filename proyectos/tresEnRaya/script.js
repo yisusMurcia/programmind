@@ -11,12 +11,14 @@ let machineMoves= [];
 onePlayerBtn.addEventListener("click", ()=>{
     boardElement.classList.remove("hidden");
     settingsDiv.classList.add("hidden");
+    seeBoard(startedBoard);
 });
 
 twoPlayersBtn.addEventListener("click", ()=>{
     boardElement.classList.remove("hidden");
     settingsDiv.classList.add("hidden");
     twoPlayers= true;
+    seeBoard(startedBoard);
 })
 
 const minMax= (board, turn)=>{
@@ -113,6 +115,9 @@ for (let button of squaresBtns){
         };
         if (tie(board) || win(board)){
             turnText.innerText= "Game over";
+            if (win(board)== player){
+                turnText.innerText= "Ganaste";
+            };
             if (win(board) && twoPlayers){
                 turnText.innerText+= `\nGanador: '${win(board)== 1? "o": "x"}'`;
             };
