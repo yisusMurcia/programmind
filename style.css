@@ -661,6 +661,11 @@ button.javascript:active{
     margin-bottom: 0.5rem;
 }
 
+#grid7x7, #controls{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
 .flex{
     display: flex;
     flex-wrap: wrap;
