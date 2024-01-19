@@ -25,15 +25,13 @@ twoPlayersBtn.addEventListener("click", ()=>{
 })
 
 const minMax= (board, turn)=>{
-    let auxBoard= [].concat(...board);
-    let movements= [];
-    if (win(board)){
-        return win(board);
-    }else if(tie(board)){
-        return 0;
-    }
+    const movements= [];
+    if (win(board)!= undefined){
+        return win(board)== "tie"? 0: win(board);
+    };
     for (let i= 0; i< 9; i++){
         if (board[i]== 0){
+            const auxBoard= [].concat(...board);
             auxBoard[i]= turn;
             const puntuation= minMax(auxBoard, turn*(-1));
             movements.push([puntuation, i]);
@@ -45,8 +43,7 @@ const minMax= (board, turn)=>{
         machineMoves.push(movement[1]);
         return movement[0];
     }else{
-        movements.reverse();
-        const movement= movements[0];
+        const movement= movements[movements.length-1];
         return movement[0];
     };
 };
@@ -72,12 +69,13 @@ const declareTurn=(turn)=>{
 
 const tie=(board)=>{
     const end= board.indexOf(0);
-    if (end==-1){
-        return true;
-    };
+    return end==-1;
 };
 
 const win= (board)=>{
+    if (tie(board)){
+        return "tie";
+    };
     const winPoints= [
         [0, 1, 2],
         [3, 4, 5],
@@ -112,14 +110,16 @@ for (let button of squaresBtns){
                 seeBoard(board);
                 turnText.innerText= `Seleccionar casilla ${machineMove +1}`
         };
-        if (tie(board) || win(board)){
-            turnText.innerText= "Game over";
-            if (win(board)== player){
-                turnText.innerText= "Ganaste";
-            };
-            if (win(board) && twoPlayers){
+        if (win(board)){
+            if(win(board)== "tie"){
+                turnText.innerText= "Game over";
+            }else if (win(board) && twoPlayers){
                 turnText.innerText+= `\nGanador: '${win(board)== 1? "o": "x"}'`;
-            };
+            }else if (win(board)== player){
+                turnText.innerText= "Ganaste";
+            }else{
+                turnText.innerText= "Game over";
+            }
             //Restaurar todo
             //Restore everything
             board= [].concat(...startedBoard);
