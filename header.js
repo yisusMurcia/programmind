@@ -23,11 +23,9 @@ async function importHeader() {
     });
     //Crear función hacer visible-invisible
     let changeVisibility= (element)=>{
-        element= document.querySelector(`#${element}`)
-        if (element.classList.contains("visible")){
-            return element.classList.remove("visible");
-        };
-        return element.classList.add("visible");
+        element= document.querySelector(`#${element}`);
+        element.classList.toggle("hidden");
+        element.classList.toggle("visible");
     }
     //Establecer elementos del header expandibles
     const aboutLink= document.querySelector("#about");
