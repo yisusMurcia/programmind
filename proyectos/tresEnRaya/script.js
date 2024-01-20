@@ -4,25 +4,6 @@ const turnText= document.getElementById("turn");
 const twoPlayersBtn= document.getElementById("players-btn");
 const onePlayerBtn= document.getElementById("one-player-btn");
 const squaresBtns= document.querySelectorAll("button.square");
-const startedBoard= [0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-let twoPlayers;
-let machineMoves= [];
-onePlayerBtn.addEventListener("click", ()=>{
-    boardElement.classList.remove("hidden");
-    settingsDiv.classList.add("hidden");
-    twoPlayers= false;
-    player= -1;
-    seeBoard(board);
-});
-
-twoPlayersBtn.addEventListener("click", ()=>{
-    boardElement.classList.remove("hidden");
-    settingsDiv.classList.add("hidden");
-    twoPlayers= true;
-    seeBoard(board);
-    declareTurn(player);
-})
 
 const minMax= (board, turn)=>{
     const movements= [];
@@ -94,7 +75,34 @@ const win= (board)=>{
             return board[point[0]];
         }
     }
+};
+
+
+const startedBoard= [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let twoPlayers;
+let machineMoves= [];
+let savedBoard= JSON.parse(localStorage.getItem("triqui"));
+let savedPlayer= JSON.parse(localStorage.getItem("player"))
+let board= savedBoard ||[].concat(...startedBoard);
+let player=savedPlayer|| -1;
+
+const setElements= ()=>{
+    boardElement.classList.remove("hidden");
+    settingsDiv.classList.add("hidden");
+    seeBoard(board);
 }
+
+onePlayerBtn.addEventListener("click", ()=>{
+    setElements();
+    twoPlayers= false;
+    player= -1;
+});
+
+twoPlayersBtn.addEventListener("click", ()=>{
+    setElements()
+    twoPlayers= true;
+    declareTurn(player);
+})
 
 for (let button of squaresBtns){
     button.addEventListener("click", ()=>{
@@ -104,16 +112,14 @@ for (let button of squaresBtns){
             player*= -1;
             declareTurn(player);
         }else{ 
-                minMax(board, 1)
-                const machineMove= machineMoves[machineMoves.length-1]
-                board[machineMove]= 1;
-                seeBoard(board);
-                turnText.innerText= `Seleccionar casilla ${machineMove +1}`
+            minMax(board, 1)
+            const machineMove= machineMoves[machineMoves.length-1]
+            board[machineMove]= 1;
+            seeBoard(board);
+            turnText.innerText= `Seleccionar casilla ${machineMove +1}`
         };
         if (win(board)){
-            if(win(board)== "tie"){
-                turnText.innerText= "Game over";
-            }else if (win(board) && twoPlayers){
+            if (typeof(win(board))== "number" && twoPlayers){
                 turnText.innerText+= `\nGanador: '${win(board)== 1? "o": "x"}'`;
             }else if (win(board)== player){
                 turnText.innerText= "Ganaste";
@@ -129,8 +135,3 @@ for (let button of squaresBtns){
         localStorage.setItem("player", JSON.stringify(player));
     });
 };
-
-let savedBoard= JSON.parse(localStorage.getItem("triqui"));
-let savedPlayer= JSON.parse(localStorage.getItem("player"))
-let board= savedBoard ||[].concat(...startedBoard);
-let player=savedPlayer|| -1;
