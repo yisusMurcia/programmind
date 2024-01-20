@@ -620,7 +620,7 @@ button.javascript:active{
 }
 
 .time h2{
-    border: solid 2px var(--purple-border);
+    border: solid 2px;
     border-radius: 15px 15px 0 0;
     color: #2beaccdf;
     padding: 15px;
@@ -664,6 +664,22 @@ button.javascript:active{
 #grid7x7, #controls{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin: 5px;
+}
+#grid7x7{
+    border: solid 2px var(--h-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#grid7x7 p{
+    text-align: center;
+    border: solid 1px var(--news-color);
+    border-radius: 20px;
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--a-color);
 }
 
 .flex{
