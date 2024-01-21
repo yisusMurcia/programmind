@@ -50,7 +50,7 @@ const win=(board)=>{
             let count= 0;
             const player= board[21+i];
             let num= 21+i;
-            while (num> 0 && board[num]== player){
+            while (num>= 0 && board[num]== player){
                 num-= 7;
             };
             //Set the start of the 4 line
@@ -136,10 +136,16 @@ const win=(board)=>{
             };
         };
     };
+    //Empate
+    //Tie
+    const ceroIndex= board.indexOf(0)
+    if(ceroIndex== -1){
+        return "tie";
+    };
 };
 
 const declareTurn= (player)=>{
-    turnText.innerText= `Turno de ${player==1? 'o':'x'}`
+    turnText.innerText= `Turno de '${player==1? 'o':'x'}'`
 }
 
 let player= -1;
@@ -153,6 +159,9 @@ for(let button of playButtons){
         declareTurn(player);
         if(win(board)){
             turnText.innerText="Game over";
+            if (win(board)!= "tie"){
+                turnText.innerText+= `\nGanador: ${win(board)==1? 'o': 'x'}`;
+            };
             board= createNewBoard();
         };
     });
