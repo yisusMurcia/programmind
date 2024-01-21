@@ -148,8 +148,8 @@ const declareTurn= (player)=>{
     turnText.innerText= `Turno de '${player==1? 'o':'x'}'`
 }
 
-let player= -1;
-let board= createNewBoard();
+let player= JSON.parse(localStorage.getItem("player"))||-1;
+let board= JSON.parse(localStorage.getItem("board")) ||createNewBoard();
 
 for(let button of playButtons){
     button.addEventListener("click",()=>{
@@ -164,5 +164,10 @@ for(let button of playButtons){
             };
             board= createNewBoard();
         };
+        localStorage.setItem("board", JSON.stringify(board));
+        localStorage.setItem("player", JSON.stringify(player));
     });
 };
+
+seeBoard(board);
+declareTurn(player)
