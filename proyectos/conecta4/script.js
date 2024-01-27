@@ -1,6 +1,27 @@
 const boardDiv= document.getElementById("grid7x7");
+const consoleEl= document.getElementById("console");
 const turnText= document.getElementById("turn");
 const playButtons= document.querySelectorAll("#controls>button");
+const twoPlayersBtn= document.getElementById("players-btn");
+const onePlayerBtn= document.getElementById("one-player-btn");
+const settingsDiv= document.getElementById("settings")
+
+//Preparar juego
+//Set game
+const setGame=()=>{
+    settingsDiv.classList.add("hidden");
+    consoleEl.classList.remove("hidden");
+};
+
+twoPlayersBtn.addEventListener("click", ()=>{
+    setGame();
+    twoPlayers= true;
+});
+onePlayerBtn.addEventListener("click", ()=>{
+    setGame();
+});
+
+let twoPlayers= false;
 
 const createNewBoard= ()=>{
     const arr= [];
@@ -60,7 +81,7 @@ const win=(board)=>{
                 count++;
                 num+=7;
             };
-            if(count== 4){
+            if(count>= 4){
                 return true;
             };
         };
@@ -80,7 +101,7 @@ const win=(board)=>{
                 count++;
                 num++;
             };
-            if(count== 4){
+            if(count>= 4){
                 return true;
             };
         };
@@ -125,7 +146,7 @@ const win=(board)=>{
                 while(i< 49){
                     if(board[i]== player){
                         count++;
-                        if(count== 4){
+                        if(count>= 4){
                             return true;
                         };
                     }else{
@@ -146,7 +167,134 @@ const win=(board)=>{
 
 const declareTurn= (player)=>{
     turnText.innerText= `Turno de '${player==1? 'o':'x'}'`
-}
+};
+
+//Movimiento de las máquinas
+//Machine moves
+const evaluateBoard=(board, player)=>{
+    let count2= 0;
+    let count3= 0;
+    let count4= 0;
+    const enemy= player*-1
+    for(let i= 0; i< 7; i++){
+        //Vertical
+        if(board[21+i]!= enemy){
+            let count= 0;
+            let num= 21+i;
+            while (num>= 0 && board[num]!= enemy){
+                num-= 7;
+            };
+            num+=7;
+            while(num<= 41+i){
+                if(board[num]!= enemy){
+                    count++;
+                    num+=7;
+                }else{
+                    if(count>3){
+                        count4++;
+                    };
+                    count= 0;
+                    break
+                };
+            };
+            switch (count) {
+                case count== 1 || count== 0:
+                    break;
+                case count== 2:
+                    count2++;
+                case count== 3:
+                    count3++;
+                default:
+                    count4++;
+            };
+        };
+        //Horizontal
+        if (board[7*i+3]!=enemy){
+            let count= 0
+            let num= i*7+3;
+            while (num>= i*7 && board[num]!= enemy){
+                num--;
+            };
+            num++;
+            while(num< (i+1)*7){
+                if(board[num]!= enemy){
+                    count++;
+                    num++;
+                }else{
+                    if (count>3){
+                        count4+=1;
+                    };
+                    count= 0;
+                    break;
+                };
+            };
+            switch (count) {
+                case count== 1 || count== 0:
+                    break;
+                case count== 2:
+                    count2++;
+                case count== 3:
+                    count3++;
+                default:
+                    count4++;
+            };
+        };
+    };
+    //Diagonal
+    let diagonalPoints= [
+        [21, 3],
+        [21, 45],
+        [27, 3],
+        [27, 45],
+        [22, 10],
+        [22, 38],
+        [26, 10],
+        [26, 38],
+        [23, 17],
+        [23, 31],
+        [25, 17],
+        [25, 31],
+        [24, 24]
+    ];
+    for(let points of diagonalPoints){
+        if(board[points[0]]!= enemy && board[points[0]]== board[points[1]]){
+            //Obtener el inicio de la línea
+            //Get the start of the line
+            const pointDistances= [6, 8];
+            for(let distance of pointDistances){
+                let count= 0;
+                let i= points[0];
+                while (i>= 0 && board[i]!= enemy){
+                    i-= distance
+                };
+                i+= distance
+                while(i< 49){
+                    if(board[i]!= enemy){
+                        count++;
+                        i+= distance;
+                    }else{
+                        if(count>= 3){
+                            count4++;
+                        };
+                        count= 0;
+                        break;
+                    };
+                };
+                switch (count) {
+                    case count== 1 || count== 0:
+                        break;
+                    case count== 2:
+                        count2++;
+                    case count== 3:
+                        count3++;
+                    default:
+                        count4++;
+                };
+            };
+        };
+    };
+    return count2*2+ count3*9+ count4*100;
+};
 
 let player= JSON.parse(localStorage.getItem("player"))||-1;
 let board= JSON.parse(localStorage.getItem("board")) ||createNewBoard();
