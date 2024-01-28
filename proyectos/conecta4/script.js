@@ -299,29 +299,27 @@ const evaluateBoard=(board, player)=>{
 const machineMoves= []
 const minMax= (board, player, count)=>{
     let movements=[];
-    if(win(board) && win(board)== "tie"){
+    if(win(board) && win(board)!= "tie"){
         return 1000*player*-1/count;
-    }else if(count== 4){
-        return evaluateBoard(board, player)- evaluateBoard(board, player*-1);
+    }else if(count== 4 || win(board)== "tie"){
+        return evaluateBoard(board, 1)- evaluateBoard(board, -1);
     };
     for (let i= 0; i<7; i++){
         let auxBoard= [].concat(board);
-        const markedBoard = play(auxBoard, player, i);
-        if(markedBoard === auxBoard){
-            continue
+        auxBoard = play(auxBoard, i, player);
+        if(!auxBoard){
+            continue;
         };
-        auxBoard= markedBoard;
         puntuation= minMax(auxBoard, player*-1, count+1);
         movements.push([puntuation, i]);
     };
-    movements.sort((a,b)=> a[0]- b[0])
+    movements.sort((a,b)=> b[0]- a[0])
     if (player== 1){
         const movement= movements[0];
         machineMoves.push(movement[1]);
         return movement[0];
     }else{
-        movements.reverse();
-        const movement= movements[0];
+        const movement= movements[movements.length-1];
         return movement[0];
     };
 };
@@ -333,21 +331,33 @@ for(let button of playButtons){
     button.addEventListener("click",()=>{
         const copyBoard= [].concat(board);
         board= play(board, Number(button.id), player);
-        if(board== undefined){
+        if(!board){
             //Si el tablero no cambia, evitar cambio de turno
             //If the board doesn't change, avoid turn change
             board= copyBoard;
-        }else{
+        }else if(twoPlayers){
             player*=-1;
-        };
+            declareTurn(player);
+        }else{
+            try {
+                minMax(board, 1, 0);
+                const column= machineMoves[machineMoves.length-1]
+                board= play(board, column, 1);
+                seeBoard(board);
+                player= -1;
+                turnText.innerText= `Moviendo en  ${column+1}`;
+            } catch (error) {
+                turnText.innerText= error
+            }
+        }
         seeBoard(board);
-        declareTurn(player);
         if(win(board)){
             turnText.innerText="Game over";
             if (win(board)!= "tie"){
                 turnText.innerText+= `\nGanador: ${win(board)==1? 'o': 'x'}`;
             };
             board= createNewBoard();
+            settingsDiv.classList.remove("hidden");
         };
         localStorage.setItem("board", JSON.stringify(board));
         localStorage.setItem("player", JSON.stringify(player));
