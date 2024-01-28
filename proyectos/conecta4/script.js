@@ -59,10 +59,9 @@ const play= (board, column, player)=>{
     for (let i= 0; i< 7; i++){
         if(board[(7*i)+column]== 0){
             board[(7*i)+column]= player;
-            break;
+            return board;
         };
     };
-    return board;
 };
 
 const win=(board)=>{
@@ -332,9 +331,16 @@ let board= JSON.parse(localStorage.getItem("board")) ||createNewBoard();
 
 for(let button of playButtons){
     button.addEventListener("click",()=>{
+        const copyBoard= [].concat(board);
         board= play(board, Number(button.id), player);
+        if(board== undefined){
+            //Si el tablero no cambia, evitar cambio de turno
+            //If the board doesn't change, avoid turn change
+            board= copyBoard;
+        }else{
+            player*=-1;
+        };
         seeBoard(board);
-        player*=-1;
         declareTurn(player);
         if(win(board)){
             turnText.innerText="Game over";
