@@ -325,7 +325,7 @@ li.noStyle{
     background-color: #50505060;
 }
 .gallery img{
-    height: 120px;
+    height: 70px;
     background-color: #2f2f2f;
     padding: 2px;
     border-radius: 10px;
@@ -361,11 +361,11 @@ li.noStyle{
     width: 30%;
     max-width: 150px;
     min-width: 100px;
-    border-radius: 15%;
+    border-radius: 25%;
     float: left;
     margin: 5px;
     margin-bottom: 0px;
-    border: solid 2px #2c2c2c;
+    aspect-ratio: 1;
 }
 
 #profileResume{
@@ -373,13 +373,14 @@ li.noStyle{
     border-radius: 15px;
     border: solid 2px #4f65ca;
     box-shadow: none;
+    background-color: #1c1c1c;
 }
 #profileResume h1{
     color: var(--h-color-2);
     line-height: 30px;
 }
 #profileResume p{
-    color: var(--text-color);
+    color: #8591c8;
     padding: 8px;
 }
 #socialMediaNav{
@@ -778,11 +779,6 @@ button.javascript:active{
         width: 35px;
         height: 35px;
     }
-
-    .gallery img{
-        height: 80px;
-    }
-
     .post{
         width: 180px;
     }
