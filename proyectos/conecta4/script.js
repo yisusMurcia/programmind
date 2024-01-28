@@ -59,9 +59,10 @@ const play= (board, column, player)=>{
     for (let i= 0; i< 7; i++){
         if(board[(7*i)+column]== 0){
             board[(7*i)+column]= player;
-            return board;
+            break;
         };
     };
+    return board;
 };
 
 const win=(board)=>{
@@ -294,6 +295,36 @@ const evaluateBoard=(board, player)=>{
         };
     };
     return count2*2+ count3*9+ count4*100;
+};
+
+const machineMoves= []
+const minMax= (board, player, count)=>{
+    let movements=[];
+    if(win(board) && win(board)== "tie"){
+        return 1000*player*-1/count;
+    }else if(count== 4){
+        return evaluateBoard(board, player)- evaluateBoard(board, player*-1);
+    };
+    for (let i= 0; i<7; i++){
+        let auxBoard= [].concat(board);
+        const markedBoard = play(auxBoard, player, i);
+        if(markedBoard === auxBoard){
+            continue
+        };
+        auxBoard= markedBoard;
+        puntuation= minMax(auxBoard, player*-1, count+1);
+        movements.push([puntuation, i]);
+    };
+    movements.sort((a,b)=> a[0]- b[0])
+    if (player== 1){
+        const movement= movements[0];
+        machineMoves.push(movement[1]);
+        return movement[0];
+    }else{
+        movements.reverse();
+        const movement= movements[0];
+        return movement[0];
+    };
 };
 
 let player= JSON.parse(localStorage.getItem("player"))||-1;
