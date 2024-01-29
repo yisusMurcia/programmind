@@ -15,8 +15,6 @@
     --section-color: #c7c7c7;
     --text-color: #1c1c1c;
     --h-color-2: blue;
-    --a-color: #ddcedd;
-    --a-color-hover: #fa3efa;
     --news-color: blue;
     --news-border-color: #994fca;
 }
@@ -80,6 +78,15 @@ section, aside{
     overflow: hidden;
     box-shadow: 0 3px 7px var(--news-border-color);
 }
+
+footer{
+    display: flex;
+    background-color: var(--section-color);
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+}
+
 p{
     color: var(--text-color);
     margin: 10px 0;
@@ -297,6 +304,14 @@ li.noStyle{
 }
 
 /*main page*/
+.centered{
+    text-align: center;
+}
+
+.orange{
+    color: orangered
+}
+
 .divided{
     display: grid;
     grid-template-columns: 1fr;
