@@ -10,7 +10,9 @@ myProyects.map(
 postArray.map(
     post=>{
         post[2]= "blog/"+ post[2];
-        post[3]= "blog/"+ post[3];
+        if(post[3]){
+          post[3]= "blog/"+ post[3];
+        };
     }
 )
 //Añadir proyectos
@@ -26,7 +28,7 @@ for (let i = 0; i < postNum; i++) {
     postDiv.appendChild(postLenguage);
     proyectsContent.appendChild(postDiv);
     postDiv.addEventListener("click", ()=>location.href=post[1]);
-    if (post[3]== undefined){
+    if (!post[3]){
         postDiv.style.backgroundImage= `url(img/imagePreview.png)`;
     }else{
         postDiv.style.backgroundImage= `url(proyectos/${post[3]})`;
@@ -44,7 +46,7 @@ for (let i= 0; i<postNum; i++){
     post.appendChild(postTag);
     post.addEventListener("click", ()=>location.href=(postArray[i][2]));
     blogContent.appendChild(post);
-    if (postArray[i][3]== undefined){
+    if (!postArray[i][3]){
         post.style.backgroundImage= `url(img/imagePreview.png)`;
     }else{
         post.style.backgroundImage= `url(${postArray[i][3]})`;
