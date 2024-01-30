@@ -14,6 +14,7 @@
     --h-color: orange;
     --section-color: #c7c7c7;
     --text-color: #1c1c1c;
+    --a-color: #ddcedd;
     --h-color-2: blue;
     --news-color: blue;
     --news-border-color: #994fca;
@@ -131,7 +132,7 @@ a:hover, .navLink:hover> a{
     color: var(--a-color-hover);
 }
 
-.aButton{
+.aButton, .a-button{
     display: block;
     margin-left: 10%;
     margin-right: 10%;
@@ -140,7 +141,7 @@ a:hover, .navLink:hover> a{
     border-radius: 12px;
     text-align: center;
 }
-.aButton:hover{
+.aButton:hover, .a-button:hover{
     background-color: #2c2c2c;
     border: solid 2px var(--h-color-2);
     padding: 6px 10px;
@@ -195,12 +196,11 @@ header{
     position: sticky;
     top: 0;
     z-index: 9;
-}
-#header{
     z-index: 1;
     display: flex;
     background-color: #383838c2;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 10px;
     padding: 2px;
     border-radius: 5px;
@@ -210,17 +210,6 @@ header{
     height: 60px;
     width: 180px;
     cursor: pointer;
-}
-
-section #programmind{
-    display: block;
-    margin: 0 auto;
-    cursor: default;
-}
-
-#programmindHidden{
-    left: 10px;
-    top: 45px;
 }
 
 .menu{
@@ -244,17 +233,17 @@ section #programmind{
     margin: 0;
 }
 
-li.navLink{
-    list-style: none;
+.nav-link{
     padding: 5px;
     color: var(--a-color);
     cursor: pointer;
 }
 
-.navLink:hover{
+.nav-link:hover{
     color: var(--a-color-hover);
     background-color: var(--section-color);
     border-radius: 5px;
+    padding: 5px;
 }
 
 .hidden{
@@ -265,12 +254,6 @@ li.navLink{
     height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
-}
-
-.webPage:hover{
-    background-color: #0000007c;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 .visible{
@@ -289,8 +272,8 @@ ul.visible{
 
 .socialMediaImg{
     display: inline;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     background-color: #444444;
     padding: 5px;
     border-radius: 25%;
@@ -788,11 +771,6 @@ button.javascript:active{
     .menu:active{
         background-color: black;
         color: #909dd8;
-    }
-
-    .socialMediaImg{
-        width: 35px;
-        height: 35px;
     }
     .post{
         width: 180px;
