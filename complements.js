@@ -6,7 +6,7 @@ window.addEventListener("load", ()=>{
     };
     header.innerHTML= `<button class="menu" id="open">☰</button>
     <a href="https://yisusmurcia.github.io/programmind/index.html"><img id="programmind" src="https://yisusmurcia.github.io/programmind/img/programmind.svg" alt="programmind"></a>
-    <h1>${document.querySelector("title").innerText!= "Programmind"? document.querySelector("title").innerText: "Portafolio"}</h1>
+    ${document.querySelector("title").innerText!= "Programmind"? "<h1>"+document.querySelector("title").innerText+"</h1>": ""}
     <nav id="navbar">
         <ul class="navList">
             <button class="menu" id="close">✖</button>
@@ -36,8 +36,7 @@ window.addEventListener("load", ()=>{
         footer= document.createElement("footer");
         document.body.appendChild(footer);
     };
-    footer.innerHTML= `<a href="https://github.com/yisusMurcia/programmind" class="a-button">Open source</a>
-    <nav>
+    footer.innerHTML= `<nav>
         <a href="https://twitter.com/yisusMurcia" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="x" class="socialMediaImg">
         </a>
@@ -48,6 +47,7 @@ window.addEventListener("load", ()=>{
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/320px-Threads_%28app%29_logo.svg.png" alt="Threads" class="socialMediaImg">
         </a>
     </nav>
+    <a href="https://github.com/yisusMurcia/programmind" class="a-button">Open source</a>
     <p>V 4.0</p>`;
     //Ligth mode
     let modeButton= document.querySelector("#mode");
