@@ -6,7 +6,7 @@ window.addEventListener("load", ()=>{
     };
     header.innerHTML= `<button class="menu" id="open">☰</button>
     <a href="https://yisusmurcia.github.io/programmind/index.html"><img id="programmind" src="https://yisusmurcia.github.io/programmind/img/programmind.svg" alt="programmind"></a>
-    <h1>${document.querySelector("title").innerText!= "Programmind"? document.querySelector("title").innerText: ""}</h1>
+    <h1>${document.querySelector("title").innerText!= "Programmind"? document.querySelector("title").innerText: "Portafolio"}</h1>
     <nav id="navbar">
         <ul class="navList">
             <button class="menu" id="close">✖</button>
