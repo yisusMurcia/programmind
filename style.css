@@ -212,6 +212,15 @@ header{
     cursor: pointer;
 }
 
+header> h1{
+    font-size: 1.3rem;
+    color: #2bbeea;
+    text-shadow: purple 5px 2px;
+    background-color: #1c1c1c;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+
 .menu{
     display: none;
     font-size: 1.2rem;
