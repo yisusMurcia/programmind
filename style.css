@@ -414,34 +414,48 @@ li.noStyle{
 }
 
 /*blog´s and proyectos´s elements, .post at the end*/
+.post{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25vw;
+    height: 25vw;
+    min-width: 125px;
+    min-height: 125px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: solid 2px #2f2f2f;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 .post:hover{
     border: 2px solid #2bbeeadf;
 }
 
 .post > h3{
-    color: purple;
-}
-
-.post:hover h3{
-    color: #cc33cc;
+    color: var(--h-color);
+    font-size: 120%;
 }
 
 .post >p{
     text-align: left;
-    color: yellow;
+    color: purple;
 }
 
 .post:hover p{
-    color: #ffbb00;
+    color: #2563eb;
 }
 
-.post p, .post h3{
-    background-color: #1c1c1ce0;
+.post p{
+    background-color: #1c1c1cd7;
     padding: 5px;
 }
 
 .post:hover p, .post:hover h3{
-    background-color: #1c1c1cef;
+    background-color: #1c1c1cbd;
 }
 
 .moreContent{
@@ -783,28 +797,11 @@ button.javascript:active{
     }
     .post{
         width: 180px;
+        width: 180px;
     }
 
     .recaps{
         display: flex;
         flex-wrap: wrap;
     }
-}
-
-.post{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 25%;
-    min-width: 180px;
-    overflow: hidden;
-    border-radius: 20px;
-    border: solid 2px #2f2f2f;
-    text-align: center;
-    cursor: pointer;
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    aspect-ratio: 1;
 }

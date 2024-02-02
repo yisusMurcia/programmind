@@ -3,42 +3,25 @@ let button= document.querySelector(".moreContent");
 let proyectsContent= document.querySelector("#myProyects");
 let i= 0;
 do {
-    let post= myProyects[i];
-    let postDiv= document.createElement("div");
-    postDiv.setAttribute("class", "post");
-    let postTitle= document.createElement("h3");
-    postTitle.innerText= post[0];
-    postDiv.appendChild(postTitle);
-    let postLenguage= document.createElement("p");
-    postLenguage.innerText= post[2];
-    postDiv.appendChild(postLenguage);
-    proyectsContent.appendChild(postDiv);
-    postDiv.addEventListener("click", ()=>location.href=post[1]);
-    if (post[3]== undefined){
-        postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
-    }else{
-        postDiv.style.backgroundImage= `url(${post[3]})`;
-    };
+    proyectsContent.innerHTML+=`
+    <a class="post" id="${projects[i].id}" href= "${projects[i].link}index.html">
+        <h3>${projects[i].title}</h3>
+        <p>${projects[i].tag}</p>
+    </a>`;
+    const projectEl= document.getElementById(projects[i].id);
+    projectEl.style.backgroundImage= `url(${projects[i].link}/img.jpg)`;
     i++;
-} while (i< 2);
+} while (i< 4);
 button.addEventListener("click", ()=>{
     proyectsContent.innerHTML= "";
     button.remove();
-    for (let post of myProyects){
-        let postDiv= document.createElement("div");
-        postDiv.setAttribute("class", "post");
-        let postTitle= document.createElement("h3");
-        postTitle.innerText= post[0];
-        postDiv.appendChild(postTitle);
-        let postLenguage= document.createElement("p");
-        postLenguage.innerText= post[2];
-        postDiv.appendChild(postLenguage);
-        proyectsContent.appendChild(postDiv);
-        postDiv.addEventListener("click", ()=>location.href=post[1]);
-        if (post[3]== undefined){
-            postDiv.style.backgroundImage= `url(../img/imagePreview.png)`;
-        }else{
-            postDiv.style.backgroundImage= `url(${post[3]})`;
-        };
-    };
+    projects.map((project)=>{
+        proyectsContent.innerHTML+=`
+    <a class="post" id="${project.id}" href= "${project.link}index.html">
+        <h3>${project.title}</h3>
+        <p>${project.tag}</p>
+    </a>`;
+    const projectEl= document.getElementById(project.id);
+    projectEl.style.backgroundImage= `url(${project.link}/img.jpg)`;
+    })
 });
