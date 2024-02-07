@@ -723,7 +723,7 @@ button.javascript:active{
     text-align: left;
 }
 
-.GitHubLink{
+.GitHubLink, .github-link{
     position: relative;
     top: 7px;
     margin-left: 25px;

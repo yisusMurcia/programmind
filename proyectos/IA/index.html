@@ -44,6 +44,68 @@
         </div>
     </section>
     <section>
+        <h2>Algoritmos</h2>
+        <div class="proyect">
+            <h2>Busqueda en amplitud (BfS)</h2>
+            <p>
+                Al explorar un diagra de arbol de los resultados, se explora por niveles, primero la rama 1,
+                luego la 2 y así sucesivamente.
+            </p>
+            <div class="flex">
+                <a href="#puzzle">Puzzle</a>
+                <a href="#road-trip">Viaje de carretera</a>
+            </div>
+        </div>
+        <div class="proyect">
+            <h2>Busqueda en profundidad (DSS)</h2>
+            <p>
+                Funciona similar a la BFS, pero en este caso se baja por toda la rama antes de pasar a la
+                siguiente.
+            </p>
+            <a href="#puzzle" id="gitHub-link">Puzzle</a>
+        </div>
+        <div class="proyect">
+            <h2>Busqueda de coste uniforme (UCS)</h2>
+            <p>
+                Tras la realización del arbol, cada nodo tien4 un coste, los de mayor profundidad suman los
+                costes de los nodos anteriores para seleccionar el nodo a examinar.
+            </p>
+            <a href="#road-trip"></a>
+        </div>
+        <div class="proyect">
+            <h2>Algorimtos geneticos</h2>
+            <p>
+                Este algoritmo conciste en tratar las posibles soluciones como una población en evolución,
+                tomando los dos mejores y combinandolos, a su vez que se eliminan los dos peores.
+            </p>
+            <p>
+                Durante su ejecución, los nuevos resultados pueden tener mutaciones, o cambios en su solución,
+                y el algoritmo finaliza cuando la población alcanza cierta puntuación o tras ciertos números de
+                cruces
+            </p>
+            <a href="#SAT">Problema SAT</a>
+        </div>
+        <div class="proyect">
+            <h2>Dijkstra</h2>
+            <p>
+                El algoritmo emplea una tupla, donde guarda el nodo padre y un coste o distancia acomulada,
+                suma de las distancias anteriores, y se selecciona el de menor distancia acomulada. Tras la
+                ejecución, todos los grafos son visitados.
+            </p>
+            <a href="#dijkstra">Camino de grafos</a>
+        </div>
+        <div class="project">
+            <h2>Funciones heuristicas</h2>
+            <p>
+                Estos algorimtos implementan una función hueristica que permite evaluar un a posible solución,
+                de esta manera se puede trabajar con los de mayor o menor valor.
+            </p>
+            <div class="flex">
+                <a href="#puzzle"></a>
+            </div>
+        </div>
+    </section>
+    <section>
         <h2>Problemas</h2>
         <div class="proyect">
             <h2>Puzzle</h2>
@@ -52,20 +114,30 @@
                 va intercambiando de lugar las piezas del puzzle, el algoritmo busca armar el puzzle en la
                 menor cantidad de pasos.
             </p>
+            <div class="flex">
+                <a href="https://github.com/yisusMurcia/IA/blob/main/puzzleBFS.py" class="gitHub-link">BFS</a>
+                <a href="https://github.com/yisusMurcia/IA/blob/main/heuristicPuzzle.py" class="gitHub-link">Heuristica</a>
+                <a href="https://github.com/yisusMurcia/IA/blob/main/puzzleDFS.py" class="gitHub link">DFS</a>
+            </div>
         </div>
-        <div class="proyect">
+        <div class="proyect" id="road-trip">
             <h2>Viaje de carretera</h2>
             <p>
                 Este problema conciste en una conexión entre ciudades, donde se tiene una ciudad de partida y
                 una de llegada, por lo que se debe buscar el camino con mejor distancia entre las dos ciudades.
             </p>
+            <div class="flex">
+            <a href="https://github.com/yisusMurcia/IA/blob/main/roadTripBFS.py" class="GitHubLink">BFS</a>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/roadTripUCS.py" class="GitHubLink">UCS</a>
+            </div>
         </div>
-        <div class="proyect">
+        <div class="proyect" id="dijkstra">
             <h2>Camino de grafos</h2>
             <p>
                 Este algoritmo busca unir una serie de grafos, representados como diferentes rutas con un coste
                 cada una, de tal manera que todos los grafos sean recorridos.
             </p>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/graphTraversalDijkstra.py" class="GitHubLink">graphTraversal.py</a><br>
         </div>
         <div class="proyect">
             <h2>Inecuación</h2>
@@ -77,6 +149,16 @@
                 7x + 4y ≤ 150 <br>
                 6x + 5y ≤ 160
             </p>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/inequation.py" class="GitHubLink">inequation.py</a>
+        </div>
+        <div class="proyect" id="SAT">
+            <h2>Satisfacción booleana</h2>
+            <p>
+                Dada cierta igualdad o solución, se quiere llegar a una lista de 0 y 1 que satisfacen dicha
+                premisa, en este caso partimos de una solución genereada aleatoriamente pero puede usarse una
+                función de evaluación.
+            </p>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/geneticAlgorithmSat.py" class="gitHub-link">SAT.py</a>
         </div>
         <div class="proyect">
             <h2>Empresa de viaje</h2>
@@ -84,6 +166,7 @@
                 Dada una cantidad de pedidos a diferentes ciudades, se queiere crear rutas de camiones que
                 optimicen la entrega de los pedidos, sin exceder la carga máxima.
             </p>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/savingsAlgorithmClarkWeigth.py" class="GitHubLink">savingsAlgorithm.py</a><br>
         </div>
         <div class="proyect">
             <h2>ALgoritmo de costos</h2>
@@ -91,64 +174,7 @@
                 Se requieren 4 productos de 4 empresas que los ofrecen con diferentes costos, pero se quiere que
                 cada empresa aporte uno de esos productos a la vez que se toma el menor costo posible.
             </p>
-        </div>
-    </section>
-    <section>
-        <div class="proyect">
-            <h2>Puzzle.py</h2>
-            <p>
-                Este código busca organizar un rompecabezas de números (va de 1 a 4), requiere de conocer la
-                solución del rompecabezas y el orden inical de los números, la salida del código es la secuencia
-                de pasos para resolver el rompecabezas.
-            </p>
-            
-        </div>
-        <div class="proyect">
-            <h2>RoadTrip.py</h2>
-            <p>
-                El código busca crear la mejor ruta para ir de una ciudad a otra, para ello requiere las conexiones
-                entre las carreteras (rutas) y se emplean las coordenadas para hacer un estimación de la distancia,
-                el código retorna el mejor camino para ir de una ciudad a otra.
-            </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/roadTrip.py" class="GitHubLink">RoadTrip.py</a><br>
-        </div>
-        <div class="proyect">
-            <h2>GraphTraversal.py</h2>
-            <p>
-                Él codigo busca recorrer un camino de puntos, estos puntos conectan con otros puntos a determinada
-                distancia, por lo que se busca es recorrer todos los puntos con el menor coste posible, el código
-                retorna dicho camino.
-            </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/graphTraversal.py" class="GitHubLink">GraphTraversal.py</a><br>
-        </div>
-        <div class="proyect">
-            <h2>Inequation.py</h2>
-            <p>
-                El código busca resolver una inecuación con dos incognitas, la idea es buscar el mayor valor posible
-                para las variables.
-            </p>
-            <p class="center">
-                7x + 4y ≤ 150 <br>
-                6x + 5y ≤ 160
-            </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/inequation.py" class="GitHubLink">inequation.py</a><br>
-        </div>
-        <div class="proyect">
-            <h2>SavingsAlgorithm</h2>
-            <p>
-                Este código busca crear rutas para entregar una serie de paquetes, la ruta debe ser la mejor,
-                para ello se tiene en cuanta aquellos pedidos que se pueden conectar en una misma ruta y que
-                no sobrepasen el peso máximo.
-            </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/savingsAlgorithm.py" class="GitHubLink">savingsAlgorithm.py</a><br>
-        </div>
-        <div class="proyect">
-            <h2>SearchMinCost</h2>
-            <p>
-                El código busca encontrar la mejor forma de organizar un pedido donde se tomen cuatro tipos
-                y se compren uno por cada proveedor y aquel pedido tenga el menor coste.
-            </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/searchMinCost.py" class="GitHubLink">searchMinCost.py</a><br>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/searchMinCost.py" class="GitHubLink">searchMinCost.py</a>
         </div>
     </section>
     <img src="../../img/lightMode.png" alt="lightMode" id="mode">
