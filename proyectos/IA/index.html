@@ -94,15 +94,63 @@
             </p>
             <a href="#dijkstra">Camino de grafos</a>
         </div>
-        <div class="project">
+        <div class="proyect">
             <h2>Funciones heuristicas</h2>
             <p>
                 Estos algorimtos implementan una función hueristica que permite evaluar un a posible solución,
                 de esta manera se puede trabajar con los de mayor o menor valor.
             </p>
-            <div class="flex">
-                <a href="#puzzle"></a>
-            </div>
+            <a href="#puzzle">Puzzle</a>
+        </div>
+        <div class="proyect">
+            <h2>Backtracking</h2>
+            <p>
+                Esta mejora se aplica en la función heuristica, donde el algoritmo deja de explorar una rama
+                si esa no conduce a la solución, en el ejemplo en caso de que no cumpla las condiciones de la
+                inecuación.
+            </p>
+            <a href="#inequation">Inecuación</a>
+        </div class= "proyect">
+        <div class="proyect">
+            <h2>Algoritmo A*</h2>
+            <p>
+                Este algoritmo parte de la busqueda de coste uniforme, pero ahora se busca estimar el coste
+                de los nodos frontera.
+            </p>
+            <a href="#road-trip">Viaje de carretera</a>
+        </div>
+        <div class="proyect">
+            <h2>Algoritmo Clark & Wright</h2>
+            <p>
+                También conocido como algoritmo de ahorros, done se agrupan una serie de datos, en el ejemplo se
+                agrupan rutas de entregas respentando una serie de restricciones.
+            </p>
+            <a href="#entregas">Servicio de entregas</a>
+        </div>
+        <div class="proyect">
+            <h2>Hill climbing</h2>
+            <p>
+                El algoritmo parte de una solución inicial, la cuál ira modifcando para quedar con una solución
+                mejor a esa, frenando cuando ya no haya una solución más óptima.
+            </p>
+            <a href="#road-trip">VIaje de carretera</a>
+        </div>
+        <div class="proyect">
+            <h2>Simulated annealing</h2>
+            <p>
+                Este algoritmo parte de manera similar al hill climbing, pero hay una probabilidad de elgir un
+                estado menos óptimo que el anterior, para explorar más posibilidades. Dicha posibilidad va
+                disminyendo a medida que aumentan las soluciones exploradas.
+            </p>
+            <a href="road-trip">Viaje de carretera</a>
+        </div>
+        <div class="proyect">
+            <h2>Busqueda tabú</h2>
+            <p>
+                En este algritmo, es similar al hill climbing, pero recuerda los últimos estados vecinos para
+                no explorarlos, en este caso, los últimos intercambios entre ciudades.
+            </p>
+            <a href="road-trip">Viaje de carretera</a>
         </div>
     </section>
     <section>
@@ -129,6 +177,10 @@
             <div class="flex">
             <a href="https://github.com/yisusMurcia/IA/blob/main/roadTripBFS.py" class="GitHubLink">BFS</a>
             <a href="https://github.com/yisusMurcia/IA/blob/main/roadTripUCS.py" class="GitHubLink">UCS</a>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/roadTripAStar.py" class="gitHub-link">A*</a>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/hillClimbingRoadTrip.py" class="gitHub-link">Hill climbing</a>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/roadTripSimulatedAnnealing.py" class="gitHub-link">Simulated annealing</a>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/tabuRoadSearch.py" class="gitHub-link">Busqueda tabú</a>
             </div>
         </div>
         <div class="proyect" id="dijkstra">
@@ -139,7 +191,7 @@
             </p>
             <a href="https://github.com/yisusMurcia/IA/blob/main/graphTraversalDijkstra.py" class="GitHubLink">graphTraversal.py</a><br>
         </div>
-        <div class="proyect">
+        <div class="proyect" id="inequation">
             <h2>Inecuación</h2>
             <p>
                 El código busca resolver una inecuación con dos incognitas, la idea es buscar el mayor valor posible
@@ -149,7 +201,7 @@
                 7x + 4y ≤ 150 <br>
                 6x + 5y ≤ 160
             </p>
-            <a href="https://github.com/yisusMurcia/IA/blob/main/inequation.py" class="GitHubLink">inequation.py</a>
+            <a href="https://github.com/yisusMurcia/IA/blob/main/inequationWithBacktracking.py" class="gitHub-link">inequation.py</a>
         </div>
         <div class="proyect" id="SAT">
             <h2>Satisfacción booleana</h2>
@@ -160,8 +212,8 @@
             </p>
             <a href="https://github.com/yisusMurcia/IA/blob/main/geneticAlgorithmSat.py" class="gitHub-link">SAT.py</a>
         </div>
-        <div class="proyect">
-            <h2>Empresa de viaje</h2>
+        <div class="proyect" id="entregas">
+            <h2>Servicio de entregas</h2>
             <p>
                 Dada una cantidad de pedidos a diferentes ciudades, se queiere crear rutas de camiones que
                 optimicen la entrega de los pedidos, sin exceder la carga máxima.
