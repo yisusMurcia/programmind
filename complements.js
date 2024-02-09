@@ -36,6 +36,7 @@ window.addEventListener("load", ()=>{
         footer= document.createElement("footer");
         document.body.appendChild(footer);
     };
+    document.getElementById("mode").remove();
     footer.innerHTML= `<nav>
         <a href="https://twitter.com/yisusMurcia" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/800px-X_logo_2023.svg.png" alt="x" class="socialMediaImg">
@@ -48,7 +49,8 @@ window.addEventListener("load", ()=>{
         </a>
     </nav>
     <a href="https://github.com/yisusMurcia/programmind" class="a-button">Open source</a>
-    <p>V 4.0</p>`;
+    <p>V 4.0</p>
+    <img src="https://yisusmurcia.github.io/programmind/img/lightMode.png" alt="lightMode" id="mode">`;
     //Ligth mode
     let modeButton= document.querySelector("#mode");
     let src= modeButton.getAttribute("src");

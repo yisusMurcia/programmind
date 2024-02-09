@@ -20,14 +20,6 @@
     --news-border-color: #994fca;
 }
 
-.message{
-    font-size: 300%;
-    background-color: green;
-    color: #e41010;
-    padding: 20px;
-    border-radius: 8px;
-}
-
 *{
     padding: 0;
     margin: 0;
@@ -52,10 +44,7 @@ html{
 }
 
 #mode{
-    position: fixed;
     width: 35px;
-    bottom: 10px;
-    right: 10px;
 }
 
 /*HTML elements*/
@@ -81,9 +70,12 @@ section, aside{
 }
 
 footer{
-    display: flex;
+    position: sticky;
+    bottom: 0px;
     background-color: var(--section-color);
-    padding: 5px;
+    display: flex;
+    padding: 2px;
+    border-radius: 5px;
     align-items: center;
     justify-content: space-around;
 }
@@ -196,7 +188,6 @@ header{
     position: sticky;
     top: 0;
     z-index: 9;
-    z-index: 1;
     display: flex;
     background-color: #383838c2;
     justify-content: space-evenly;
