@@ -707,8 +707,17 @@ button.javascript:active{
 .flex{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+.grid-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+}   
+.grid-gallery > h2, hr{
+    grid-column: 1/4;
+    color: purple;
 }
 
 .proyect{
@@ -724,14 +733,16 @@ button.javascript:active{
 }
 
 .GitHubLink, .github-link{
-    position: relative;
-    top: 7px;
-    margin-left: 25px;
-    padding: 8px 20px;
+    margin: 5px 0;
+    padding: 8px 10px;
     background-color: var(--section-color);
     border-radius: 20px;
     border: solid 2px var(--news-border-color);
     color: #cc33cc;
+    text-align: center;
+}
+.github-link:hover, .GitHubLink:hover{
+    border-color: var(--text-color);
 }
 
 /*Media Query for mobile devices*/
@@ -799,9 +810,7 @@ button.javascript:active{
         width: 180px;
         width: 180px;
     }
-
-    .recaps{
-        display: flex;
-        flex-wrap: wrap;
+    .grid-gallery{
+        display: block;
     }
 }
