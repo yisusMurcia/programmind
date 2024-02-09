@@ -714,7 +714,11 @@ button.javascript:active{
 .grid-gallery{
     display: grid;
     grid-template-columns: repeat(3, 33%);
-}   
+    justify-items: space-evenly;
+} 
+.grid-gallery> *{
+    font-size: 100%;
+}
 .grid-gallery > h2, hr{
     grid-column: 1/4;
     color: purple;
@@ -728,18 +732,19 @@ button.javascript:active{
 }
 
 .proyect h2{
-    padding: 5px 20px;
+    padding: 5px;
     text-align: left;
 }
 
 .GitHubLink, .github-link{
-    margin: 5px 0;
-    padding: 8px 10px;
+    margin: 0;
+    padding: 5px 10px;
     background-color: var(--section-color);
     border-radius: 20px;
     border: solid 2px var(--news-border-color);
     color: #cc33cc;
     text-align: center;
+    font-size: 80%;
 }
 .github-link:hover, .GitHubLink:hover{
     border-color: var(--text-color);
