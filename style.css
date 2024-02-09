@@ -716,7 +716,7 @@ button.javascript:active{
     grid-template-columns: repeat(3, 33%);
     justify-items: space-evenly;
 } 
-.grid-gallery> *{
+.grid-gallery> proyect *{
     font-size: 100%;
 }
 .grid-gallery > h2, hr{
