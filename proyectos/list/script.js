@@ -1,4 +1,4 @@
-let inputsDiv= document.getElementById("inputConsole");
+let inputsDiv= document.getElementById("inputs-container");
 let inputs= document.getElementsByTagName("input");
 let list=[];
 let newList=[];

@@ -33,22 +33,27 @@
             <p>
                 En este código, se generará una lista aleatoria o se seleccionará una cantidad
                 específica de elementos. Ya sea que necesites una lista de números aleatorios para
-                realizar pruebas o desees obtener una muestra aleatoria de elementos de una listaexistente.
+                realizar pruebas o desees obtener una muestra aleatoria de elementos de una lista
+                existente.
             </p>
         </section>
         <section>
-            <div id="inputConsole" class="flex">
+            <div id="inputConsole" class="grid">
                 <button id="add">Añadir item</button>
-                <input type="text">
-            </div>
-            <div class="flex">
+                <div id="inputs-container">
+                    <input type="text" />
+                </div>
                 <button id="delete">Eliminar último item</button>
                 <button id="set">Reorganizar</button>
-                <p class="pContainer">
-                    Selecciona una cantidad de items
-                    <input type="number" value="1">
-                    <button id="select">Seleccionar</button>
-                </p>
+                <div>
+                    <hr>
+                    <p class="pContainer">
+                        Selecciona una cantidad de items
+                        <input type="number" value="1">
+                        <button id="select">Seleccionar</button>
+                    </p>
+                </div>
+                
             </div>
         </section>
         <section>
