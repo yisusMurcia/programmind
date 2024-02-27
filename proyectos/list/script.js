@@ -1,9 +1,43 @@
-let inputsDiv= document.getElementById("inputs-container");
-let inputs= document.getElementsByTagName("input");
+const inputsDiv= document.getElementById("inputs-container");
+const setButton= document.querySelector("#set");
+const addButton= document.querySelector("#add");
+const selectButton= document.querySelector("#select");
+const result= document.getElementById("result");
+
+const getValues= ()=>{
+    const list= []
+    const inputs= document.querySelectorAll(".input");
+    for (let input of inputs){
+        list.push(input.value);
+    };
+    return list;
+};
+
+const sortValues= (list)=>{
+    let copyList= [].concat(...list);
+    const newList= [];
+    while (newList.length!= list.length){
+        const randomIndex= Math.floor(Math.random()* copyList.length);
+        const item= copyList.splice(randomIndex, 1);
+        newList.push(item);
+    };
+    return newList
+}
+
+addButton.addEventListener("click", ()=>{
+    const input= document.createElement("input");
+    input.classList.add("input")
+    inputsDiv.appendChild(input);
+});
+
+setButton.addEventListener("click", ()=>{
+    sortValues(getValues());
+});
+
 let list=[];
 let newList=[];
+
 let setItems=(times)=>{
-    let result= document.getElementById("result");
     for (let i = 0; i < inputs.length-1; i++) {
         list.push(inputs[i].value);
     };
@@ -22,11 +56,8 @@ let setItems=(times)=>{
     result.replaceWith(htmlList);
     list= [];
     newList= [];
-}
-let addButton= document.querySelector("#add");
-addButton.addEventListener("click", ()=>{
-    inputsDiv.appendChild(document.createElement("input"));
-});
+};
+
 let deleteButton= document.querySelector("#delete");
 deleteButton.addEventListener("click", ()=>{
     alert(inputs.length)
@@ -34,11 +65,9 @@ deleteButton.addEventListener("click", ()=>{
         inputs[inputs.length-2].remove();
     };
 });
-let setButton= document.querySelector("#set");
 setButton.addEventListener("click", ()=>{
     setItems(inputs.length-1)
 });
-let selectButton= document.querySelector("#select");
 selectButton.addEventListener("click", ()=>{
     let numOfItems= +inputs[inputs.length-1].value;
     setItems(numOfItems);
