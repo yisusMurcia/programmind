@@ -2,6 +2,7 @@ const inputsDiv= document.getElementById("inputs-container");
 const setButton= document.querySelector("#set");
 const addButton= document.querySelector("#add");
 const selectButton= document.querySelector("#select");
+const deleteButton= document.querySelector("#delete");
 const result= document.getElementById("result");
 
 const getValues= ()=>{
@@ -21,8 +22,12 @@ const sortValues= (list)=>{
         const item= copyList.splice(randomIndex, 1);
         newList.push(item);
     };
-    return newList
-}
+    return newList;
+};
+
+const getSomeItems=(num, arr)=>{
+    return arr.slice(0, num);
+};
 
 addButton.addEventListener("click", ()=>{
     const input= document.createElement("input");
@@ -30,45 +35,16 @@ addButton.addEventListener("click", ()=>{
     inputsDiv.appendChild(input);
 });
 
-setButton.addEventListener("click", ()=>{
-    sortValues(getValues());
-});
-
-let list=[];
-let newList=[];
-
-let setItems=(times)=>{
-    for (let i = 0; i < inputs.length-1; i++) {
-        list.push(inputs[i].value);
-    };
-    while(newList.length!== times){
-        let num= Math.floor(Math.random()*list.length);
-        newList.push(list[num]);
-        list.splice(num, 1);
-    };
-    let htmlList= document.createElement("ul");
-    htmlList.setAttribute("id", "result")
-    newList.forEach(element => {
-        let item= document.createElement("li");
-        item.innerText= element;
-        htmlList.appendChild(item);
-    });
-    result.replaceWith(htmlList);
-    list= [];
-    newList= [];
-};
-
-let deleteButton= document.querySelector("#delete");
 deleteButton.addEventListener("click", ()=>{
-    alert(inputs.length)
+    const inputs= document.querySelectorAll(".input");
     if (inputs.length >1){
-        inputs[inputs.length-2].remove();
+        inputs[inputs.length-1].remove();
     };
 });
 setButton.addEventListener("click", ()=>{
-    setItems(inputs.length-1)
+    result.innerText= sortValues(getValues());
 });
 selectButton.addEventListener("click", ()=>{
-    let numOfItems= +inputs[inputs.length-1].value;
-    setItems(numOfItems);
+    const selectionNum= document.getElementById("selection-num").value;
+    result.innerText= getSomeItems(selectionNum, sortValues(getValues()));
 });
