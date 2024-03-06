@@ -5,12 +5,23 @@ const selectButton= document.querySelector("#select");
 const deleteButton= document.querySelector("#delete");
 const result= document.getElementById("result");
 
+
 const getValues= ()=>{
-    const list= []
+    let list= [];
     const inputs= document.querySelectorAll(".input");
     for (let input of inputs){
-        list.push(input.value);
+        if(!list.includes(input.value) && input.value!=""){
+            list.push(input.value);
+        };
     };
+    if(list.length== 0){
+        list= JSON.parse(localStorage.getItem("list"))
+    }
+    if (list.length< 2){
+        result.innerText= 'Inserte más valores';
+        return;
+    };
+    localStorage.setItem("list", JSON.stringify(list));
     return list;
 };
 
